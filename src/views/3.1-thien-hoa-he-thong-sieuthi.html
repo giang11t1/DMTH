@@ -12,8 +12,31 @@
                     <span>Cập nhật</span>
                 </a>
             </div>
-            <div class="banner">
+            <div class="banner banner-display">
                 <img src="assets/images/banner-indoduce.png" alt="banner">
+            </div>
+            <div class="banner-update">
+                <div class="col-md-10">
+                    <img src="assets/images/banner-indoduce.png" alt="banner">
+                </div>
+                <div class="col-md-2">
+                    <a href="#" style="background: rgb(255, 255, 255); color: rgb(70, 70, 70);">
+                        <i class="icon-browser">&nbsp;</i>
+                        <span>Browse ...</span>
+                        <input type="file" name="newfile">
+                    </a>
+                    <span class="size-note">Kích thước 900 x 300 px</span>
+                    <label>Link banner</label>
+                    <input type="text" name="" placeholder="Nhập link banner"> 
+                    <div class="action">
+                        <span class="cancel">Hủy bỏ</span>
+                        <button class="btn button-update">Cập nhật thông tin</button>
+                    </div>
+                </div>
+            </div>
+            <div class="no-banner">
+                <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
+                <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
             </div>
         </div>
     </section>
@@ -24,7 +47,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="box">
+                    <div class="box box-left">
                         <div class="header-box">
                             <h4>Siêu thị sắp khai trương</h4>
                             <a class="pull-right add-action">
@@ -32,7 +55,7 @@
                                 <span>Thêm mới</span>
                             </a>
                         </div>
-                        <div class="body-box">
+                        <div class="body-box display-list">
                             <div class="scrollbar">
                                 <ul class="list-super">
                                     <li>
@@ -66,10 +89,79 @@
                                 </ul>
                             </div>                            
                         </div>
+                        <div class="body-box update-list">
+                            <div class="form-group">
+                                <label>Tên siêu thị</label>
+                                <input type="text" name="" class="form-control" placeholder="Nhập tên siêu thị">
+                            </div>  
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Tỉnh/ Thành phố</label>
+                                        <div class="wrap_select">
+                                            <select class="form-control">
+                                                <option>Chọn Tỉnh / Thành phố</option>
+                                                <option>Kiên Giang</option>
+                                                <option>An Giang</option>
+                                                <option>TP Hồ Chí Minh</option>
+                                                <option>Hà Nội</option>
+                                            </select>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Quận/ Huyện</label>
+                                        <div class="wrap_select">
+                                            <select class="form-control">
+                                                <option>Chọn Quận / Huyện</option>
+                                                <option>Kiên Giang</option>
+                                                <option>An Giang</option>
+                                                <option>TP Hồ Chí Minh</option>
+                                                <option>Hà Nội</option>
+                                            </select>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                          
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Phường/ Xã</label>
+                                        <div class="wrap_select">
+                                            <select class="form-control">
+                                                <option>Chọn Phường / Xã</option>
+                                                <option>Kiên Giang</option>
+                                                <option>An Giang</option>
+                                                <option>TP Hồ Chí Minh</option>
+                                                <option>Hà Nội</option>
+                                            </select>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Địa chỉ</label>
+                                        <input type="text" name="" class="form-control" placeholder="Nhập địa chỉ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row action">
+                                <span class="cancel">Hủy bỏ</span>
+                                <button class="btn button-update">Cập nhật thông tin</button>
+                            </div>
+                        </div>
+                        <div class="no-banner">
+                            <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
+                            <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="box">
+                    <div class="box box-right">
                         <div class="header-box">
                             <h4>Siêu thị hiện có/ Đang hoạt động</h4>
                             <a class="pull-right add-action">
@@ -77,7 +169,7 @@
                                 <span>Thêm mới</span>
                             </a>
                         </div>
-                        <div class="body-box">
+                        <div class="body-box display-list">
                             <div class="scrollbar">
                                 <div class="city">
                                     <h4 class="title-city"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Thành phố Hồ Chí Minh</span></h4>
@@ -120,7 +212,135 @@
                                     </ul>
                                 </div>
                             </div>                             
-                        </div>                                               
+                        </div>  
+                        <div class="body-box update-list">
+                            <div class="form-group">
+                                <label>Tên siêu thị</label>
+                                <input type="text" name="" class="form-control" placeholder="Nhập tên siêu thị">
+                            </div>  
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Tỉnh/ Thành phố</label>
+                                        <div class="wrap_select">
+                                            <select class="form-control">
+                                                <option>Chọn Tỉnh / Thành phố</option>
+                                                <option>Kiên Giang</option>
+                                                <option>An Giang</option>
+                                                <option>TP Hồ Chí Minh</option>
+                                                <option>Hà Nội</option>
+                                            </select>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Quận/ Huyện</label>
+                                        <div class="wrap_select">
+                                            <select class="form-control">
+                                                <option>Chọn Quận / Huyện</option>
+                                                <option>Kiên Giang</option>
+                                                <option>An Giang</option>
+                                                <option>TP Hồ Chí Minh</option>
+                                                <option>Hà Nội</option>
+                                            </select>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                          
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Phường/ Xã</label>
+                                        <div class="wrap_select">
+                                            <select class="form-control">
+                                                <option>Chọn Phường / Xã</option>
+                                                <option>Kiên Giang</option>
+                                                <option>An Giang</option>
+                                                <option>TP Hồ Chí Minh</option>
+                                                <option>Hà Nội</option>
+                                            </select>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Địa chỉ</label>
+                                        <input type="text" name="" class="form-control" placeholder="Nhập địa chỉ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label>Số điện thoại</label>
+                                <input type="text" name="" class="form-control" placeholder="Nhập số điện thoại liên hệ">
+                            </div>
+                            <div class="row">
+                                <label>Thời gian mở cửa</label>
+                                <div class="col-md-6">
+                                    <label>Từ</label>
+                                    <div class="wrap_select">
+                                        <select class="form-control">
+                                            <option>Thứ 2</option>
+                                            <option>Thứ 2</option>
+                                            <option>Thứ 2</option>
+                                            <option>Thứ 2</option>
+                                            <option>Thứ 2</option>
+                                        </select>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Đến</label>
+                                    <div class="wrap_select">
+                                        <select class="form-control">
+                                            <option>Thứ 2</option>
+                                            <option>Thứ 2</option>
+                                            <option>Thứ 2</option>
+                                            <option>Thứ 2</option>
+                                            <option>Thứ 2</option>
+                                        </select>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Từ</label>
+                                    <div class="wrap_select">
+                                        <select class="form-control">
+                                            <option>01h00</option>
+                                            <option>01h00</option>
+                                            <option>01h00</option>
+                                            <option>01h00</option>
+                                            <option>01h00</option>
+                                        </select>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Đến</label>
+                                    <div class="wrap_select">
+                                        <select class="form-control">
+                                            <option>01h00</option>
+                                            <option>01h00</option>
+                                            <option>01h00</option>
+                                            <option>01h00</option>
+                                            <option>01h00</option>
+                                        </select>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row action">
+                                <span class="cancel">Hủy bỏ</span>
+                                <button class="btn button-update">Cập nhật thông tin</button>
+                            </div>
+                        </div>  
+                        <div class="no-banner">
+                            <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
+                            <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
+                        </div>                                           
                     </div>
                 </div>
             </div>
@@ -132,8 +352,19 @@
                         <span>Cập nhật</span>
                     </a>
                 </div>
-                <div class="content">
+                <div class="content content-display">
                     Công ty TNHH TM&DV Thiên Nam Hòa chính thức được thành lập và đi vào hoạt động ngày 24/11/2001 với ngành nghề kinh doanh chủ yếu là điện máy – nội thất. Bắt đầu hoạt động từ một cửa hàng kinh doanh các mặt hàng điện – điện tử - điện lạnh nhỏ tại TP HCM, đến nay Thiên Hòa đã phát triển thành chuỗi Hệ thống trung tâm Điện máy – Nội thất quy mô với 7 trung tâm lớn tiện nghi thu hút đông đảo khách hàng đến tham quan và mua sắm.
+                </div>
+                <div class="update-content">
+                    <textarea placeholder="Nhập thông tin giới thiệu về hệ thống siêu thị" rows="5" cols="20"></textarea>
+                    <div class="row action">
+                        <span class="cancel">Hủy bỏ</span>
+                        <button class="btn button-update">Cập nhật thông tin</button>
+                    </div>
+                </div>
+                <div class="no-banner">
+                    <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
+                    <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
                 </div>
             </div>
         </div>

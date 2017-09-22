@@ -887,6 +887,54 @@ $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
         $(document).on('focus', '[data-toggle="tooltip"]', function() { $(this).tooltip('hide'); });
     });
+    // update banner
+    $(".section-banner .update-action").click(function(){
+        $(this).hide();
+        $(".banner-display").slideUp();
+        $(".banner-update").slideDown();
+    });
+
+    $(".section-banner .banner-update .button-update").click(function(){
+        $(".section-banner .update-action").show();
+        $(".banner-display").slideDown();
+        $(".banner-update").slideUp();
+    });
+    // left-box
+    $(".section-infor .box-left .add-action").click(function(){
+        $(this).hide();
+        $(this).closest(".box-left").find(".display-list").slideUp();
+        $(this).closest(".box-left").find(".update-list").slideDown();
+    });
+
+    $(".section-infor .box-left .button-update").click(function(){
+        $(".section-infor .box-left .add-action").show();
+        $(this).closest(".box-left").find(".update-list").slideUp();
+        $(this).closest(".box-left").find(".display-list").slideDown();
+    });
+    // right-box
+    $(".section-infor .box-right .add-action").click(function(){
+        $(this).hide();
+        $(this).closest(".box-right").find(".display-list").slideUp();
+        $(this).closest(".box-right").find(".update-list").slideDown();
+    });
+
+    $(".section-infor .box-right .button-update").click(function(){
+        $(".section-infor .box-right .add-action").show();
+        $(this).closest(".box-right").find(".update-list").slideUp();
+        $(this).closest(".box-right").find(".display-list").slideDown();
+    });
+    //content super
+    $(".section-infor .intro-supper .update-action").click(function(){
+        $(this).hide();
+        $(this).closest(".intro-supper").find(".content-display").slideUp();
+        $(this).closest(".intro-supper").find(".update-content").slideDown();
+    });
+
+    $(".section-infor .intro-supper .button-update").click(function(){
+        $(".section-infor .intro-supper .update-action").show();
+        $(this).closest(".intro-supper").find(".content-display").slideDown();
+        $(this).closest(".intro-supper").find(".update-content").slideUp();
+    });
   // chart
  if ($('.chart')[0]) {
         $(function() {

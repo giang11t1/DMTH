@@ -11982,6 +11982,9 @@ section.table_supply .wrap-table.filter_child {
 .top a {
   cursor: pointer;
 }
+.no-banner {
+  display: none;
+}
 .section-banner .banner {
   width: 100%;
   height: 305px;
@@ -11989,6 +11992,9 @@ section.table_supply .wrap-table.filter_child {
 .section-banner .banner img {
   width: 100%;
   height: 100%;
+}
+.section-banner .banner-update {
+  display: none;
 }
 .section-infor .box {
   border-radius: 0;
@@ -12068,10 +12074,16 @@ section.table_supply .wrap-table.filter_child {
 .section-infor .col-md-6:last-child {
   padding-right: 0;
 }
+.section-infor .update-list {
+  display: none;
+}
 .section-infor .intro-supper {
   margin-top: 15px;
 }
 .section-infor .intro-supper .content {
   color: #818181;
   line-height: 25px;
+}
+.section-infor .intro-supper .update-content {
+  display: none;
 }
