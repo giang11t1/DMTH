@@ -1,0 +1,147 @@
+{% set current_page = 'product' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view ">
+		<div class="header ">
+			<h2 class="title">Import sản phẩm</h2>
+			<a href="5.1 CMS-v2-product-Brand.html"><i class="fa fa-reply" aria-hidden="true"></i>  Quay lại</a>
+		</div>
+		<ul class="nav nav-tabs">
+			<li class="active">
+	        	<a href="#1" data-toggle="tab">Sản phẩm mới</a>
+			</li>
+			<li><a href="#2" data-toggle="tab">Số lượng sản phẩm</a>
+			</li>
+			<li><a href="#3" data-toggle="tab">Giá bán sản phẩm</a>
+			</li>
+		</ul>
+		<div class="tab-content tab-content-import">
+			<!-- tab content 1 -->
+		  	<div class="tab-pane active" id="1">
+		  		<div class="content_import">
+		  			<div class="col-md-3"></div>
+		  			<div class="col-md-6">
+		  				<ul class="wrap_btn row">
+		  					<li class="col-md-3">
+		  						<a href="#">
+		  							<i class="icon-browser">&nbsp</i>
+		  							<span>Browse ...</span>
+		  							<input type="file" name="newfile">
+		  						</a>
+		  					</li>
+		  					<li class="col-md-5">
+		  						<a href="#">
+		  							<i class="icon-import">&nbsp</i>
+		  							<span>Import sản phẩm mới</span>
+		  						</a>
+		  					</li>
+		  					<li class="col-md-4">
+		  						<a href="#">
+		  							<i class="icon-excel">&nbsp</i>
+		  							<span>Tải file Excell mẫu</span>
+		  						</a>
+		  					</li>
+		  				</ul>
+		  				<div class="show_file">
+		  					<span class="file_name"></span>
+		  				</div>
+		  				<div class="note">
+		  					<b>Lưu ý:</b>
+		  					<ul>
+		  						<li class="row"><span>- File excell phải đầy đủ thông tin</span></li>
+		  						<li class="row"><span>- File excell chỉ giới hạn 150 dòng, nếu dài hơn thì tách ra làm nhiều file.</span></li>
+		  						<li class="row"><span>- Việc import danh sách sản phẩm rất quan trọng, cần sự cẩn thận, kỹ càng, chi tiết.</span></li>
+		  					</ul>
+		  				</div>
+		  			</div>
+		  			<div class="col-md-3"></div>
+		  		</div>
+		  		
+			</div>
+			<!-- tab content 2 -->
+			<div class="tab-pane" id="2">
+	            <div class="content_import">
+		  			<div class="col-md-3"></div>
+		  			<div class="col-md-6">
+		  				<ul class="wrap_btn row">
+		  					<li class="col-md-3">
+		  						<a href="#">
+		  							<i class="icon-browser">&nbsp</i>
+		  							<span>Browse ...</span>
+		  							<input type="file" name="numberfile" >
+		  						</a>
+		  					</li>
+		  					<li class="col-md-5">
+		  						<a href="#">
+		  							<i class="icon-import">&nbsp</i>
+		  							<span>Import số lượng sản phẩm</span>
+		  						</a>
+		  					</li>
+		  					<li class="col-md-4">
+		  						<a href="#">
+		  							<i class="icon-excel">&nbsp</i>
+		  							<span>Tải file Excell mẫu</span>
+		  						</a>
+		  					</li>
+		  				</ul>
+		  				<div class="show_file">
+		  					<span class="file_name"></span>
+		  				</div>
+		  				<div class="note">
+		  					<b>Lưu ý:</b>
+		  					<ul>
+		  						<li class="row"><span>- File excell phải đầy đủ thông tin</span></li>
+		  						<li class="row"><span>- File excell chỉ giới hạn 150 dòng, nếu dài hơn thì tách ra làm nhiều file.</span></li>
+		  						<li class="row"><span>- Việc import danh sách sản phẩm rất quan trọng, cần sự cẩn thận, kỹ càng, chi tiết.</span></li>
+		  					</ul>
+		  				</div>
+		  			</div>
+		  			<div class="col-md-3"></div>
+		  		</div>
+			</div>
+			<!-- tab content 3 -->
+	        <div class="tab-pane" id="3">
+	        	<div class="content_import">
+		  			<div class="col-md-3"></div>
+		  			<div class="col-md-6">
+		  				<ul class="wrap_btn row">
+		  					<li class="col-md-3">
+		  						<a href="#">
+		  							<i class="icon-browser">&nbsp</i>
+		  							<span>Browse ...</span>
+		  							<input type="file" name="pricefile" >
+		  						</a>
+		  					</li>
+		  					<li class="col-md-5">
+		  						<a href="#">
+		  							<i class="icon-import">&nbsp</i>
+		  							<span>Import giá sản phẩm</span>
+		  						</a>
+		  					</li>
+		  					<li class="col-md-4">
+		  						<a href="#">
+		  							<i class="icon-excel">&nbsp</i>
+		  							<span>Tải file Excell mẫu</span>
+		  						</a>
+		  					</li>
+		  				</ul>
+		  				<div class="show_file">
+		  					<span class="file_name"></span>
+		  				</div>
+		  				<div class="note">
+		  					<b>Lưu ý:</b>
+		  					<ul>
+		  						<li class="row"><span>- File excell phải đầy đủ thông tin</span></li>
+		  						<li class="row"><span>- File excell chỉ giới hạn 150 dòng, nếu dài hơn thì tách ra làm nhiều file.</span></li>
+		  						<li class="row"><span>- Việc import danh sách sản phẩm rất quan trọng, cần sự cẩn thận, kỹ càng, chi tiết.</span></li>
+		  					</ul>
+		  				</div>
+		  			</div>
+		  			<div class="col-md-3"></div>
+		  		</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,273 @@
+{% set current_page = 'product' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view ">
+		<div class="header ">
+			<h2 class="title title-path">Thông tin chi tiết danh mục sản phẩm</h2>
+			<a href="5.5 CMS-v2-product-category.html"><i class="fa fa-reply" aria-hidden="true"></i>  Quay lại</a>
+		</div>
+		<section class="infor_category_detail">
+			<h3 class="title_supplier">Thông tin nhà cung cấp</h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="box box1-infor">
+						<i class="icon_edit" title="Chỉnh sửa">&nbsp</i>
+						<ul>
+							<li class="row">
+								<b>Tên danh mục: </b> <span>SÁCH - VĂN PHÒNG PHẨM</span>
+							</li>
+							<li class="row">
+								<b>Thư mục cha: </b><span>Ngành hàng chính </span>
+							</li>
+							<li class="row">
+								<b>Tên Alias: </b> <span>Sách - VPP</span>
+							</li>
+							<li class="row">
+								<b>Thứ tụ hiển thị: </b> <span>01</span>
+							</li>
+							<li class="row">
+								<b class="status">Trạng thái danh mục: </b>
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</li>
+							<li class="row">
+								<b>Mô tả danh mục: </b> 
+								<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</span>
+							</li>
+						</ul>
+					</div>
+					<div class="box box1-edit">
+						<ul>
+							<li class="row">
+								<div class="col-md-3">
+									<label>Tên danh mục:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" name="" value="SÁCH - VĂN PHÒNG PHẨM" placeholder="Nhập tên danh mục">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-3">
+									<label>Thư mục cha:</label>
+								</div>
+								<div class="col-md-9">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Ngành hàng chính</option>
+										    <option>ads</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-3">
+									<label>Tên Alias:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" name="" value="Sách - VPP" placeholder="Nhập tên Alias của danh mục">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-3">
+									<label>Thứ tự hiển thị:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" name="" value="01" placeholder="Vd: 01">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-3">
+									<label>Trạng thái danh mục:</label>
+								</div>
+								<div class="col-md-9">
+									<div class="wrapper_">
+									  <input type="checkbox" id="checkbox0" class="slider-toggle" checked />
+										<label class="slider-viewport" for="checkbox0">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-3">
+									<label>Mô tả danh mục:</label>
+								</div>
+								<div class="col-md-9">
+									<textarea cols="" placeholder="Nhập nội dung mô tả danh mục">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley ...</textarea>
+								</div>
+							</li>
+						</ul>
+						<div class="wrap_btn">
+							<span class="cancel">Hủy bỏ</span>
+							<button type="button" class="btn-save" data-toggle="modal" data-target="#Modal">Lưu thay đổi</button>
+						</div>
+					</div>
+					<!-- popup -->
+					<div class="modal fade" id="Modal" role="dialog">
+						<div class="modal-dialog modal_success">
+							<div class="modal-content ">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<div class="content">
+									<i class="icon_success">&nbsp</i>
+									<h2>CẬP NHÂT DANH MỤC SẢN PHẨM THÀNH CÔNG</h2>
+									<p>Bạn có thể xem <a href="#">Chi tiết</a> hoặc <a href="#">Danh sách danh mục sản phẩm</a></p>
+									<button type="button" class="btn_next btn-save">Tiếp tục</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- end -->
+				</div>
+				<div class="col-md-6">
+					<div class="box box2-infor">
+						<i class="icon_edit" title="Chỉnh sửa">&nbsp</i>
+						<p class="title"><b>Thuộc tính danh mục: </b> Xuất xứ</p>
+						<div class="wrap_property">
+							<span>Mỹ</span>
+							<span>Anh</span>
+							<span>Tây Ban Nha</span>
+							<span>Canada</span>
+						</div>
+					</div>
+					<div class="box box2-edit">
+						<div class="top_box row">
+							<div class="col-md-3">
+								<b>Thuộc tính danh mục: </b>
+							</div>
+							<div class="col-md-9">
+								<div class="wrap_select">
+									<select class="form-control">
+									    <option>Xuất xứ</option>
+									    <option>ads</option>
+									</select>
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+						<div class="wrap_property row">
+							<span>Mỹ <i class="fa fa-times" aria-hidden="true"></i></span>
+							<span>Anh <i class="fa fa-times" aria-hidden="true"></i></span>
+							<span>Tây Ban Nha <i class="fa fa-times" aria-hidden="true"></i></span>
+							<span>Canada <i class="fa fa-times" aria-hidden="true"></i></span>
+						</div>
+						<div class="bottom_box row">
+							<div class="content collapse in">
+                				<div class="scrollbar">
+                					<div class="col-md-4">
+										<p>
+										    <input type="checkbox" id="test1" checked="" />
+										    <label for="test1">Mỹ</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test2" checked="" />
+										    <label for="test2">Canada</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test3" />
+										    <label for="test3">Nhật Bản</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test4" />
+										    <label for="test4">Hàn Quốc</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test5" />
+										    <label for="test5">Pháp</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test6" />
+										    <label for="test6">Việt Nam</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test7" />
+										    <label for="test7">Malaysia</label>
+										</p>
+									</div>
+									<div class="col-md-4">
+										<p>
+										    <input type="checkbox" id="test8" />
+										    <label for="test8">Đài Loan</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test9" />
+										    <label for="test9">Thái Lan</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test10" />
+										    <label for="test10">Indonesia</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test11" />
+										    <label for="test11">Cambodia</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test12" />
+										    <label for="test12">Thụy Điển</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test13" />
+										    <label for="test13">Thụy Sĩ</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test14" checked="" />
+										    <label for="test14">Anh</label>
+										</p>
+									</div>
+									<div class="col-md-4">
+										<p>
+										    <input type="checkbox" id="test15" />
+										    <label for="test15">Cộng Hòa Séc</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test16" />
+										    <label for="test16">Đan Mạch</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test17" />
+										    <label for="test17">Thổ Nhĩ Kỳ</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test18" />
+										    <label for="test18">Singapore</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test19" />
+										    <label for="test19">Philipines</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test20" />
+										    <label for="test20">Phần Lan</label>
+										</p>
+										<p>
+										    <input type="checkbox" id="test21" checked="" />
+										    <label for="test21">Tây Ban Nha</label>
+										</p>
+									</div>
+                				</div>
+            				</div>
+						</div>
+						<div class="wrap_btn">
+							<span class="cancel">Hủy bỏ</span>
+							<button type="button" class="btn-save" data-toggle="modal" data-target="#Modal">Lưu thay đổi</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+{% endblock %}

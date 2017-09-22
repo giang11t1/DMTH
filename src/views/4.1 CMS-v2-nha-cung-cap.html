@@ -1,0 +1,1040 @@
+{% set current_page = 'nhacungcap' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view">
+		<div class="header">
+			<h2 class="title">Quản lý nhà cung cấp</h2>
+			<a href="4.3 CMS-v2-Supplier-Make-new-supplier.html"><i class="icon-add">&nbsp</i> <span>Tạo nhà cung cấp mới</span></a>
+		</div>
+		<section class="search_box">
+			<h3 class="title_supplier">Tìm kiếm nhà cung cấp</h3>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label>ID Nhà cung cấp</label>
+						<input type="text" placeholder="Nhập mã ID nhà cung cấp">
+						<span class="error">Nhập mã nhà cung cấp</span>
+					</div>
+					<div class="form-group">
+						<label>Buyer phụ trách</label>
+						<div class="wrap_select">
+							<select class="form-control">
+							    <option>Elisa Doan</option>
+							    <option>Jimmy Nguyen</option>
+							</select>
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label>Tên nhà cung cấp</label>
+						<input type="text" placeholder="Vd: Cty TNHH Dịch Vụ Mộc Thủy">
+						<span class="error">Nhập mã tên nhà cung cấp</span>
+					</div>
+					<div class="form-group">
+						<label>User quản lý</label>
+						<input type="text" placeholder="Nhập tên user quản lý">
+						<span class="error">Nhập user quản lý</span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label>Trạng thái hoạt động</label>
+						<div class="wrap_select">
+							<select class="form-control">
+							    <option>Kích hoạt</option>
+							    <option>Không kích hoạt</option>
+							</select>
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</div>
+					</div>
+					<div class="form-group">
+						<button type="button" class="btn_edit btn_search_supply">Tìm kiếm</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="table_supply">
+			<div class="wrap-table">
+				<div class="table-supply">
+					<div class="header_table">
+						<div class="col-md-7">
+							<div class="col-md-1">
+								<span>ID</span>
+							</div>
+							<div class="col-md-5">
+								<span>Tên nhà cung cấp</span>
+							</div>
+							<div class="col-md-6">
+								<span>Địa chỉ</span>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-3">
+								<span>Trạng thái</span>
+							</div>
+							<div class="col-md-3">
+								<span>Buyer</span>
+							</div>
+							<div class="col-md-3">
+								<span>User</span>
+							</div>
+							<div class="col-md-3"></div>
+						</div>
+					</div>
+					<ul class="panel-group" id="accordion2">
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>AQU</span></div>
+								<div class="col-md-5"><span>Cửa hàng giày dép AQUA</span></div>
+								<div class="col-md-6"><span>65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức, TpHCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapsea">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapsea">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsea">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>DCH</span></div>
+								<div class="col-md-5"><span>CÔNG TY TNHH THỜI TRANG ĐAN CHÂU</span></div>
+								<div class="col-md-6"><span>Số 96, Phạm Viết Chánh, phường 19, quận Bình Thạnh, TPHCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapseb">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapseb">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapseb">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>ADC</span></div>
+								<div class="col-md-5"><span>CÔNG TY TNHH PHÂN PHỐI TIÊN TIẾN</span></div>
+								<div class="col-md-6"><span>Số 1D, Phổ Quang, phường 2, quận Tân Bình, TPHCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapsec">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapsec">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsec">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>PVH</span></div>
+								<div class="col-md-5"><span>CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VÀ PHÁT TRIỂN VĂN HÓA</span></div>
+								<div class="col-md-6"><span>65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức, TpHCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapsed">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapsed">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsed">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>AQU</span></div>
+								<div class="col-md-5"><span>Cửa hàng giày dép AQUA</span></div>
+								<div class="col-md-6"><span>65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức, TpHCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapsee">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapsee">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsee">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>SNG</span></div>
+								<div class="col-md-5"><span>CÔNG TY TNHH THỜI TRANG SƠN NGUYỄN</span></div>
+								<div class="col-md-6"><span>137/27/7, Lê Văn Sỹ, Phường 13, quận Phú Nhuận, TPHCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapsef">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapsef">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsef">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>SGS</span></div>
+								<div class="col-md-5"><span>CÔNG TY TNHH SÀI GÒN SỐNG</span></div>
+								<div class="col-md-6"><span>274, Cao Thắng, Phường 12, quận 10, TPHCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapseg">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapseg">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapseg">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>SGA</span></div>
+								<div class="col-md-5"><span>CÔNG TY TNHH THƯƠNG MẠI SẢN XUẤT XUẤT NHẬP KHẨU YẾN SÀO SÀI GÒN ANPHA</span></div>
+								<div class="col-md-6"><span>Lô 12	đường M12, khu công nghiệp Tân Bình (mở rộng), P. Bình Hưng Hòa, Quận Bình Tân, TPHCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapseh">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapseh">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapseh">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>MIC</span></div>
+								<div class="col-md-5"><span>CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI VÀ DỊCH VỤ HÀ MINH CƯỜNG</span></div>
+								<div class="col-md-6"><span>115G Đường C4, phường Tây Thạnh, quận Tân Phú, TP.HCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapsek">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapsek">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsek">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>SKO</span></div>
+								<div class="col-md-5"><span>CÔNG TY TNHH SAKOS</span></div>
+								<div class="col-md-6"><span>Số 11A, Phạm Ngọc Thạch, Phường 6, Quận 3, TPHCM</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3"><span>Elisa Doan</span></div>
+								<div class="col-md-3">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion2" href="#collapsel">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion2" href="#collapsel">&nbsp</i>
+									<a href="4.2 CMS-v2-Supplier-infor.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-list" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+									<i class="icon-list-hover" title="Danh sách sản phẩm nhà cung cấp">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapse2">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-supply.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>Cửa hàng giày dép AQUA</h4>
+												<b>AQU</b>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+									<div class="box box2">
+										<div class="header_box">
+											<i class="icon_buyer">&nbsp</i>
+											<b class="title"> Buyer phụ trách </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người buyer phụ trách:</b> Elisa Doan</p>
+											<p><b>Điện thoại:</b> 0123.456.6582</p>
+											<p><b>Email:</b> elisadoan.mymall@gmail.com</p>
+											<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ lấy hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+											<p><b>Điện thoại:</b>  0127.686.4243</p>
+											<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+											<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="4.2 CMS-v2-Supplier-infor.html" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="bottoom_table">
+						<p class="left">Tổng trạng thái: <span>10/40</span></p>
+						<div class="page">
+							<div class="wrap">
+								<div class="left">
+									<i class="fa fa-angle-double-left">&nbsp</i>
+									<div> <p>Trước</p></div>
+								</div>
+								<p class="display">Trang 1/4</p>
+								<div class="right">
+									<div><p>Sau</p></div>
+									<i class="fa fa-angle-double-right">&nbsp</i>
+								</div>
+							</div>
+							
+							<div class="per_page">
+								<select class="form-control">
+								    <option>10 dòng/ Trang</option>
+								    <option>20 dòng/ Trang</option>
+								    <option>30 dòng/ Trang</option>
+								    <option>40 dòng/ Trang</option>
+								</select>
+								<i class="fa fa-angle-down">&nbsp</i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+{% endblock %}

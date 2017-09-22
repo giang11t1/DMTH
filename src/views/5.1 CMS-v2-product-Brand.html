@@ -1,0 +1,1037 @@
+{% set current_page = 'product' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view manage_brand">
+		<div class="header ">
+			<h2 class="title">Quản lý thương hiệu</h2>
+			<a href="5.3 CMS-v2-product-Brand-create.html"><i class="icon-add">&nbsp</i> <span>Tạo thương hiệu mới</span></a>
+		</div>
+		<section class="search_box">
+			<h3 class="title_supplier">Tìm kiếm thương hiệu</h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Thương hiệu</label>
+							<div class="wrap_select">
+								<select class="form-control">
+								    <option>Chọn thương hiệu</option>
+								    <option>Đan châu</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="form-group">
+							<label>Nhà cung cấp</label>
+							<div class="wrap_select">
+								<select class="form-control">
+								    <option>Chọn nhà cung cấp</option>
+								    <option>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</option>
+								    <option>CÔNG TY TNHH TM & DV PHÂN PHỐI ÁNH DƯƠNG</option>
+								    <option>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ XUẤT NHẬP KHẨU DĨNH KHANG</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Danh mục</label>
+							<div class="wrap_select">
+								<select class="form-control">
+								    <option>Chọn danh mục</option>
+								    <option>Mỹ phẩm cho mẹ</option>
+								    <option>Thời trang nữ</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Trạng thái thương hiệu</label>
+							<div class="wrap_select">
+								<select class="form-control">
+								    <option>Kích hoạt</option>
+								    <option>Không kích hoạt</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn_edit btn_search_supply">Tìm kiếm</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="table_supply">
+			<div class="wrap-table">
+				<div class="table-supply">
+					<div class="header_table">
+						<div class="col-md-7">
+							<div class="col-md-1">
+								<span>ID</span>
+							</div>
+							<div class="col-md-3">
+								<span>Tên thương hiệu</span>
+							</div>
+							<div class="col-md-2">
+								<span>Tên Alias</span>
+							</div>
+							<div class="col-md-6">
+								<span>Nhà cung cấp</span>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>Danh mục</span>
+							</div>
+							<div class="col-md-3">
+								<span>Logo</span>
+							</div>
+							<div class="col-md-3">
+								<span>Trạng thái</span>
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+					</div>
+					<ul class="panel-group" id="accordion1">
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2242</span></div>
+								<div class="col-md-3"><span>Maternea</span></div>
+								<div class="col-md-2"><span>Maternea</span></div>
+								<div class="col-md-6"><span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>Mỹ phẩm cho mẹ</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo1.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapsea">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapsea">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsea" >
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2241</span></div>
+								<div class="col-md-3"><span>ĐAN CHÂU</span></div>
+								<div class="col-md-2"><span>an-chau</span></div>
+								<div class="col-md-6"><span>CÔNG TY TNHH THỜI TRANG ĐAN CHÂU</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>Thời trang nữ</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo2.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapseb">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapseb">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapseb">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2240</span></div>
+								<div class="col-md-3"><span>K-MOM</span></div>
+								<div class="col-md-2"><span>k-mom</span></div>
+								<div class="col-md-6"><span>CÔNG TY TNHH TM & DV PHÂN PHỐI ÁNH DƯƠNG</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>Mẹ - bé</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo3.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapsec">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapsec">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsec">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2239</span></div>
+								<div class="col-md-3"><span>BABYMOOV</span></div>
+								<div class="col-md-2"><span>babymoov</span></div>
+								<div class="col-md-6"><span>CÔNG TY TNHH TM & DV PHÂN PHỐI ÁNH DƯƠNG</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>Mẹ - bé</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo3.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapsed">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapsed">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsed">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2238</span></div>
+								<div class="col-md-3"><span>Donlim</span></div>
+								<div class="col-md-2"><span>Donlim</span></div>
+								<div class="col-md-6"><span>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ XUẤT NHẬP KHẨU DĨNH KHANG</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>---</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo4.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapsee">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapsee">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsee">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2237</span></div>
+								<div class="col-md-3"><span>Hasu</span></div>
+								<div class="col-md-2"><span>Hasu</span></div>
+								<div class="col-md-6"><span>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ XUẤT NHẬP KHẨU DĨNH KHANG</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>Gia Dụng</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo4.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapsef">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapsef">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsef">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2236</span></div>
+								<div class="col-md-3"><span>Genki!</span></div>
+								<div class="col-md-2"><span>Genki!</span></div>
+								<div class="col-md-6"><span>CÔNG TY CỔ PHẦN QUẢNG XUÂN</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>Gia Dụng</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo5.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapseg">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapseg">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapseg">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2235</span></div>
+								<div class="col-md-3"><span>Enge</span></div>
+								<div class="col-md-2"><span>Enge</span></div>
+								<div class="col-md-6"><span>CÔNG TY TNHH SX TM DV QUỐC HƯNG</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>Tã dán – Tã quần em bé</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo6.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapseh">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapseh">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapseh">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2234</span></div>
+								<div class="col-md-3"><span>Tanamera</span></div>
+								<div class="col-md-2"><span>Tanamera</span></div>
+								<div class="col-md-6"><span>CÔNG TY TNHH SX TM DV QUỐC HƯNG</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>Thực phẩm</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo6.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapsek">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapsek">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsek">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="row panel">
+							<div class="col-md-7">
+								<div class="col-md-1"><span>2233</span></div>
+								<div class="col-md-3"><span>Bentley Organic</span></div>
+								<div class="col-md-2"><span>bentley - organic</span></div>
+								<div class="col-md-6"><span>CÔNG TY TNHH SX TM DV QUỐC HƯNG</span></div>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-4">
+									<span>Thực phẩm</span>
+								</div>
+								<div class="col-md-3">
+									<div class="wrap-img">
+										<img src="../assets/images/sub-logo6.png" alt=""> 
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion1" href="#collapsel">&nbsp</i><i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion1" href="#collapsel">&nbsp</i>
+									<a href="5.2 CMS-v2-product-Brand-detail.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								</div>
+							</div>
+							<div class="view_fast panel-collapse collapse" id="collapsel">
+								<div class="col-md-6">
+									<div class="box box1">
+										<div class="top">
+											<div class="col-md-2">
+												<div class="wrap-img">
+													<img src="../assets/images/logo-pro1.png" alt=""> 
+												</div>
+											</div>
+											<div class="col-md-10">
+												<h4>MATERNEA</h4>
+												<div><span>Nhà cung cấp:</span><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+											</div>
+										</div>
+										<div class="bottom">
+											<p><b>Tên thương hiệu:</b> MATERNEA</p>
+											<p><b>Tên tiếng anh:</b> MATERNEA</p>
+											<p><b>Tên Alias:</b> Maternea</p>
+											<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+											<b>Trạng thái:</b>
+											<div class="wrapper">
+											  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+												<label class="slider-viewport" for="checkbox">
+												  	<div class="slider">
+												    	<div class="slider-button">&nbsp;</div>
+												    	<div class="slider-content left"><span>On</span></div>
+												    	<div class="slider-content right"><span>Off</span></div>
+												  	</div>
+												</label>
+											</div>
+											<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="box box_descript">
+					  					<div class="header_box">
+											<b class="title"> Mô tả thương hiệu </b>
+										</div>
+										<div class="body_box">
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+												<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+											</div>
+											<div class="part">
+												<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+												<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+											</div>
+										</div>
+					  				</div>
+					  				<div class="wrap_btn">
+										<a href="#" type="button" class="btn_next">Sửa thông tin</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="bottoom_table">
+						<p class="left">Tổng trạng thái: <span>10/40</span></p>
+						<div class="page">
+							<div class="wrap">
+								<div class="left">
+									<i class="fa fa-angle-double-left">&nbsp</i>
+									<div> <p>Trước</p></div>
+								</div>
+								<p class="display">Trang 1/4</p>
+								<div class="right">
+									<div><p>Sau</p></div>
+									<i class="fa fa-angle-double-right">&nbsp</i>
+								</div>
+							</div>
+							
+							<div class="per_page">
+								<select class="form-control">
+								    <option>10 dòng/ Trang</option>
+								    <option>20 dòng/ Trang</option>
+								    <option>30 dòng/ Trang</option>
+								    <option>40 dòng/ Trang</option>
+								</select>
+								<i class="fa fa-angle-down">&nbsp</i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+{% endblock %}

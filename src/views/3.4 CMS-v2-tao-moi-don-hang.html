@@ -1,0 +1,731 @@
+{% set current_page = 'xemdonhang' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view">
+		<div class="header">
+			<h2 class="title">Tạo đơn hàng mới</h2> 
+			<ul class="top-action">
+				<li><a href="#"><i class="icon icon-link">&nbsp</i> Web</a></li>
+				<li><a href="#"><i class="icon icon-print">&nbsp</i> In</a></li>
+				<li><a href="#"><i class="icon icon-edit">&nbsp</i> Sửa</a></li>
+				<li><a href="#"><i class="icon icon-save">&nbsp</i> Lưu</a></li>
+			</ul>
+		</div>
+		<div class="first_step" id="first_step">
+			<div class="box top_detail">
+				<div class="wrap">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="col-md-1">
+								<div class="wrap-img">
+									<img src="../assets/images/product.png" alt=""> 
+								</div>
+							</div>
+							<div class="col-md-11">
+								<a href="#">Son Môi Missha Painting Rouge - Syrup SPK02 - M5483</a>
+								<p class="company">NCC: Công ty TNHH TM Thủy Lộc</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="col-md-4">
+								<p>199.000₫    <span>X</span> </p>
+								<div class="wrap-input">
+									<input type="number" value="1">
+									<i class="fa fa-caret-down" aria-hidden="true"></i>
+									<i class="fa fa-caret-up" aria-hidden="true"></i>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<p>100gr</p>
+							</div>
+							<div class="col-md-4">
+								<p>199.000 <sup>đ</sup></p>
+							</div>
+							<div class="col-md-1">
+								<i class="icon-trash"></i>
+								<i class="icon-trash-hover"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+							
+				<div class="wrap">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="col-md-1">
+								<div class="wrap-img">
+									<img src="../assets/images/product.png" alt=""> 
+								</div>
+							</div>
+							<div class="col-md-11">
+								<a href="#">Son Môi Missha Painting Rouge - Syrup SPK02 - M5483</a>
+								<p class="company">NCC: Công ty TNHH TM Thủy Lộc</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="col-md-4">
+								<p>199.000₫ <span>X</span></p>
+								<div class="wrap-input">
+									<input type="number" value="1">
+									<i class="fa fa-caret-down" aria-hidden="true"></i>
+									<i class="fa fa-caret-up" aria-hidden="true"></i>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<p>100gr</p>
+							</div>
+							<div class="col-md-4">
+								<p>199.000 <sup>đ</sup></p>
+							</div>
+							<div class="col-md-1">
+								<i class="icon-trash"></i>
+								<i class="icon-trash-hover"></i>
+							</div>
+						</div>
+					</div>
+					<div class="row gift">
+						<div class="col-md-7">
+							<div class="col-md-2 wrap-img">
+								<img src="../assets/images/gift.png" alt="">
+							</div>
+							<div class="col-md-10">
+								<i class="fa fa-gift" aria-hidden="true"></i>
+								<p>Tặng chảo không dính cao cấp Thương Hiệu Supor 24cm</p>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-5">
+								<p>124.000đ x 1</p>
+							</div>
+							<div class="col-md-7">
+								<p>750gr</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row gift_hight">
+					<div class="content">
+						<i class="fa fa-gift" aria-hidden="true"></i>
+						<b>Tặng <span>voucher mua hàng</span> trị giá <span>100.000đ</span> cho đơn hàng trị giá từ <span>500.000đ</span> trở lên</b>
+					</div>
+				</div>
+				<div class="row money">
+					<div class="col-md-6">
+						<input type="text" placeholder="Tìm, nhập tên sản phẩm hoặc mã SKU" id="search">
+						<i class="icon_search_add">&nbsp</i>
+						<div class="content collapse in">
+			                <div class="scrollbar">
+				                <ul class="list_result_search">
+									<li class="row">
+										<div class="col-md-1">
+											<div class="wrap-img">
+												<img src="../assets/images/pro-1.png" alt="">
+											</div>
+										</div>
+										<div class="col-md-8">
+											<span>Combo Bếp Cồn, Nồi Lẩu 24cm, Khay 30cm Fivestar Bcnl-Mmc-1</span>
+										</div>
+										<div class="col-md-3">
+											<b class="orange">199.000 <sup>đ</sup></b>
+										</div>
+									</li>
+									<li class="row">
+										<div class="col-md-1">
+											<div class="wrap-img">
+												<img src="../assets/images/pro-2.png" alt="">
+											</div>
+										</div>
+										<div class="col-md-8">
+											<span>Bộ đồ chơi náu ăn cho bé gái cao cấp</span>
+										</div>
+										<div class="col-md-3">
+											<b class="orange">158.000 <sup>đ</sup></b>
+										</div>
+									</li>
+									<li class="row">
+										<div class="col-md-1">
+											<div class="wrap-img">
+												<img src="../assets/images/pro-3.png" alt="">
+											</div>
+										</div>
+										<div class="col-md-8">
+											<span>Gói bông hình bánh cupcake dễ thương 40cm</span>
+										</div>
+										<div class="col-md-3">
+											<b class="orange">225.000 <sup>đ</sup></b>
+										</div>
+									</li>
+									<li class="row">
+										<div class="col-md-1">
+											<div class="wrap-img">
+												<img src="../assets/images/pro-4.png" alt="">
+											</div>
+										</div>
+										<div class="col-md-8">
+											<span>túi xách tua rua da thời trang cao cấp thương hiệu ELISE - Đỏ</span>
+										</div>
+										<div class="col-md-3">
+											<b class="orange">379.000 <sup>đ</sup></b>
+										</div>
+									</li>
+									<li class="row">
+										<div class="col-md-1">
+											<div class="wrap-img">
+												<img src="../assets/images/pro-5.png" alt="">
+											</div>
+										</div>
+										<div class="col-md-8">
+											<span>Máy chụp ảnh lấy liền Fujifilm + 1 cuộn phim cao cấp</span>
+										</div>
+										<div class="col-md-3">
+											<b class="orange">1.799.000 <sup>đ</sup></b>
+										</div>
+									</li>
+									<li class="row">
+										<div class="col-md-1">
+											<div class="wrap-img">
+												<img src="../assets/images/pro-5.png" alt="">
+											</div>
+										</div>
+										<div class="col-md-8">
+											<span>Máy chụp ảnh lấy liền Fujifilm + 1 cuộn phim cao cấp</span>
+										</div>
+										<div class="col-md-3">
+											<b class="orange">1.799.000 <sup>đ</sup></b>
+										</div>
+									</li>
+								</ul>
+			                </div>
+		                </div>
+					</div>
+					<div class="col-md-6">
+						<p>Thành tiền: <span>199,000 <sup>đ</sup></span></p>
+						<p>Phí vận chuyển và thu tiền tận nơi : <span>+61,000</span> <sup>đ</sup></p>
+						<p>Giảm giá Coupon : <span>-10,000</span> <sup>đ</sup></p>
+						<p><b>Tổng cộng : <span class="orange">250,000 <sup>đ</sup></span></b></p>
+						<p>Khối lượng đơn hàng : <span class="orange">100gr</span></p>
+						<p>Đơn hàng này được tích lũy: <span class="orange">+1990 <span>myXu</span></span></p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="wrap_btn">
+				<a href="#">Hủy bỏ</a>
+				<a href="#" id="next1" type="button" class="btn_next">Tiếp tục</a>
+			</div>
+		</div>
+		<!-- end first step -->
+		<div class="second_step" id="second_step">
+			<div class="header_step">
+				<i class="icon-ship-edit">&nbsp</i>
+				<h3>Thông tin giao hàng</h3>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="box">
+						<div class="header-box">
+							<p>Địa chỉ liên hệ và thanh toán</p>
+						</div>
+						<div class="body-box">
+							<div class="form-group">
+								<div class="col-md-2">
+									<label>Người nhận:</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" value="" placeholder="Nhập tên người đặt hàng">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Nam</option>
+										    <option>Nữ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-2">
+									<label>Điện thoại:</label>
+								</div>
+								<div class="col-md-10">
+									<input type="text" value="" placeholder="Nhập số điện thoại">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-2">
+									<label>Email:</label>
+								</div>
+								<div class="col-md-10">
+									<input type="text" value="Nhập địa chỉ email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-2">
+									<label>Địa chỉ:</label>
+								</div>
+								<div class="col-md-10">
+									<div class="col-md-6">
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>Chọn Tỉnh / Thành phố</option>
+											    <option>Kiên Giang</option>
+											    <option>An Giang</option>
+											    <option>TP Hồ Chí Minh</option>
+											    <option>Hà Nội</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>Chọn Quận / Huyện</option>
+											    <option>Đang đặt hàng</option>
+											    <option>Hủy</option>
+											    <option>Kiểm tra đơn hàng</option>
+											    <option>Chờ đặt hàng</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-2">
+								</div>
+								<div class="col-md-10">
+									<div class="col-md-6">
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>Chọn Phường / Xã</option>
+											    <option>Đang đặt hàng</option>
+											    <option>Hủy</option>
+											    <option>Kiểm tra đơn hàng</option>
+											    <option>Chờ đặt hàng</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<input type="text" value="" placeholder="Số nhà, hẻm, đường">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="header-box">
+							<p>Địa chỉ giao hàng</p>
+						</div>
+						<div class="body-box">
+							<p>
+							    <input type="checkbox" id="test9" data-toggle="collapse" data-target="#info" class="" aria-expanded="false"/>
+							    <label for="test9">Địa chỉ thanh toán là địa chỉ giao hàng</label>
+							</p>
+							<div class="similar collapse in" id="info" aria-expanded="false">
+								<div class="form-group">
+									<div class="col-md-2">
+										<label>Người nhận:</label>
+									</div>
+									<div class="col-md-8">
+										<input type="text" value="" placeholder="Nhập tên người đặt hàng">
+									</div>
+									<div class="col-md-2">
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>Nam</option>
+											    <option>Nữ</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-2">
+										<label>Điện thoại:</label>
+									</div>
+									<div class="col-md-10">
+										<input type="text" value="" placeholder="Nhập số điện thoại">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-2">
+										<label>Email:</label>
+									</div>
+									<div class="col-md-10">
+										<input type="text" value="" placeholder="Nhập địa chỉ email">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-2">
+										<label>Địa chỉ:</label>
+									</div>
+									<div class="col-md-10">
+										<div class="col-md-6">
+											<div class="wrap_select">
+												<select class="form-control">
+												    <option>Chọn Tỉnh/ Thành phố</option>
+												    <option>Kiên Giang</option>
+												    <option>An Giang</option>
+												    <option>TP Hồ Chí Minh</option>
+												    <option>Hà Nội</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrap_select">
+												<select class="form-control">
+												    <option>Chọn Quận/ Huyện</option>
+												    <option>Đang đặt hàng</option>
+												    <option>Hủy</option>
+												    <option>Kiểm tra đơn hàng</option>
+												    <option>Chờ đặt hàng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-2">
+									</div>
+									<div class="col-md-10">
+										<div class="col-md-6">
+											<div class="wrap_select">
+												<select class="form-control">
+												    <option>Chọn Phường/ Xã</option>
+												    <option>Đang đặt hàng</option>
+												    <option>Hủy</option>
+												    <option>Kiểm tra đơn hàng</option>
+												    <option>Chờ đặt hàng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<input type="text" value="" placeholder="Số nhà, hẻm, đường">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> 
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="box">
+						<div class="header-box">
+							<p>Phương thức thanh toán</p>
+						</div>
+						<div class="body-box">
+							<p>
+							    <input type="radio" name="choose" id="test1" />
+							    <label for="test1">Thanh toán bằng tiền mặt khi giao hàng (COD)</label>
+							</p>
+							<p>
+							    <input type="radio" name="choose" id="test2" />
+							    <label for="test2">Thanh toán bằng thẻ ATM có đăng ký Internet Banking</label>
+							</p>
+							<p>
+							    <input type="radio" name="choose" id="test3" />
+							    <label for="test3">Thanh toán bằng thẻ tín dụng VISA/ Master Card</label>
+							</p>
+							<p>
+							    <input type="radio" name="choose" id="test4" />
+							    <label for="test4">Thanh toán bằng ví điện tử VTC Pay</label>
+							</p>
+							<p>
+							    <input type="radio" name="choose" id="test5"/>
+							    <label for="test5">Thanh toán trả góp lãi xuất 0% - Sacombank</label>
+							</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="header-box">
+							<p>Phương thức vận chuyển</p>
+						</div>
+						<div class="body-box">
+							<div class="form-group">
+								<div class="col-md-5">
+									<label>Phương thức vận chuyển:</label>
+								</div>
+								<div class="col-md-7">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Chọn phương thức vận chuyển</option>
+										    <option>Giao hàng chậm</option>
+										    <option>Giao hàng nhanh</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-5">
+									<label>Đơn vị vận chuyển:</label>
+								</div>
+								<div class="col-md-7">
+									<div class="wrap_select">
+										<select class="form-control">
+											<option>Chọn đơn vị vận chuyển</option>
+										    <option>Speedlink</option>
+										    <option>abc</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-5">
+									<label>Cước vận chuyển:</label>
+								</div>
+								<div class="col-md-5">
+									<input type="text" value="">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>VNĐ</option>
+										    <option>USD</option>
+										    <option>EURO</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="header-box">
+							<p>Áp dụng mã Coupon giám giá</p>
+						</div>
+						<div class="body-box">
+							<div class="col-md-4">
+								<label >Nhập mã coupon:</label>
+							</div>
+							<div class="col-md-6">
+	  							<input type="text" value="" placeholder="Vd: MUASAM1402">
+							</div>
+							<div class="col-md-2">
+								<i class="fa fa-check" aria-hidden="true"></i>
+	  							<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+	  				</div>
+	  				<div class="box">
+	  					<div class="header-box">
+							<p>Dịch vụ khác</p>
+						</div>
+	  					<div class="body-box">
+	  						<p>
+							    <input type="checkbox" id="test6" />
+							    <label for="test6">Xuất hóa đơn VAT cho đơn hàng</label>
+							</p>
+							<p>
+							    <input type="checkbox" id="test7" />
+							    <label for="test7">Sử dụng dịch vụ "Ông già NOEL"</label>
+							</p>
+							<p>
+							    <input type="checkbox"  id="test8" data-toggle="collapse" data-target="#VAT-info" class="" aria-expanded="true"/>
+							    <label for="test8">Gói thành quà và gửi kèm lời nhắn</label>
+							</p>
+							<textarea placeholder="Nhập nội dung lời nhắn" cols="50" rows="5" class="collapse" id="VAT-info" aria-expanded="true"></textarea>
+						</div>
+	  				</div>
+				</div>
+			</div>
+			<div class="wrap_btn">
+				<a href="#" id="prev1">Hủy bỏ</a>
+				<a href="#" type="button" class="btn_next" data-toggle="modal" data-target="#Modal">Tiếp tục</a>
+			</div>
+		</div>
+		<!-- end second step -->
+		<div class="third_step modal fade" id="Modal1" role="dialog">
+			<div class="modal-dialog modal_detail">
+				<div class="modal-content ">
+					<div class="content">
+						<div class="header">
+							<i class="icon-tomtat">&nbsp</i>
+							<h2>Tóm tắt đơn hàng</h2>
+						</div>
+						<div class="row">
+							<div class="main_content">
+					  			<div class="col-md-7">
+					  				<div class="box top_detail">
+					  					<div class="wrap">
+					  						<div class="row">
+												<div class="col-md-7">
+													<div class="col-md-2">
+														<div class="wrap-img">
+															<img src="../assets/images/product.png" alt=""> 
+														</div>
+													</div>
+													<div class="col-md-10">
+														<a href="#">Son Môi Missha Painting Rouge - Syrup SPK02 - M5483</a>
+														<p class="company">NCC: Công ty TNHH TM Thủy Lộc</p>
+													</div>
+												</div>
+												<div class="col-md-5">
+													<div class="col-md-4">
+														<p>199.000₫    X    1</p>
+													</div>
+													<div class="col-md-4">
+														<p>100gr</p>
+													</div>
+													<div class="col-md-4">
+														<p>199.000 <sup>đ</sup></p>
+													</div>
+												</div>
+											</div>
+					  					</div>
+										
+										<div class="wrap">
+											<div class="row">
+												<div class="col-md-7">
+													<div class="col-md-2">
+														<div class="wrap-img">
+															<img src="../assets/images/product.png" alt=""> 
+														</div>
+													</div>
+													<div class="col-md-10">
+														<a href="#">Son Môi Missha Painting Rouge - Syrup SPK02 - M5483</a>
+														<p class="company">NCC: Công ty TNHH TM Thủy Lộc</p>
+													</div>
+												</div>
+												<div class="col-md-5">
+													<div class="col-md-4">
+														<p>199.000₫    X    1</p>
+													</div>
+													<div class="col-md-4">
+														<p>100gr</p>
+													</div>
+													<div class="col-md-4">
+														<p>199.000 <sup>đ</sup></p>
+													</div>
+												</div>
+											</div>
+											<div class="row gift">
+												<i class="fa fa-gift" aria-hidden="true"></i>
+												<p>Tặng chảo không dính cao cấp Thương Hiệu Supor 24cm</p>
+											</div>
+										</div>
+										<div class="row gift_hight">
+											<div class="content">
+												<i class="fa fa-gift" aria-hidden="true"></i>
+												<b>Tặng <span>voucher mua hàng</span> trị giá <span>100.000đ</span> cho đơn hàng trị giá từ <span>500.000đ</span> trở lên</b>
+											</div>
+										</div>
+										<div class="row money">
+											<p>Thành tiền: <span>199,000 <sup>đ</sup></span></p>
+											<p>Phí vận chuyển và thu tiền tận nơi : <span>+61,000</span> <sup>đ</sup></p>
+											<p>Giảm giá Coupon : <span>-10,000</span> <sup>đ</sup></p>
+											<p><b>Tổng cộng : <span class="orange">250,000 <sup>đ</sup></span></b></p>
+											<p>Khối lượng đơn hàng : <span class="orange">100gr</span></p>
+											<p>Đơn hàng này được tích lũy: <span class="orange">+1990 <span>myXu</span></span></p>
+										</div>
+									</div>
+									<div class="box box-note">
+										<div class="header_box">
+											<i class="icon-note-detail">&nbsp</i><b class="title"> Ghi chú đơn hàng: </b>
+										</div>
+										<ul class="body_box">
+											<li>
+												<input type="radio" name="defaut" value="giao hang tieu chuan" checked>
+												<div class="infor">
+													<p><b>Ghi chú của khách hàng</b></p>
+													<p>Vui lòng giao sản phẩm từ thứ 2 đến thứ 6 trong giờ hành chính</p>
+												</div>
+											</li>
+											<li>
+												<input type="radio" name="defaut1" value="giao hang tieu chuan" checked>
+												<div class="infor">
+													<p><b>Ghi chú của nhân viên</b></p>
+													<p>Đã tiếp nhận thông tin đơn hàng và liên hệ xác nhận đơn hàng với khách hàng</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="box box_coupon">
+					  					<label>Áp dụng mã Coupon giám giá</label>
+					  					<p> MUASAM1402</p>
+					  				</div>
+					  			</div>
+					  			<div class="col-md-5">
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ giao hàng </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người nhận:</b> Nguyễn Nhật Toàn</p>
+											<p><b>Địa chỉ:</b> 241, Ấp 9, Xã Tân Lập Đông, Huyện Thới Bình, Tỉnh Cà Mau</p>
+											<p><b>Điện thoại:</b>  01698948506</p>
+											<p><b>Email:</b> nhattoannguyen89@gmail.com</p>
+										</div>
+					  				</div>
+					  				<div class="box box-address">
+					  					<div class="header_box">
+											<b class="title"> Địa chỉ thanh toán </b>
+										</div>
+										<div class="body_box">
+											<p><b>Người nhận:</b> Nguyễn Nhật Toàn</p>
+											<p><b>Địa chỉ:</b> 241, Ấp 9, Xã Tân Lập Đông, Huyện Thới Bình, Tỉnh Cà Mau</p>
+											<p><b>Điện thoại:</b>  01698948506</p>
+											<p><b>Email:</b> nhattoannguyen89@gmail.com</p>
+										</div>
+					  				</div>
+					  				<div class="box box-ship">
+										<div class="header_box">
+											<i class="icon-shipper">&nbsp</i><b class="title"> Thông tin vận chuyển: </b>
+										</div>
+										<div class="body_box">
+											<p><b>Phương thức vận chuyển: </b> Giao hàng nhanh</p>
+											<p><b>Đơn vị vận chuyển: </b> Speedlink</p>
+											<p><b>Cước vận chuyển: </b> <span class="orange"> 89,000 VNĐ</span></p>
+											<p><b>Mã vận chuyển: </b><span class="orange"> ZZD34T57</span></p>
+											<p><b>Ngày giao hàng: </b><span> 15/02/2017</span></p>
+											<p><b>Ngày khách nhận hàng: </b><span> 15/02/2017</span></p>
+										</div>
+									</div>
+					  				<div class="box box_method">
+					  					<div class="header_box">
+											<i class="icon-method">&nbsp</i>
+											<div class="infor">
+												<p><b class="title"> Phương thức thanh toán: </b></p>
+												<p>Thanh toán khi giao hàng (COD)</p>
+											</div>
+										</div>
+										<div class="body_box">
+											<p><b>Số tiền thanh toán: </b>N/A</p>
+											<p><b>Tình trạng xuất VAT: </b> Chưa xuất VAT</p>
+										</div>
+					  				</div>
+					  			</div>
+					  			<div class="wrap_btn">
+									<a href="#" type="button"  data-dismiss="modal">Hủy bỏ</a>
+									<a href="#" type="button" class="btn_next">Hoàn tất đơn hàng</a>
+								</div>
+					  		</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end step 3 -->
+		<div class="last_step modal fade" id="Modal" role="dialog">
+			<div class="modal-dialog modal_success">
+				<div class="modal-content ">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<div class="content">
+						<i class="icon_success">&nbsp</i>
+						<h2>Đơn hàng của bạn đã được tạo thành công</h2>
+						<p>Bạn có thể xem <a href="#">Chi tiết đơn hàng</a> hoặc <a href="#">Danh sách đơn hàng</a></p>
+						<button type="button" class="btn_next btn-save">Tiếp tục</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end step 4 -->
+	</div>
+</div>

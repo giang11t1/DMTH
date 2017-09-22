@@ -1,0 +1,71 @@
+{% set current_page = 'xemdonhang' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view">
+		<div class="header">
+			<h2 class="title">Sửa trạng thái đơn hàng</h2>
+			<a href="3.5 CMS-v2-quan-ly-trang-thai-don-hang.html"><i class="fa fa-reply" aria-hidden="true"></i> Quay lại</a>
+		</div>
+		<div class="body">
+			<div class="form_create_status">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<div class="form-group">
+						<div class="col-md-4">
+							<label>Tên trạng thái <span>*</span></label>
+						</div>
+						<div class="col-md-8">
+							<input type="text" placeholder="Nhập tên trạng thái mới cần tạo" value="Hủy (bởi Quantium)">
+							<span class="error">Nhập tên trạng thái</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4">
+							<label>Thứ tự trạng thái <span>*</span></label>
+						</div>
+						<div class="col-md-8">
+							<input type="text" placeholder="Vd: 15" value="27">
+							<span class="error">Nhập thứ tự trạng thái</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4">
+							<label>Ngày khởi tạo <span>*</span></label>
+						</div>
+						<div class="col-md-8">
+							<input type="text" placeholder="" value="09:35 SA - 12/02/2017">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4">
+							<label>Kích hoạt trạng thái <span>*</span></label>
+						</div>
+						<div class="col-md-8">
+							<div class="wrapper">
+							  <input type="checkbox" id="checkbox1" class="slider-toggle" checked />
+								<label class="slider-viewport" for="checkbox1">
+							  	<div class="slider">
+							    	<div class="slider-button">&nbsp;</div>
+							    	<div class="slider-content left"><span>On</span></div>
+							    	<div class="slider-content right"><span>Off</span></div>
+							  	</div>
+								</label>
+							</div>
+							<span class="note">Chọn để kích hoạt/ Hủy kích hoạt trạng thái</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4">
+						</div>
+						<div class="col-md-8">
+							<button type="button" value="" class="btn_primary">Cập nhật trạng thái</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

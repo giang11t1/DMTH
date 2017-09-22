@@ -1,0 +1,123 @@
+.create_product {
+	
+	.header {
+		.wrap_link {
+	    display: inline-block;
+	    float: right;
+	    margin-top: 8px;
+			a {
+				margin-right: 10px;
+				&:first-child {
+					margin-right: 0;
+				}
+				&:last-child {
+					display: none;
+			    padding: 8px 10px;
+				}
+			}
+		}
+	}
+}
+.tb_filter {
+  margin-bottom: 150px;
+}
+.icon_create_filter {
+	width: 16px;
+	height: 22px;
+	display: inline-block;
+	margin-right: 6px;
+	top: -2px !important;
+	margin-right: 8px !important;
+	background: url('../images/upload/icon_create_filter.png') no-repeat;
+}
+section.table_supply .wrap-table.filter_child {
+	display: none;
+}
+.table_filter {
+	padding: 20px 30px;
+	.table-supply  {
+		ul{
+			border: @border;
+			.col-md-5 .col-md-4{
+				&:first-child {
+					padding-left : 7%;
+				}
+			}
+			.col-md-4 {
+				.col-md-4 {
+					padding-left: 12%;
+				}
+				.col-md-8 {
+					padding-left: 7%;
+				}
+			}
+		}
+	}
+}
+.create_filter {
+	display: inline-block;
+	background: #fff;
+	width: 100%;
+	padding: 50px 20px ;
+  margin-bottom: 400px;
+	li {
+		margin-bottom: 15px;
+		.col-md-3 {
+			text-align: right;
+			@media(max-width: 1600px) {
+	      padding:0;
+	    }
+			label {
+				position: relative;
+				top: 8px;
+			}
+		}
+		&:last-child {
+			label {
+				position: relative;
+				top: 0;
+			}
+		}
+		.col-md-9 {
+			.col-md-4 {
+				padding: 0;
+			}
+			.col-md-2{
+				padding-right: 0;
+				text-align: center;
+				@media(max-width: 1600px) {
+		      padding-left: 7px;
+		    }
+				b {
+					position: relative;
+					top: 6px;
+					right: 5px;
+				}
+			}
+		}
+	}
+	.wrap-button {
+		margin-top: 15px;
+	}
+	.btn_save {
+		height: 36px;
+		padding: 5px 30px;
+		background: @primary-color;
+		border: none;
+		border-radius: 3px;
+		color: #fff;
+		text-transform: uppercase;
+		margin-right: 10px;
+		font-family: 'fontbold';
+	}
+	.btn_save_filter {
+		height: 36px;
+		padding: 5px 20px;
+		font-family: 'fontbold';
+		color: @primary-color;
+		background: #fff;
+		border: 1px solid @primary-color;
+		border-radius: 3px; 
+		text-transform: uppercase;
+	}
+}

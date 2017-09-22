@@ -1,0 +1,699 @@
+{% set current_page = 'nhacungcap' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view">
+		<div class="header">
+			<h2 class="title">Thông tin chi tiết nhà cung cấp</h2>
+			<a href="4.1 CMS-v2-nha-cung-cap.html"><i class="fa fa-reply" aria-hidden="true"></i> Quay lại</a>
+		</div>
+		<div class="body edit_supplier">
+			<div class="top_body">
+				<h3 class="title_supplier">Thông tin nhà cung cấp</h3>
+				<div class="col-md-6">
+					<div class="box box1">
+						<div class="top">
+							<div class="col-md-2">
+								<div class="wrap-img">
+									<img src="../assets/images/logo-supply.png" alt=""> 
+								</div>
+							</div>
+							<div class="col-md-10">
+								<div>
+									<h4>Cửa hàng giày dép AQUA</h4>
+									<i class="icon-edit" title="Sửa trạng thái">&nbsp</i>
+								</div>
+								<b>AQU</b>
+							</div>
+						</div>
+						<div class="bottom">
+							<p><b>Tên nhà cung cấp:</b> Cửa hàng giày dép AQUA</p>
+							<p><b>Tên hiển thị trên myMall:</b> GIÀY DÉP AQUA</p>
+							<p><b>Mã số thuế:</b>  00123MST7890</p>
+							<p><b>Điện thoại:</b>  0127.686.4243</p>
+							<p><b>Email:</b> aquasportswear2014@gmail.com</p>
+							<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức, Thành phố Hồ Chí Minh.</p>
+						</div>
+					</div>
+					<div class="box box1_edit">
+						<div class="top">
+							<div class="col-md-2">
+								<div class="image-upload">
+								    <label for="file-input">
+								    	<img src="../assets/images/logo-supply.png" alt="your image"  />
+								        <img id="blah" src="../assets/images/icon_choose_img.png" alt="your image"  />
+								    </label>
+
+								    <input id="file-input" type='file' onchange="readURL(this);"/>
+								</div>
+							</div>
+							<div class="col-md-10">
+								<h4>Cửa hàng giày dép AQUA</h4>
+								<b>AQU</b>
+								<div class="wrap">
+									<label class="name">Khóa</label>
+									<span class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked />
+										<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</span>
+									<span>* Mở khóa để thay đổi mã ID</span>
+								</div>
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="row">
+								<div class="col-md-3">
+									<label>Tên nhà cung cấp:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" value="Cửa hàng giày dép AQUA" placeholder="Tên nhà cung cấp">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Tên hiển thị trên myMall:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" value="GIÀY DÉP AQUA" placeholder="Tên hiển thị trên AQUA">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Mã số thuế:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" value="00123MST7890" placeholder="Nhập mã số thuế">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Điện thoại:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" value="0127.686.4243" placeholder="Nhập số điện thoại">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Email liên hệ:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" value="aquasportswear2014@gmail.com" placeholder="Nhập email liên hệ">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Địa chỉ:</label>
+								</div>
+								<div class="col-md-9">
+									<div class="col-md-6">
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>TP HCM</option>
+											    <option>HÀ Nội</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>Linh Xuân</option>
+											    <option>Hoàn Kiếm</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>Thủ Đức</option>
+											    <option>Tân Bình</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+										<input type="text" value="Số 65/68/14, đường.." placeholder="Nhập địa chỉ">
+									</div>
+								</div>
+							</div>
+							<div class="wrap_btn">
+								<span class="cancel">Hủy bỏ</span>
+								<button type="button" class="btn-save" data-toggle="modal" data-target="#Modal">Lưu thay đổi</button>
+							</div>
+						</div>
+					</div>
+					<!-- popup -->
+					<div class="modal fade" id="Modal" role="dialog">
+						<div class="modal-dialog modal_success">
+							<div class="modal-content ">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<div class="content">
+									<i class="icon_success">&nbsp</i>
+									<h2>THÔNG TIN NHÀ CUNG CẤP CẬP NHẬT THÀNH CÔNG</h2>
+									<p>Bạn có thể xem <a href="#">Chi tiết đơn hàng</a> hoặc <a href="#">Danh sách đơn hàng</a></p>
+									<button type="button" class="btn_next btn-save">Tiếp tục</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end popup -->
+					<div class="box box_introduce">
+						<div class="title_box">
+							<p>Giới thiệu nhà cung cấp</p>
+							<i class="icon-edit" title="Sửa trạng thái">&nbsp</i>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+					</div>
+					<div class="box boxintroduce_edit">
+						<div class="title_box">
+							<p>Giới thiệu nhà cung cấp</p>
+						</div>
+						<textarea placeholder="Nhập nội dung thông tin">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it...</textarea>
+						<div class="wrap_btn">
+							<span class="cancel">Hủy bỏ</span>
+							<button type="button" class="btn-save">Lưu thay đổi</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="box box_payment">
+						<div class="title_box">
+							<p>Thông tin thanh toán</p>
+							<i class="icon-edit" title="Sửa trạng thái">&nbsp</i>
+						</div>
+						<div class="body_box">
+							<p><b>Ngân hàng:</b> Ngân Hàng TMCP Công Thương Việt Nam - VietinBank</p>
+							<p><b>Số tài khoản:</b> 2354A15249785</p>
+							<p><b>Chủ tài khoản:</b> Nguyễn Hoàng Mỹ Trinh</p>
+						</div>
+					</div>
+					<div class="box box_payment_edit">
+						<div class="title_box">
+							<p>Thông tin thanh toán</p>
+						</div>
+						<div class="body_box">
+							<div class="row">
+								<div class="col-md-3">
+									<label>Ngân hàng:</label>
+								</div>
+								<div class="col-md-9">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Ngân Hàng TMCP Công Thương Việt Nam - VietinBank</option>
+										    <option>Ngân hàng Agribank</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Số tài khoản:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" placeholder="Số tài khoản" value="2354A15249785">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Chủ tài khoản:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" placeholder="Tên chủ tài khoản" value="Nguyễn Hoàng Mỹ Trinh">
+								</div>
+							</div>
+							<div class="wrap_btn">
+								<span class="cancel">Hủy bỏ</span>
+								<button type="button" class="btn-save">Lưu thay đổi</button>
+							</div>
+						</div>
+					</div>
+					<div class="box box2">
+						<div class="title_box">
+							<p>Hình thức nhận đơn hàng</p>
+							<i class="icon-edit" title="Sửa trạng thái">&nbsp</i>
+						</div>
+						<div class="body_box">
+							<p><b>Đơn hàng mới:</b> Email</p>
+							<p><b>Đối soát - Thanh toán:</b> Văn bản</p>
+							<p><b>Thông báo mới:</b> Email</p>
+						</div>
+					</div>
+					<div class="box box2_edit">
+						<div class="title_box">
+							<p>Hình thức nhận đơn hàng</p>
+						</div>
+						<div class="body_box">
+							<div class="row">
+								<div class="col-md-4">
+									<label>Đơn hàng mới:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="col-md-4">
+										<input type="radio" name="defaut" value="" checked=""> <span>Email</span>
+									</div>
+									<div class="col-md-4">
+										<input type="radio" name="defaut" value="" > <span>Điện thoại</span>
+									</div>
+									<div class="col-md-4">
+										<input type="radio" name="defaut" value="" > <span>Văn bản</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<label>Đối soát - Thanh toán:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="col-md-4">
+										<input type="radio" name="defaut1" value="" > <span>Email</span>
+									</div>
+									<div class="col-md-4">
+										<input type="radio" name="defaut1" value="" checked=""> <span>Văn bản</span>
+									</div>
+									<div class="col-md-4">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<label>Thông báo mới:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="col-md-4">
+										<input type="radio" name="defaut2" value="" checked=""> <span>Email</span>
+									</div>
+									<div class="col-md-4">
+										<input type="radio" name="defaut2" value="" > <span>Văn bản</span>
+									</div>
+									<div class="col-md-4">
+									</div>
+								</div>
+							</div>
+							<div class="wrap_btn">
+								<span class="cancel">Hủy bỏ</span>
+								<button type="button" class="btn-save">Lưu thay đổi</button>
+							</div>
+						</div>
+					</div>
+					<div class="box box3">
+						<div class="title_box">
+							<p>Nhà cung cấp thuộc User</p>
+							<i class="icon-edit" title="Sửa trạng thái">&nbsp</i>
+						</div>
+						<p>mytrinh.aquasportswear2014@gmail.com</p>
+					</div>
+					<div class="box box3_edit">
+						<div class="title_box">
+							<p>Nhà cung cấp thuộc User</p>
+						</div>
+						<input type="text" value="mytrinh.aquasportswear2014@gmail.com">
+						<div class="wrap_btn">
+							<span class="cancel">Hủy bỏ</span>
+							<button type="button" class="btn-save">Lưu thay đổi</button>
+						</div>
+					</div>
+					<div class="box box_status">
+						<label>Trạng thái hoạt động nhà cung cấp</label>
+						<div class="wrapper">
+						  <input type="checkbox" id="checkboxa" class="slider-toggle" checked />
+							<label class="slider-viewport" for="checkboxa">
+							  	<div class="slider">
+							    	<div class="slider-button">&nbsp;</div>
+							    	<div class="slider-content left"><span>On</span></div>
+							    	<div class="slider-content right"><span>Off</span></div>
+							  	</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_body">
+				<h3 class="title_supplier">Thông tin hợp đồng ký kết với mymall</h3>
+				<div class="col-md-6">
+					<div class="box box1">
+						<div class="title_box">
+							<p>Thông tin hợp đồng ký kết với myMall</p>
+							<i class="icon-edit" title="Sửa trạng thái">&nbsp</i>
+						</div>
+						<div class="body_box">
+							<p><b>Loại hợp đồng:</b> Quảng cáo - Pickup - HD04 </p>
+							<p><b>Yêu cầu xuất hóa đơn V.A.T cho khách hàng:</b>  Không xuất hóa đơn V.A.T</p>
+							<div>
+								<b>Khóa các loại hợp đồng của nhà cung cấp này: </b>
+								<span class="wrapper">
+								  <input type="checkbox" id="checkbox11" class="slider-toggle" checked />
+									<label class="slider-viewport" for="checkbox11">
+								  	<div class="slider">
+								    	<div class="slider-button">&nbsp;</div>
+								    	<div class="slider-content left"><span>On</span></div>
+								    	<div class="slider-content right"><span>Off</span></div>
+								  	</div>
+									</label>
+								</span>
+							</div>
+						</div>
+						<div class="bottom_box">
+							<a href="#">***Tìm hiểu về các loại hợp đồng.</a>
+						</div>
+					</div>
+					<div class="box box1_edit">
+						<div class="title_box">
+							<p>Thông tin hợp đồng ký kết với myMall</p>
+						</div>
+						<div class="body_box">
+							<div class="row">
+								<div class="col-md-3">
+									<label>Loại hợp đồng:</label>
+								</div>
+								<div class="col-md-9">
+									<p>
+									    <input type="checkbox" id="test1" />
+									    <label for="test1">Tài trợ - HD00</label>
+									</p>
+									<p>
+									    <input type="checkbox" id="test2" />
+									    <label for="test2">Đại lý ký gởi - HD01</label>
+									</p>
+									<p>
+									    <input type="checkbox" id="test3" />
+									    <label for="test3">Quảng cáo - ký gởi - HD02</label>
+									</p>
+									<p>
+									    <input type="checkbox" id="test4" />
+									    <label for="test4">Dịch vụ - HD03</label>
+									</p>
+									<p>
+									    <input type="checkbox" id="test5" checked="" />
+									    <label for="test5">Quảng cáo - Pickup - HD04</label>
+									</p>
+									<p>
+									    <input type="checkbox" id="test6" />
+									    <label for="test6">Đại lý - Pickup - HD05</label>
+									</p>
+									<p>
+									    <input type="checkbox" id="test7" />
+									    <label for="test7">Trading - HD06</label>
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<b>Khách hàng mua hàng trên myMall, yêu cầu xuất hóa đơn V.A.T thì:</b>
+								<div class="row">
+									<div class="col-md-3"></div>
+									<div class="col-md-9">
+										<div>
+											<input type="radio" name="defaut3" value="" > <span>Không xuất hóa đơn V.A.T cho khách hàng</span>
+										</div>
+										<div>
+											<input type="radio" name="defaut3" value="" checked=""> <span>Có xuất hóa đơn V.A.T cho khách hàng</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<b>Khóa các loại hợp đồng của nhà cung cấp này: </b>
+								<span class="wrapper">
+								  <input type="checkbox" id="checkbox1" class="slider-toggle" checked />
+									<label class="slider-viewport" for="checkbox1">
+								  	<div class="slider">
+								    	<div class="slider-button">&nbsp;</div>
+								    	<div class="slider-content left"><span>On</span></div>
+								    	<div class="slider-content right"><span>Off</span></div>
+								  	</div>
+									</label>
+								</span>
+							</div>
+						</div>
+						<div class="bottom_box">
+							<a href="#">***Tìm hiểu về các loại hợp đồng.</a>
+							<div class="wrap_btn">
+								<span class="cancel">Hủy bỏ</span>
+								<button type="button" class="btn-save">Lưu thay đổi</button>
+							</div>
+						</div>
+					</div>
+					<div class="box box2">
+						<div class="title_box">
+							<i class="icon_buyer">&nbsp</i>
+							<p class="title"> Buyer phụ trách </p>
+							<i class="icon-edit" title="Sửa trạng thái">&nbsp</i>
+						</div>
+						<div class="body_box">
+							<p><b>Tên buyer phụ trách:</b> Elisa Doan</p>
+							<p><b>Điện thoại:</b> 0123.456.6582</p>
+							<p><b>Email liên hệ:</b> elisadoan.mymall@gmail.com</p>
+							<p><b>Địa chỉ:</b>  Phòng 802, lầu 8, tòa nhà CT Plaza, số 60A, đường Trường Sơn,                Phường 2, Quận Tân Bình, Thành phố Hồ Chí Minh.</p>
+						</div>
+					</div>
+					<div class="box box2_edit">
+						<div class="title_box">
+							<i class="icon_buyer">&nbsp</i>
+							<p class="title"> Buyer phụ trách </p>
+						</div>
+						<div class="body_box">
+							<div class="row">
+								<div class="col-md-3">
+									<label>Tên buyer phụ trách:</label>
+								</div>
+								<div class="col-md-9">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Elisa Doan</option>
+										    <option>Jimmy</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Điện thoại:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" placeholder="Số điện thoại" value="0123.456.6582">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Email liên hệ:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" placeholder="Nhập email" value="elisadoan.mymall@gmail.com">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<label>Địa chỉ</label>
+								</div>
+								<div class="col-md-9">
+									<div class="col-md-6">
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>TP HCM</option>
+											    <option>HÀ Nội</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>Linh Xuân</option>
+											    <option>Hoàn Kiếm</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>Thủ Đức</option>
+											    <option>Tân Bình</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+										<input type="text" value="Số 65/68/14, đường.." placeholder="Nhập địa chỉ">
+									</div>
+								</div>
+							</div>
+							<div class="wrap_btn">
+								<span class="cancel">Hủy bỏ</span>
+								<button type="button" class="btn-save">Lưu thay đổi</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div>
+						<div class="box box-address">
+		  					<div class="title_box">
+								<p class="title"> Địa chỉ lấy hàng </p>
+								<i class="icon-edit" title="Sửa trạng thái">&nbsp</i>
+							</div>
+							<div class="body_box">
+								<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+								<p><b>Điện thoại:</b>  0127.686.4243</p>
+								<p><b>Email liên hệ:</b> aquasportswear2014@gmail.com</p>
+								<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+							</div>
+		  				</div>
+		  				<div class="box box-address-edit">
+		  					<div class="title_box">
+								<p class="title"> Địa chỉ lấy hàng </p>
+							</div>
+							<div class="body_box">
+								<div class="row">
+									<div class="col-md-3">
+										<label>Người liên hệ:</label>
+									</div>
+									<div class="col-md-9">
+										<input type="text" placeholder="Nhập tên người liên hệ" value="Nguyễn Hoàng Mỹ Trinh">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3">
+										<label>Điện thoại:</label>
+									</div>
+									<div class="col-md-9">
+										<input type="text" placeholder="Số điện thoại" value="0127.686.4243">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3">
+										<label>Email liên hệ:</label>
+									</div>
+									<div class="col-md-9">
+										<input type="text" placeholder="Nhập email" value="aquasportswear2014@gmail.com">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3">
+										<label>Địa chỉ</label>
+									</div>
+									<div class="col-md-9">
+										<div class="col-md-6">
+											<div class="wrap_select">
+												<select class="form-control">
+												    <option>TP HCM</option>
+												    <option>HÀ Nội</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+											<div class="wrap_select">
+												<select class="form-control">
+												    <option>Linh Xuân</option>
+												    <option>Hoàn Kiếm</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrap_select">
+												<select class="form-control">
+												    <option>Thủ Đức</option>
+												    <option>Tân Bình</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+											<input type="text" value="Số 65/68/14, đường.." placeholder="Nhập địa chỉ">
+										</div>
+									</div>
+								</div>
+								<div class="wrap_btn">
+									<span class="cancel">Hủy bỏ</span>
+									<button type="button" class="btn-save">Lưu thay đổi</button>
+								</div>
+							</div>
+		  				</div>
+					</div>
+					<div>
+						<div class="box box-address">
+		  					<div class="title_box">
+								<p class="title"> Địa chỉ giao hàng </p>
+								<i class="icon-edit" title="Sửa trạng thái">&nbsp</i>
+							</div>
+							<div class="body_box">
+								<p><b>Người liên hệ:</b> Nguyễn Hoàng Mỹ Trinh</p>
+								<p><b>Điện thoại:</b>  0127.686.4243</p>
+								<p><b>Email liên hệ:</b> aquasportswear2014@gmail.com</p>
+								<p><b>Địa chỉ:</b> Số 65/68/14, đường số 5, KP2, Phường Linh Xuân, Quận Thủ Đức,               Thành phố Hồ Chí Minh.</p>
+							</div>
+		  				</div>
+		  				<div class="box box-address-edit">
+		  					<div class="title_box">
+								<p class="title"> Địa chỉ lấy hàng </p>
+							</div>
+							<div class="body_box">
+								<div class="row">
+									<div class="col-md-3">
+										<label>Người liên hệ:</label>
+									</div>
+									<div class="col-md-9">
+										<input type="text" placeholder="Nhập tên người liên hệ" value="Nguyễn Hoàng Mỹ Trinh">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3">
+										<label>Điện thoại:</label>
+									</div>
+									<div class="col-md-9">
+										<input type="text" placeholder="Số điện thoại" value="0127.686.4243">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3">
+										<label>Email liên hệ:</label>
+									</div>
+									<div class="col-md-9">
+										<input type="text" placeholder="Nhập email" value="aquasportswear2014@gmail.com">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3">
+										<label>Địa chỉ</label>
+									</div>
+									<div class="col-md-9">
+										<div class="col-md-6">
+											<div class="wrap_select">
+												<select class="form-control">
+												    <option>TP HCM</option>
+												    <option>HÀ Nội</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+											<div class="wrap_select">
+												<select class="form-control">
+												    <option>Linh Xuân</option>
+												    <option>Hoàn Kiếm</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrap_select">
+												<select class="form-control">
+												    <option>Thủ Đức</option>
+												    <option>Tân Bình</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+											<input type="text" value="Số 65/68/14, đường.." placeholder="Nhập địa chỉ">
+										</div>
+									</div>
+								</div>
+								<div class="wrap_btn">
+									<span class="cancel">Hủy bỏ</span>
+									<button type="button" class="btn-save">Lưu thay đổi</button>
+								</div>
+							</div>
+		  				</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

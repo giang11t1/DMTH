@@ -1,0 +1,200 @@
+{% set current_page = 'product' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view manage_brand">
+		<div class="header ">
+			<h2 class="title">Quản lý thương hiệu</h2>
+			<a href="5.1 CMS-v2-product-Brand.html"><i class="fa fa-reply" aria-hidden="true"></i>  Quay lại</a>
+		</div>
+		<div class="view_detail_brand edit_brand" >
+			<div class="col-md-12">
+				<h3 class="title ">Thông tin chi tiết thương hiệu</h3>
+			</div>
+			<div class="col-md-6">
+				<div class="box box1">
+					<div class="top">
+						<div class="col-md-2">
+							<div class="wrap-img">
+								<img src="../assets/images/logo-pro1.png" alt=""> 
+							</div>
+						</div>
+						<div class="col-md-10">
+							<h4>MATERNEA</h4>
+							<i class="icon-edit" title="Chỉnh sửa">&nbsp</i>
+							<div><b>Nhà cung cấp:</b><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+						</div>
+					</div>
+					<div class="bottom">
+						<p><b>Tên thương hiệu:</b> MATERNEA</p>
+						<p><b>Tên tiếng anh:</b> MATERNEA</p>
+						<p><b>Tên Alias:</b> Maternea</p>
+						<p><b>Thuộc danh mục:</b>  Mỹ phẩm cho mẹ</p>
+						<b>Trạng thái:</b>
+						<div class="wrapper">
+						  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+							<label class="slider-viewport" for="checkbox">
+							  	<div class="slider">
+							    	<div class="slider-button">&nbsp;</div>
+							    	<div class="slider-content left"><span>On</span></div>
+							    	<div class="slider-content right"><span>Off</span></div>
+							  	</div>
+							</label>
+						</div>
+						<p><b>Link thương hiệu:</b> <a href="#"> www.mymall.vn/brand/maternea</a></p>
+					</div>
+				</div>
+				<div class="box box1_edit">
+					<div class="top">
+						<div class="col-md-2">
+							<div class="image-upload">
+							    <label for="file-input">
+							    	<img src="../assets/images/logo-pro1.png" alt="your image"  />
+							        <img id="blah" src="../assets/images/icon_choose_img.png" alt="your image"  />
+							    </label>
+
+							    <input id="file-input" type='file' onchange="readURL(this);"/>
+							</div>
+						</div>
+						<div class="col-md-10">
+							<h4>MATERNEA</h4>
+							<div><b>Nhà cung cấp:</b><br> <span>CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH</span></div>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="row">
+							<div class="col-md-3">
+								<label>Tên thương hiệu:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" value="MATERNEA" placeholder="Nhập tên thương hiệu">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Tên tiếng anh:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" value="MATERNEA" placeholder="Tên tiếng anh">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Tên Alias:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" value="Maternea" placeholder="Nhập tên Alias">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Thuộc danh mục:</label>
+							</div>
+							<div class="col-md-9">
+								<div class="wrap_select">
+									<select class="form-control">
+									    <option>Mỹ phẩm cho mẹ</option>
+									    <option>Làm đẹp</option>
+									    <option>Đồ gia dụng</option>
+									</select>
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Nhà cug cấp:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" value="CHI NHÁNH CÔNG TY CPXNKTM ĐÀI LINH" placeholder="Nhà cung cấp">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Trạng thái:</label>
+							</div>
+							<div class="col-md-9">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked />
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Link thương hiệu:</label>
+							</div>
+							<div class="col-md-9">
+								<input class="in_link" type="text" value="www.mymall.vn/brand/maternea" placeholder="Link thương hiệu">
+							</div>
+						</div>
+						<div class="wrap_btn">
+							<span class="cancel">Hủy bỏ</span>
+							<button type="button" class="btn-save" data-toggle="modal" data-target="#Modal">Lưu thay đổi</button>
+						</div>
+					</div>
+				</div>
+				<!-- popup -->
+				<div class="modal fade" id="Modal" role="dialog">
+						<div class="modal-dialog modal_success">
+							<div class="modal-content ">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<div class="content">
+									<i class="icon_success">&nbsp</i>
+									<h2>THÔNG TIN THƯƠNG HIỆU CẬP NHẬT THÀNH CÔNG</h2>
+									<p>Bạn có thể xem <a href="#">Chi tiết đơn hàng</a> hoặc <a href="#">Danh sách đơn hàng</a></p>
+									<button type="button" class="btn_next btn-save">Tiếp tục</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- end -->
+			</div>
+			<div class="col-md-6">
+				<div class="box box_descript">
+  					<div class="header_box">
+						<b class="title"> Mô tả thương hiệu </b>
+						<i class="icon-edit" title="Chỉnh sửa">&nbsp</i>
+					</div>
+					<div class="body_box">
+						<div class="part part1">
+							<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+							<p>MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới...., là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa nhiệt đới....</p>
+						</div>
+						<div class="edit edit_vietnam">
+							<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+							<textarea class="edit_content">MATERNEA là dòng mỹ phẩm chuyên dụng dành cho bà mẹ. MATERNEA trong ngôn ngữ của người Malay có nghĩa là Đất Đỏ, là nguồn gốc sản sinh ra các nguyên vật liệu phong phú từ vùng đất của rừng mưa...</textarea>
+							<div class="wrap_btn">
+								<span class="cancel">Hủy bỏ</span>
+								<button type="button" class="btn-save" data-toggle="modal" data-target="#Modal">Lưu thay đổi</button>
+							</div>
+						</div>
+						<div class="part part2">
+							<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+							<p>MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</p>
+						</div>
+						<div class="edit edit_engish">
+							<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+							<textarea class="edit_content">MATERNEA cosmetic line is dedicated for mothers. MATERNEA in Malay language means Dat, is sourced produce rich raw materials from the land of tropical rain forest. The Tanamera cosmetics are manufactured according...</textarea>
+							<div class="wrap_btn">
+								<span class="cancel">Hủy bỏ</span>
+								<button type="button" class="btn-save" data-toggle="modal" data-target="#Modal">Lưu thay đổi</button>
+							</div>
+						</div>
+					</div>
+  				</div>
+				<p class="bottom">
+				    <input type="checkbox" name="choose" id="test1">
+				    <label for="test1">Hiển thị trên trang chủ myMall.vn</label>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

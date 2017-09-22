@@ -1,0 +1,999 @@
+{% set current_page = 'product' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view view_product">
+		<div class="header">
+			<h2 class="title">Danh sách sản phẩm</h2>
+			<a href="5.9 CMS-v2-product-create-product.html"><i class="icon-add">&nbsp</i> <span>Tạo sản phẩm mới</span></a>
+		</div>
+		<section class="view_donhang ">
+			<form class="search_donhang">
+				<h3 class="title">Tìm kiếm nhanh</h3>
+				<div class="form_search_fast row">
+					<div class="col-md-3">
+						<div class="form-group">
+							<label>SKU Sản phẩm</label>
+							<input type="text" name="" placeholder="Nhập mã sản phẩm">
+						</div>
+						<div class="form-group">
+							<label>Nhà cung cấp</label>
+							<div class="wrap_select">
+								<select class="form-control">
+								    <option>Chọn nhà cung cấp</option>
+								    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+								    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+								    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+								    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label>Tên sản phẩm</label>
+							<input type="text" class="" placeholder="Nhập tên sản phẩm">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group"> 
+							<label>Thương hiệu</label>
+							<div class="wrap_select">
+								<select class="form-control">
+								    <option>Chọn thương hiệu</option>
+								    <option>Lock&lock</option>
+								    <option>Heanuri Laver</option>
+								    <option>MyMall</option>
+								    <option>Heanuri Laver</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group"> 
+							<label>Danh mục sản phẩm</label>
+							<div class="wrap_select">
+								<select class="form-control">
+								    <option>Chọn danh mục</option>
+								    <option>Thực phẩm</option>
+								    <option>Đồ dùng trong nhà</option>
+								    <option>Mỹ phẩm làm đẹp</option>
+								    <option>Phòng ngủ</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search_level">
+					<h3 class="title">Tìm kiếm nâng cao</h3>
+					<div class="wrap_search">
+						<div class="number_product">
+							<label>Số lượng sản phẩm</label>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group"> 
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>0 Sản phẩm</option>
+											    <option>1 Sản phẩm</option>
+											    <option>2 Sản phẩm</option>
+											    <option>3 Sản phẩm</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<b>Từ</b>
+										<input type="text" class="" placeholder="Nhập số lượng sản phẩm">
+										<i>Cái</i>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<b>Đến</b>
+										<input type="text" class="" placeholder="Nhập số lượng sản phẩm">
+										<i>Cái</i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="price_product">
+							<label>Giá bán sản phẩm</label>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group"> 
+										<div class="wrap_select">
+											<select class="form-control">
+											    <option>1000 - 100.000 VNĐ</option>
+											    <option>2000 - 200.000 VNĐ</option>
+											    <option>3000 - 300.000 VNĐ</option>
+											    <option>4000 - 400.000 VNĐ</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<b>Từ</b>
+										<input type="text" class="" placeholder="Nhập giá sản phẩm">
+										<i>VNĐ</i>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<b>Đến</b>
+										<input type="text" class="" placeholder="Nhập giá sản phẩm">
+										<i>VNĐ</i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="status">
+							<p class="sub_title"><i class="icon-status">&nbsp</i> <span>Trạng thái sản phẩm</span></p>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="col-md-6"><input type="checkbox" name="" value=""> Kích hoạt</div>
+									<div class="col-md-6"><input type="checkbox" name="" value=""> Không kích hoạt</div>
+								</div>
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-4">
+								</div>
+							</div>
+						</div>
+						<div class="khovan">
+							<p class="sub_title"><i class="icon-kho-van">&nbsp</i> <span>Sản phẩm lưu kho</span></p>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="col-md-6"><input type="checkbox" name="" value=""> Lưu kho</div>
+									<div class="col-md-6"><input type="checkbox" name="" value=""> Không lưu kho</div>
+								</div>
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-4">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="btn_search_level">
+					<i class="icon-search-hover">&nbsp</i>
+					<div class="show_search" > 
+						<span class="on_search">Tìm kiếm nâng cao</span> <i class="fa fa-angle-down" aria-hidden="true"></i>
+					</div>
+					<div class="hide_search" style="display: none;">
+						<span class="off_search" >Tắt tìm kiếm nâng cao</span>
+						<i class="fa fa-angle-up" aria-hidden="true"></i>
+					</div>
+				</div>
+				<button type="button" class="btn_search" value="">Tìm kiếm</button>
+			</form>
+		</section>
+		<section class="table ">
+			<div class="table_donhang">
+				<div class="header_table">
+					<div class="row">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" data-toggle="checkall" data-target="input[name=choose]" class="checkbox_check"></div>
+							<div class="center col-md-3">SKU</div>
+							<div class=" col-md-3">Tên sản phẩm</div>
+							<div class=" col-md-2">Danh mục</div>
+							<div class=" col-md-3">Nhà cung cấp</div>
+						</div>
+						<div class="col-md-6">
+							<div class="center col-md-2">Thương hiệu</div>
+							<div class=" col-md-2">Giá NCC</div>
+							<div class=" col-md-2">Giá thị trường</div>
+							<div class=" col-md-2">Giá bán</div>
+							<div class=" col-md-2">Trạng thái</div>
+							<div class=" col-md-2"></div>
+						</div>
+					</div>
+				</div>
+				<ul class="body_table panel-group" id="accordion5">
+					<div class="switch_bar" >
+						<span>Bạn đã chọn <b class="orange">02</b> sản phẩm</span>
+						<div class="wrap-choose">
+							<label class="lb-choose">Chọn thao tác</label>
+							<div class="wrap-select">
+								<select class="form-control" id="choose-act">
+								    <option value="0">Chọn thao tác</option>
+								    <option value="1">Chuyển trạng thái sản phẩm</option>
+								    <option value="2">Cập nhật số lượng</option>
+								    <option value="3">Hiển thị icon</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="opacity1 option0">1</div>
+						<div class="wrap-choose choose-status option1">
+							<label class="lb-choose">Chọn trạng thái</label>
+							<div class="wrap-select">
+								<select class="form-control">
+								    <option>Không kích hoạt</option>
+								    <option>Kích hoạt</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="wrap-switch option1" >
+							<label class="switch">
+							  <input type="checkbox">
+							  <div class="slider round"><i class="icon-check">&nbsp</i></div>
+							</label>
+						</div>
+						<div class="wrap-choose option2">
+							<label>Chọn số lượng</label>
+							<input type="text" name="" placeholder="Nhập số lượng sản phẩm">
+						</div>
+						<button type="button" class="btn_update option2" value="">Cập nhật</button>
+						<div class="wrap-choose option3">
+							<label class="lb-choose">Chọn icon</label>
+							<div class="wrap-select">
+								<select class="form-control">
+								    <option>Tặng quà</option>
+								    <option>sds</option>
+								    <option>ewef</option>
+								</select>
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</div>
+						</div>
+						<button type="button" class="btn_update option3" value="">Cập nhật</button>
+					</div>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Bộ 03 Hộp Thủy Tinh Glass Và Túi Giữ Nhiệt Hàn Quốc Màu Đỏ</div>
+							<div class=" col-md-2">Đồ dùng nhà bếp</div>
+							<div class=" col-md-3">CÔNG TY TNHH SẮC MÀU PHA LÊ</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> Lock&lock</div>
+							<div class=" col-md-2"> <span class="orange">145.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">270.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">179.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<a href="#"><i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i></a>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapsea">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapsea">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapsea">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>% Giảm giá </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Hộp 10 Gói Rong Biển Haenuri Laver Hàn Quốc 24g</div>
+							<div class=" col-md-2">Thực phẩm</div>
+							<div class=" col-md-3">CÔNG TY TNHH GREEN TREND</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> Heanuri Laver</div>
+							<div class=" col-md-2"> <span class="orange">230.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">310.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">255.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<a href="#"><i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i></a>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapseb">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapseb">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapseb">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>% Giảm giá </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Combo 2 Hộp Đựng Đồ Tiện Dụng</div>
+							<div class=" col-md-2">Đồ dùng nhà bếp</div>
+							<div class=" col-md-3">CÔNG TY TNHH SẮC MÀU PHA LÊ</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> myMall</div>
+							<div class=" col-md-2"> <span class="orange">70.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<a href="#"><i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i></a>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapsec">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapsec">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapsec">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>% Giảm giá </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Combo 2 Hộp Đựng Đồ Tiện Dụng</div>
+							<div class=" col-md-2">Đồ dùng nhà bếp</div>
+							<div class=" col-md-3">CÔNG TY TNHH SẮC MÀU PHA LÊ</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> myMall</div>
+							<div class=" col-md-2"> <span class="orange">70.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<a href="#"><i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i></a>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapsed">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapsed">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapsed">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>% Giảm giá </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Combo 2 Hộp Đựng Đồ Tiện Dụng</div>
+							<div class=" col-md-2">Đồ dùng nhà bếp</div>
+							<div class=" col-md-3">CÔNG TY TNHH SẮC MÀU PHA LÊ</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> myMall</div>
+							<div class=" col-md-2"> <span class="orange">70.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<a href="#"><i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i></a>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapsee">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapsee">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapsee">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>% Giảm giá </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Combo 2 Hộp Đựng Đồ Tiện Dụng</div>
+							<div class=" col-md-2">Đồ dùng nhà bếp</div>
+							<div class=" col-md-3">CÔNG TY TNHH SẮC MÀU PHA LÊ</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> myMall</div>
+							<div class=" col-md-2"> <span class="orange">70.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<a href="#"><i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i></a>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapsef">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapsef">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapsef">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>% Giảm giá </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Combo 2 Hộp Đựng Đồ Tiện Dụng</div>
+							<div class=" col-md-2">Đồ dùng nhà bếp</div>
+							<div class=" col-md-3">CÔNG TY TNHH SẮC MÀU PHA LÊ</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> myMall</div>
+							<div class=" col-md-2"> <span class="orange">70.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<a href="#"><i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i></a>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapseg">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapseg">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapseg">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>% Giảm giá </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Combo 2 Hộp Đựng Đồ Tiện Dụng</div>
+							<div class=" col-md-2">Đồ dùng nhà bếp</div>
+							<div class=" col-md-3">CÔNG TY TNHH SẮC MÀU PHA LÊ</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> myMall</div>
+							<div class=" col-md-2"> <span class="orange">70.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<a href="#"><i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i></a>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapseh">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapseh">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapseh">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>% Giảm giá </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Combo 2 Hộp Đựng Đồ Tiện Dụng</div>
+							<div class=" col-md-2">Đồ dùng nhà bếp</div>
+							<div class=" col-md-3">CÔNG TY TNHH SẮC MÀU PHA LÊ</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> myMall</div>
+							<div class=" col-md-2"> <span class="orange">70.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<a href="#"><i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i></a>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapsek">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapsek">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapsek">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>% Giảm giá </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="row panel">
+						<div class="col-md-6">
+							<div class=" col-md-1"><input type="checkbox" name="choose"  class="checkbox_check"></div>
+							<div class="id col-md-3">FA1234567890AD</div>
+							<div class="status col-md-3">Combo 2 Hộp Đựng Đồ Tiện Dụng</div>
+							<div class=" col-md-2">Đồ dùng nhà bếp</div>
+							<div class=" col-md-3">CÔNG TY TNHH SẮC MÀU PHA LÊ</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" col-md-2"> myMall</div>
+							<div class=" col-md-2"> <span class="orange">70.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2"> <span class="orange">99.000đ</span></div>
+							<div class=" col-md-2">
+								<div class="wrapper_">
+								  <input type="checkbox" id="checkbox0" class="slider-toggle" checked />
+									<label class="slider-viewport" for="checkbox0">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<a href="#"><i class="icon-xemtruoc" title="Xem trước">&nbsp</i></a>
+								<i class="icon-xemtruoc-hover" title="Xem trước">&nbsp</i>
+								<i class="icon-view-fast" title="Xem nhanh" data-toggle="collapse" data-parent="#accordion5" href="#collapsel">&nbsp</i>
+								<i class="icon-view-fast-hover" title="Xem nhanh" style="display: none;" data-toggle="collapse" data-parent="#accordion5" href="#collapsel">&nbsp</i>
+								<a href="5.10 CMS-v2-product-edit-product.html"><i class="icon-view-detail" title="Xem chi tiết">&nbsp</i></a>
+								<i class="icon-view-detail-hover" title="Xem chi tiết" style="display: none;">&nbsp</i>
+							</div>
+						</div>
+						<div class="view_fast panel-collapse collapse" id="collapsel">
+							<div class="wrap_pannel">
+								<p class="title_viewfast">THông tin sản phẩm</p>
+								<div class="col-md-7">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Tên sản phẩm: </b> <span>Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Cao Màu Đỏ</span></li>
+											<li class="row"><b>SKU (myMall): </b> <span>FA1234567890AD</span></li>
+											<li class="row"><b>SKU ( Nhà cung cấp): </b> <span>N/A</span></li>
+											<li class="row"><b>Nhà cung cấp: </b> <span>CÔNG TY TNHH SẮC MÀU PHA LÊ</span></li>
+											<li class="row"><b>Hợp đồng: </b> <span>Quảng cáo - ký gởi - HD02</span></li>
+											<li class="row"><b>Danh mục chính: </b> <span>Nhà bếp - vệ sinh</span></li>
+											<li class="row"><b>Danh mục phụ 1: </b> <span>Đồ dùng nhà bếp</span></li>
+											<li class="row"><b>Danh mục phụ 2: </b> <span>N/A</span></li>
+											<li class="row"><b>Địa điểm lấy hàng: </b> <span>Thành Phố Hồ Chí Minh</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="box">
+										<ul>
+											<li class="row"><b>Thương hiệu: </b> <span>LOCK&LOCK</span></li>
+											<li class="row"><b>Số lượng sản phẩm:  </b> <span>500 cái</span></li>
+											<li class="row"><b>Khối lượng sản phẩm:  </b> <span>400gr</span></li>
+											<li class="row"><b>Giá nhà cung cấp:  </b> <span>145.000 VNĐ</span></li>
+											<li class="row"><b>Giá thị trường:  </b> <span> 270.000 VNĐ</span></li>
+											<li class="row"><b>Giá bán (myMall):  </b> <span>179.000 VNĐ</span></li>
+											<li class="row"><b>179.000 VNĐ </b> <span>(giá myMall/giá thị trường):</span> <span>40%</span></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-md-offset-6">
+										<span class="cancel">Hủy bỏ</span>
+										<button type="button" class="btn_edit">Sửa đơn hàng</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<p class="total_donhang">Tổng đơn hàng: <span class="number">22,005</span></p>
+			<div class="page">
+				<div class="wrap">
+					<div class="left">
+						<i class="fa fa-angle-double-left">&nbsp</i>
+						<div> <p>Trước</p></div>
+					</div>
+					<p class="display">Trang 1/2201</p>
+					<div class="right">
+						<div><p>Sau</p></div>
+						<i class="fa fa-angle-double-right">&nbsp</i>
+					</div>
+				</div>
+				
+				<div class="per_page">
+					<select class="form-control">
+					    <option>10 dòng/ Trang</option>
+					    <option>20 dòng/ Trang</option>
+					    <option>30 dòng/ Trang</option>
+					    <option>40 dòng/ Trang</option>
+					</select>
+					<i class="fa fa-angle-down">&nbsp</i>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+{% endblock %}

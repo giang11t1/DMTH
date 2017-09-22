@@ -1,0 +1,18 @@
+{% extends "_layout-base.html" %}
+<!--header-->
+{% block header%}
+	{% include "../block/_header.html" %}
+{% endblock %}
+<!--page-container-->
+{% block page-container %}
+    <main > 
+		{% include "../block/_block-menu.html" %}
+        {% block page-content %}
+        {% endblock %}
+    </main>
+{% endblock %}
+<!--footer-->
+{% block footer%}
+	{% include "../block/_footer.html" %}
+{% endblock %}
+

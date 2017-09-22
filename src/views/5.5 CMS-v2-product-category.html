@@ -1,0 +1,905 @@
+{% set current_page = 'product' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view ">
+		<div class="header ">
+			<h2 class="title title-path">Quản lý danh mục sản phẩm</h2>
+			<h2 class="title title-path1" style="display: none;">Quản lý danh mục sản phẩm <span>/ Sách - VPP</span></h2>
+			<h2 class="title title-path2" style="display: none;">Quản lý danh mục sản phẩm <span>/ Sách - VPP</span><span>/ Văn phòng phẩm</span></h2>
+			<a href="5.7 CMS-v2-product-category_Tao-moi-category.html"><i class="icon-add">&nbsp</i> <span>Tạo danh mục mới</span></a>
+			<a href="#" class="back" id="back1"><i class="fa fa-reply" aria-hidden="true"></i>  Quay lại</a>
+			<a href="#" class="back" id="back2"><i class="fa fa-reply" aria-hidden="true"></i>  Quay lại</a>
+		</div>
+	</div>
+	<section class="table_supply table-category">
+		<div class="wrap-table">
+			<div class="table-supply ">
+				<div class="header_table">
+					<div class="col-md-7">
+						<div class="col-md-2">
+							<span>ID</span>
+						</div>
+						<div class="col-md-8">
+							<span>Tên danh mục</span>
+						</div>
+						<div class="col-md-2">
+							<span>Parent</span>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="col-md-4">
+							<span>Thứ tự hiển thị</span>
+						</div>
+						<div class="col-md-4">
+							<span>Trạng thái</span>
+						</div>
+						<div class="col-md-4">
+						</div>
+					</div>
+				</div>
+				<ul class="category_product cate1">
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1438</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Sách - VPP</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>1</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1409</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Nhà Cửa - Đời Sống</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>2</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1408</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Phụ Kiện Điện Tử</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>3</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1206</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Thể Thao - Dã Ngoại</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>4</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle"  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1198</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Tã - Sữa</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>5</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>714</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Thực Phẩm</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>6</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>12</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Mẹ - Bé</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>7</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle"  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>11</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Đồ chơi - Lưu niệm</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>8</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>10</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Thiết bị văn phòng</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>9</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle"  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>9</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Điện Tử</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>10</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- sub category 2 -->
+				<ul class="category_product cate2 " style="display: none;">
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1407</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Văn phòng phẩm</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>1</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>819</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Sách</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>2</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>855</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Dụng cụ thủ công</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>3</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- end -->
+				<!-- sub category 3 -->
+				<ul class="category_product cate3" style="display: none;">
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1437</span></div>
+							<div class="col-md-8">
+								<a href="#" title="Danh mục con rỗng">
+									<i class="fa fa-folder-o empty"></i>
+									<span>Thiết bị văn phòng</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>1</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1436</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Vệ sinh</span>
+								</a>
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>2</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1435</span></div>
+							<div class="col-md-8">
+								<a href="#" title="Danh mục con rỗng">
+									<i class="fa fa-folder-o empty" aria-hidden="true" ></i>
+									<span>Máy tính - Pin</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>3</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1434</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Đóng tập sách</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>4</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1433</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Bảng tên</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>5</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1432</span></div>
+							<div class="col-md-8">
+								<a href="#" title="Danh mục con rỗng">
+									<i class="fa fa-folder-o empty" aria-hidden="true" ></i>
+									<span>Dụng cụ lưu trữ</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>6</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1431</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Con dấu</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>7</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1430</span></div>
+							<div class="col-md-8">
+								<a href="#" title="Danh mục con rỗng">
+									<i class="fa fa-folder-o empty" aria-hidden="true"></i>
+									<span>Keo - Hồ</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>8</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1429</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Dụng cụ mỹ thuật</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>9</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-7">
+							<div class="col-md-2"><span>1428</span></div>
+							<div class="col-md-8">
+								<a href="#">
+									<i class="fa fa-folder-o" aria-hidden="true"></i>
+									<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+									<span>Bút (Viết)</span>
+								</a>									
+							</div>
+							<div class="col-md-2"><span>Root</span></div>
+						</div>
+						<div class="col-md-5">
+							<div class="col-md-4">
+								<span>10</span>
+							</div>
+							<div class="col-md-4">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="5.6 CMS-v2-product-category_Edit-category.html"><i class="icon-edit" title="Chỉnh sửa">&nbsp</i></a></a>
+								<i class="icon-edit-hover" title="Chỉnh sửa">&nbsp</i>
+								<i class="icon-delete" title="Xóa">&nbsp</i>
+								<i class="icon-delete-hover" title="Xóa">&nbsp</i>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- end -->
+				<div class="bottoom_table">
+					<p class="left">Tổng trạng thái: <span>10/202</span></p>
+					<div class="page">
+						<div class="wrap">
+							<div class="left">
+								<i class="fa fa-angle-double-left">&nbsp</i>
+								<div> <p>Trước</p></div>
+							</div>
+							<p class="display">Trang 1/21</p>
+							<div class="right">
+								<div><p>Sau</p></div>
+								<i class="fa fa-angle-double-right">&nbsp</i>
+							</div>
+						</div>
+						
+						<div class="per_page">
+							<select class="form-control">
+							    <option>10 dòng/ Trang</option>
+							    <option>20 dòng/ Trang</option>
+							    <option>30 dòng/ Trang</option>
+							    <option>40 dòng/ Trang</option>
+							</select>
+							<i class="fa fa-angle-down">&nbsp</i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+{% endblock %}

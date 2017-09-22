@@ -1,0 +1,89 @@
+<header>
+	<!-- Navigation -->
+	<nav >
+        <div class="navbar topnav">
+        	<div class="row">
+        		<div class=" wrap-logo">
+        			<a href="#" class="logo">
+        				<img src="assets/images/Logo.png">
+        			</a>
+        			<div class="click-hamburger">
+        				<i class="hamburger" data-toggle="offcanvas" role="button">&nbsp</i>
+        			</div>
+        		</div>
+        		<div class="header">
+        			<div class="name_page">
+        				<a href="#">
+                            <i class="fa 
+                                {% if current_page == 'change-password' %}fa-chevron-left{% endif %}
+                                {% if current_page == 'homepage' %}icon-toolaff{% endif %}
+                                {% if current_page == 'sieuthi-system' %}icon-web{% endif %}
+                                {% if current_page == 'nhacungcap' %}icon-supply{% endif %}
+                                {% if current_page == 'product' %}icon-product{% endif %}
+                            " aria-hidden="true"></i>
+                        </a>
+        				<p class="title">
+                            {% if current_page == 'change-password' %}Đổi mật khẩu{% endif %}
+                            {% if current_page == 'homepage' %}Quản lý chung{% endif %}
+                            {% if current_page == 'sieuthi-system' %}Về Thiên Hòa{% endif %}
+                            {% if current_page == 'nhacungcap' %}Nhà cung cấp{% endif %}
+                            {% if current_page == 'product' %}Sản phẩm{% endif %}
+                        </p>
+        			</div>
+        			<form class="form-search">
+                        <span class="label-search">Tìm kiếm thông tin theo</span>
+                        <select class="selectpicker" data-live-search="true" title="Mã đơn hàng">
+                          <option>Đơn hàng</option>
+                          <option>ID đơn hàng</option>
+                          <option>Mã sản phẩm</option>
+                          <option>Tên thành viên </option>
+                        </select>
+		                <input type="text" placeholder="Điền thông tin" class="form-control" onkeyup="keyupFunction()" id="input-search">		                
+		                <button type="submit" class="btn btn-search"><span class="icon-search"></span></button>
+	              </form>
+                  <div class="navbar-custom-menu pull-right">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown notifications-menu">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <span class="label">3</span>
+                            </a>
+                        </li>
+                        <li class="block-list user-menu ">
+                            <div class="item-img">
+                                <img class="user-image" src="assets/images/account-img.png" alt="thien hoa">
+                            </div>
+                            <div class="item-info dropdown control-menu " >
+                                <a href="#" class="item-description dropdown-toggle" data-toggle="dropdown">Sunflowers<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="notifi-item">
+                                        <a href="#">
+                                            <p>Điều khoản sử dụng</p>
+                                        </a>
+                                    </li>
+                                    <li class="notifi-item">
+                                        <a href="#">
+                                            <p>Chính sách bảo mật</p>
+                                        </a>
+                                    </li>
+                                    <li class="notifi-item">
+                                        <a href="#">
+                                            <p>Đổi mật khẩu</p>
+                                        </a>
+                                    </li>
+                                    <li class="notifi-item">
+                                        <a href="#">
+                                            <p>Thoát</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        		</div>	
+        	</div>
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+</header>

@@ -1,0 +1,43 @@
+//border radius creator
+.border-radius(@radius) {
+    border-radius: @radius;
+}
+//Different radius each side
+.border-radius(@top-left; @top-right; @bottom-left; @bottom-right) {
+    border-top-left-radius: @top-left;
+    border-top-right-radius: @top-right;
+    border-bottom-right-radius: @bottom-right;
+    border-bottom-left-radius: @bottom-left;
+}
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.img {
+	position: absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+.error {
+    color: #ff0000;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    font-style: italic;
+}
+.transtation {
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}

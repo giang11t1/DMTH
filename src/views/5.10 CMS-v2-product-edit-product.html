@@ -1,0 +1,844 @@
+{% set current_page = 'product' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<style type="text/css">
+	.datetimepicker {
+		width: 21%;
+	}
+	.datetimepicker table {
+	    margin: 0;
+	    width: 100%;
+	}
+</style>
+<div class="col-md-">
+	<div class="wrap_view view_product create_product">
+		<div class="header">
+			<h2 class="title">Chi tiết sản phẩm <span>/ < FA1234567890AD > < Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Màu Đỏ></span></h2>
+			<a href="5.8 CMS-v2-product-product_information.html"><i class="fa fa-reply" aria-hidden="true"></i>  Quay lại</a>
+		</div>
+		<ul class="nav nav-tabs">
+			<li class="active">
+	        	<a href="#1" data-toggle="tab">Thông tin chung</a>
+			</li>
+			<li><a href="#2" data-toggle="tab">Lịch sử sản phẩm</a>
+			</li>
+			<li><a href="#3" data-toggle="tab">S.E.O sản phẩm</a>
+			</li>
+		</ul>
+		<div class="body tab-content">
+			<div class="content_product tab-pane active" id="1">
+				<div class="part_create">
+					<h3 class="title_supplier">Hình ảnh sản phẩm <span><i class="icon-save-product" data-toggle="modal" data-target="#Modal">&nbsp</i><i class="fa fa-times" aria-hidden="true"></i></span></h3> 
+					<div class="row">
+						<div class="col-md-3">
+							<p><b>Hình chính</b></p>
+							<div class="image-upload">
+							    <label for="file-input">
+							        <img id="blah1" src="assets/images/main-product.png" alt="your image">
+							        <div class="wrap-bg" style="display: none;">
+							        	<img class="display " src="assets/images/icon-camera.png" alt="your image" >
+							        </div>
+							    	<input id="file-input" type="file" onchange="readURL(this);">
+							    </label>
+
+							</div>
+						</div>
+						<div class="col-md-9">
+							<p><b>Hình phụ</b></p>
+							<div class="wrap_images image-upload">
+								<label>
+									<input type="file" id="files" multiple />
+									<img src="assets/images/img_upload.png" alt="">
+									<div class="wrap-bg" style="display: none;">
+							        	<img class="display " src="assets/images/icon-camera.png" alt="your image" >
+							        </div>
+							    </label>
+								
+								<output id="list">
+									<span>
+										<img src="assets/images/hinhphu1.png" alt="">
+									</span>
+									<span>
+										<img src="assets/images/hinhphu2.png" alt="">
+									</span>
+									<span>
+										<img src="assets/images/hinhphu3.png" alt="">
+									</span>
+								</output>
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="col-md-6">
+								<b>Lưu ý:</b>
+								<ul>
+									<li>- Hình có dạng: <b class="orange">.png</b>; <b class="orange">.jpeg</b>; <b class="orange">.jpg</b></li>
+									<li>- Kích thước màn hình: <b class="orange">1200px x 1200px</b></li>
+									<li>- Dung lượng hình: <b class="orange">350Kb</b></li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<ul>
+									<li>- Số hình chính: <b class="orange">01 hình</b></li>
+									<li>- Số hình phụ: Tối đa <b class="orange">5 hình</b></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6"></div>
+					</div>
+				</div>
+				<div class="part_information">
+					<h3 class="title_supplier">Thông tin sản phẩm <span><i class="icon-save-product" data-toggle="modal" data-target="#Modal">&nbsp</i><i class="fa fa-times" aria-hidden="true"></i></span></h3>
+					<div class="col-md-6">
+						<ul>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Tên sản phẩm</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập tên sản phẩm" value="Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Qu...">
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Tên Alias</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập tên sản phẩm" value="Bộ 3 thố thủy tinh và túi giữ nhiệt">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>SKU (myMall)</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập mã SKU. Vd: AD12DAR8914" value="FA1234567890AD">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>SKU (Nhà cung cấp)</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập mã SKU. Vd: AD12DAR8914" value="N/A">
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Nhà cung cấp</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Thương hiệu:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>LOCK&LOCK</option>
+										    <option>LOCK&LOCK</option>
+										    <option>LOCK&LOCK</option>
+										    <option>LOCK&LOCK</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Hợp đồng:</label>
+								</div>
+								<div class="col-md-6">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Quảng cáo - ký gởi - HD02</option>
+										    <option>Quảng cáo - ký gởi - HD02</option>
+										    <option>Quảng cáo - ký gởi - HD02</option>
+										    <option>Quảng cáo - ký gởi - HD02</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="col-md-2 wr_lock">
+									<label class="lock">Khóa</label>
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox0" class="slider-toggle" checked/>
+										<label class="slider-viewport" for="checkbox0">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Địa điểm lấy hàng:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Thành Phố Hồ Chí Minh</option>
+										    <option>Thành Phố Hồ Chí Minh</option>
+										    <option>Thành Phố Hồ Chí Minh</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Danh mục chính:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Nhà bếp - vệ sinh</option>
+										    <option>Nhà bếp - vệ sinh</option>
+										    <option>Nhà bếp - vệ sinh</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Danh mục phụ 1:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Vệ sinh nhà cửa</option>
+										    <option>Vệ sinh nhà cửa</option>
+										    <option>Vệ sinh nhà cửa</option>
+										    <option>Vệ sinh nhà cửa</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Danh mục phụ 2:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>N/A</option>
+										    <option>N/A</option>
+										    <option>N/A</option>
+										    <option>N/A</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>						
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Số lượng sản phẩm:</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập số lượng sản phẩm" value="500 cái">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Khối lượng sản phẩm:</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập khối lượng sản phẩm" value="400gr">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Giá nhà cung cấp:</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" name="" placeholder="Nhập giá sản phẩm từ nhà cung cấp" value="145.000">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>VNĐ</option>
+										    <option>$</option>
+										    <option>EURO</option>
+										    <option>YEN</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Giá thị trường:</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" name="" placeholder="Nhập giá sản phẩm trên thị trường" value="270.000">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>VNĐ</option>
+										    <option>$</option>
+										    <option>EURO</option>
+										    <option>YEN</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Giá bán (myMall):</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" name="" placeholder="Nhập giá bán trên myMall" value="179.000">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>VNĐ</option>
+										    <option>$</option>
+										    <option>EURO</option>
+										    <option>YEN</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>% Giảm/ Giá thị truòng:</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" name="" placeholder="Nhập số % giảm giá trên myMall/ Giá thị trường" value="40">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>VNĐ</option>
+										    <option>$</option>
+										    <option>EURO</option>
+										    <option>YEN</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<span><b>Giá bán (myMall)</b> <br> áp dụng từ ngày:</span>
+								</div>
+								<div class="col-md-8">
+									<div class="time">
+										<div class="input-group date">
+						                    <input class="form-control form_datetime" size="20" type="text" value="01-03-2017" placeholder="Thời gian : Ngày-Tháng-Năm ">
+											<span class="fa fa-calendar"></span>
+						                </div>
+										<input type="hidden" id="dtp_input1" value="">
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="part_property">
+					<h3 class="title_supplier">Thuộc tính sản phẩm <span><i class="icon-save-product" data-toggle="modal" data-target="#Modal">&nbsp</i><i class="fa fa-times" aria-hidden="true"></i></span></h3>
+					<div class="col-md-6">
+						<div class="top_box row">
+							<div class="col-md-3">
+								<b>Nhóm thuộc tính: </b>
+							</div>
+							<div class="col-md-9">
+								<div class="wrap_select">
+									<select class="form-control">
+										<option>Chọn thuộc tính</option>
+									    <option>Xuất xứ</option>
+									    <option>ads</option>
+									</select>
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_box row">
+							<div class="content collapse in">
+			    				<div class="scrollbar">
+			    					<div class="col-md-4">
+										<p>
+										    <input class="custom" type="checkbox" id="test1" checked="" />
+										    <label for="test1">Mỹ</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test2" checked="" />
+										    <label for="test2">Canada</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test3" />
+										    <label for="test3">Nhật Bản</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test4" />
+										    <label for="test4">Hàn Quốc</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test5" />
+										    <label for="test5">Pháp</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test6" />
+										    <label for="test6">Việt Nam</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test7" />
+										    <label for="test7">Malaysia</label>
+										</p>
+									</div>
+									<div class="col-md-4">
+										<p>
+										    <input class="custom" type="checkbox" id="test8" />
+										    <label for="test8">Đài Loan</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test9" />
+										    <label for="test9">Thái Lan</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test10" />
+										    <label for="test10">Indonesia</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test11" />
+										    <label for="test11">Cambodia</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test12" />
+										    <label for="test12">Thụy Điển</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test13" />
+										    <label for="test13">Thụy Sĩ</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test14" checked="" />
+										    <label for="test14">Anh</label>
+										</p>
+									</div>
+									<div class="col-md-4">
+										<p>
+										    <input class="custom" type="checkbox" id="test15" />
+										    <label for="test15">Cộng Hòa Séc</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test16" />
+										    <label for="test16">Đan Mạch</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test17" />
+										    <label for="test17">Thổ Nhĩ Kỳ</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test18" />
+										    <label for="test18">Singapore</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test19" />
+										    <label for="test19">Philipines</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test20" />
+										    <label for="test20">Phần Lan</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test21" checked="" />
+										    <label for="test21">Tây Ban Nha</label>
+										</p>
+									</div>
+			    				</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<p class="subtitle">Các thuộc tính đã chọn</p>
+						<div class="property_choosed">
+							<div class="wrap_property">
+								<b class="title">Xuất xứ</b>
+								<span>Mỹ <i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>Anh <i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>Tây Ban Nha <i class="fa fa-times" aria-hidden="true"></i></span>
+							</div>
+							<div class="wrap_property size">
+								<b class="title">Size</b>
+								<span>S<i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>M <i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>L<i class="fa fa-times" aria-hidden="true"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="part_pro_vanhanh">
+					<h3 class="title_supplier">Thuộc tính vận hành <span><i class="icon-save-product" data-toggle="modal" data-target="#Modal">&nbsp</i><i class="fa fa-times" aria-hidden="true"></i></span></h3>
+					<div class="maketting">
+						<b>Maketting</b>
+						<div class="wrap-pro row">
+							<div class="col-md-6">
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testa" checked="">
+									    <label for="testa">Khuyến mãi</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testb" checked="">
+									    <label for="testb">Yêu thích nhất</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testc">
+									    <label for="testc">Mới nhất</label>
+									</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-6">
+									<p>
+									    <input class="custom" type="checkbox" id="testd">
+									    <label for="testd">Giảm giá</label>
+									</p>
+								</div>
+								<div class="col-md-6">
+									<p>
+									    <input class="custom" type="checkbox" id="teste">
+									    <label for="teste">Bán chạy nhất</label>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content">
+						<b>Nội dung</b>
+						<div class="wrap-pro row">
+							<div class="col-md-6">
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testf" checked="">
+									    <label for="testf">Hiển thị icon quảng cáo</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testg">
+									    <label for="testg">Sản phẩm nhạy cảm</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+								</div>
+							</div>
+							<div class="col-md-6">
+							</div>
+						</div>
+					</div>
+					<div class="kho">
+						<b>Kho</b>
+						<div class="wrap-pro row">
+							<div class="col-md-6">
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testh" checked="">
+									    <label for="testh">Sản phẩm nhập kho</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-4">
+								</div>
+							</div>
+							<div class="col-md-6">
+							</div>
+						</div>
+					</div>
+					<div class="send_recive">
+						<b>Giao nhận</b>
+						<div class="wrap-pro row">
+							<div class="col-md-5">
+								<p>
+								    <input class="custom" type="checkbox" id="testk" checked="">
+								    <label for="testk">Sản phẩm giao trong vòng 24h</label>
+								</p>
+							</div>
+							<div class="col-md-5 offset-md-2 ">
+								<div class="col-md-5">
+									<p>
+									    <input class="custom" type="checkbox" id="testl" checked="">
+									    <label for="testl">Chỉ giao sản phẩm tại:</label>
+									</p>
+								</div>
+								<div class="col-md-7">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>TP Hồ Chí Minh</option>
+										    <option>TP Hồ Chí Minh</option>
+										    <option>Hà Nội</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="input_information">
+					<div class="row">
+						<div class="col-md-6">
+							<h3 class="title_supplier">Giới thiệu sản phẩm <span><i class="icon-save-product" data-toggle="modal" data-target="#Modal">&nbsp</i><i class="fa fa-times" aria-hidden="true"></i></span></h3>
+							<div class="style-textarea">
+                <textarea name="comment" id="styled" placeholder="Nhập thông tin giới thiệu cho sản phẩm ....">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
+                <div class="text_area">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+              </div>
+						</div>
+						<div class="col-md-6">
+							<h3 class="title_supplier">Khuyến cáo sản phẩm <span><i class="icon-save-product" data-toggle="modal" data-target="#Modal">&nbsp</i><i class="fa fa-times" aria-hidden="true"></i></span></h3>
+							<div class="style-textarea">
+                <textarea name="comment" id="styled1" placeholder="Nhập nội dung khuyến cáo cho sản phẩm ....">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
+                <div class="text_area">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+              </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<h3 class="title_supplier">Mô tả ngắn sản phẩm <span><i class="icon-save-product" data-toggle="modal" data-target="#Modal">&nbsp</i><i class="fa fa-times" aria-hidden="true"></i></span></h3>
+							<div class="style-textarea">
+                <textarea name="comment" id="styled2" placeholder="Nhập mô tả ngắn cho sản phẩm ....">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
+                <div class="text_area">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+              </div>
+						</div>
+						<div class="col-md-6">
+							<h3 class="title_supplier">THông số sản phẩm <span><i class="icon-save-product" data-toggle="modal" data-target="#Modal">&nbsp</i><i class="fa fa-times" aria-hidden="true"></i></span></h3>
+							<div class="right_corner">
+								<span>SKU trên myMall: </span>
+								<span class="code">AD12DAR8914DF</span>
+							</div>
+							<div class="style-textarea">
+                <textarea name="comment" id="styled3" placeholder="Nhập thông số cho sản phẩm ....">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
+                <div class="text_area">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+              </div>
+						</div>
+					</div>
+				</div>
+				<!-- popup -->
+				<div class="modal fade" id="Modal" role="dialog">
+					<div class="modal-dialog modal_success">
+						<div class="modal-content ">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<div class="content">
+								<i class="icon_success">&nbsp</i>
+								<h2>Cập nhật thông tin sản PHẨM THÀNH CÔNG</h2>
+								<p>Bạn có thể xem <a href="#">Chi tiết</a> hoặc <a href="#">Danh sách sản phẩm</a></p>
+								<button type="button" class="btn_next btn-save">Tiếp tục</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- end -->
+			</div>
+			<!-- end tab 1 -->
+			<div class="tab-pane" id="2">
+				<div class="wrap-table">
+					<div class="table-status">
+						<div class="header_table">
+							<div class="col-md-5">
+								<div class="col-md-8">
+									<span>Thời gian</span>
+								</div>
+								<div class="col-md-4">
+									<span>User</span>
+								</div>
+							</div>
+							<div class="col-md-7">
+								<div class="col-md-4">
+									<span>Thao tác</span>
+								</div>
+								<div class="col-md-8">
+									<span>Chi tiết</span>
+								</div>
+							</div>
+						</div>
+						<ul>
+							<li class="row">
+								<div class="col-md-5">
+									<div class="col-md-8"><span>04:15 CH - 15/09/2016</span></div>
+									<div class="col-md-4"><span>admin</span></div>
+								</div>
+								<div class="col-md-7">
+									<div class="col-md-4"><span>Cập nhật sản phẩm</span></div>
+									<div class="col-md-8"><span>Giá on site : 1500000</span></div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-5">
+									<div class="col-md-8"><span>04:15 CH - 15/09/2016</span></div>
+									<div class="col-md-4"><span>admin</span></div>
+								</div>
+								<div class="col-md-7">
+									<div class="col-md-4"><span>Cập nhật sản phẩm</span></div>
+									<div class="col-md-8"><span>Giá bán chính thức : 1500000</span></div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-5">
+									<div class="col-md-8"><span>04:15 CH - 15/09/2016</span></div>
+									<div class="col-md-4"><span>admin</span></div>
+								</div>
+								<div class="col-md-7">
+									<div class="col-md-4"><span>Cập nhật sản phẩm</span></div>
+									<div class="col-md-8"><span>Category : Thời Trang</span></div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-5">
+									<div class="col-md-8"><span>04:15 CH - 15/09/2016</span></div>
+									<div class="col-md-4"><span>admin</span></div>
+								</div>
+								<div class="col-md-7">
+									<div class="col-md-4"><span>Cập nhật sản phẩm</span></div>
+									<div class="col-md-8"><span>Chỉnh sửa thuộc tính sản phẩm</span></div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-5">
+									<div class="col-md-8"><span>04:15 CH - 15/09/2016</span></div>
+									<div class="col-md-4"><span>admin</span></div>
+								</div>
+								<div class="col-md-7">
+									<div class="col-md-4"><span>Cập nhật sản phẩm</span></div>
+									<div class="col-md-8"><span>Số lượng : -12</span></div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-5">
+									<div class="col-md-8"><span>04:15 CH - 15/09/2016</span></div>
+									<div class="col-md-4"><span>admin</span></div>
+								</div>
+								<div class="col-md-7">
+									<div class="col-md-4"><span>Cập nhật sản phẩm</span></div>
+									<div class="col-md-8"><span>Số lượng : -12</span></div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-5">
+									<div class="col-md-8"><span>04:15 CH - 15/09/2016</span></div>
+									<div class="col-md-4"><span>admin</span></div>
+								</div>
+								<div class="col-md-7">
+									<div class="col-md-4"><span>Cập nhật sản phẩm</span></div>
+									<div class="col-md-8"><span>Giá on site : 1500000</span></div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-5">
+									<div class="col-md-8"><span>04:15 CH - 15/09/2016</span></div>
+									<div class="col-md-4"><span>admin</span></div>
+								</div>
+								<div class="col-md-7">
+									<div class="col-md-4"><span>Cập nhật sản phẩm</span></div>
+									<div class="col-md-8"><span>Giá on site : 1500000</span></div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-5">
+									<div class="col-md-8"><span>04:15 CH - 15/09/2016</span></div>
+									<div class="col-md-4"><span>admin</span></div>
+								</div>
+								<div class="col-md-7">
+									<div class="col-md-4"><span>Cập nhật sản phẩm</span></div>
+									<div class="col-md-8"><span>Giá on site : 1500000</span></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end tab 2 -->
+			<div class="tab-pane" id="3"> 
+				<div class="content_seo col-md-7 col-md-offset-2">
+					<ul>
+						<li class="row">
+							<div class="col-md-3">
+								<label>Tên sản phẩm:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" name="" placeholder="Tên sản phẩm" value="Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Màu Đỏ">
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-3">
+								<label>Tiêu đề:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" name="" placeholder="Nhập tiêu đề" value="Bộ 03 Hộp Thủy Tinh Và Túi Giữ Nhiệt Hàn Quốc Màu Đỏ">
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-3">
+								<label>Mô tả:</label>
+							</div>
+							<div class="col-md-9">
+								<textarea placeholder="Mô tả sản phẩm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scram...</textarea>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-3">
+								<label>Từ khóa</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" name="" placeholder="Nhập từ khóa S.E.O cho sản phẩm" value="">
+								<span>Lock&Lock <i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>Hàn Quốc <i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>Hộp thủy tinh <i class="fa fa-times" aria-hidden="true"></i></span>
+							</div>
+						</li>
+					</ul>
+					<div class="col-md-3 col-md-offset-3">
+						<button type="button" class="btn-save" value="">Thêm mới</button>
+					</div>
+				</div>
+			</div>
+			<!-- end tab 3 -->
+		</div>
+	</div>
+</div>
+{% endblock %}

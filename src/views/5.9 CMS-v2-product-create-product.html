@@ -1,0 +1,667 @@
+{% set current_page = 'product' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<style type="text/css">
+	.datetimepicker {
+		width: 21%;
+	}
+	.datetimepicker table {
+	    margin: 0;
+	    width: 100%;
+	}
+</style>
+<div class="col-md-">
+	<div class="wrap_view view_product">
+		<div class="header">
+			<h2 class="title">Tạo sản phẩm mới</h2>
+			<a href="5.8 CMS-v2-product-product_information.html"><i class="fa fa-reply" aria-hidden="true"></i>  Quay lại</a>
+		</div>
+		<div class="content_product ">
+			<div class="wrapper_create">
+				<div class="part_create">
+					<h3 class="title_supplier">Hình ảnh sản phẩm</h3>
+					<div class="row">
+						<div class="col-md-3">
+							<p><b>Hình chính</b></p>
+							<div class="image-upload">
+							    <label for="file-input">
+							    	<!-- <img src="../assets/images/logo-supply.png" alt="your image"> -->
+							        <img id="blah1" src="assets/images/img_upload.png" alt="your image">
+							        <div class="wrap-bg" style="display: none;">
+							        	<img class="display " src="assets/images/icon-camera.png" alt="your image" >
+							        </div>
+							    	<input id="file-input" type="file" onchange="readURL(this);">
+							    </label>
+
+							</div>
+						</div>
+						<div class="col-md-9">
+							<p><b>Hình phụ</b></p>
+							<div class="wrap_images image-upload">
+								<label>
+									<input type="file" id="files" multiple />
+									<img src="assets/images/img_upload.png" alt="">
+									<div class="wrap-bg" style="display: none;">
+							        	<img class="display " src="assets/images/icon-camera.png" alt="your image" >
+							        </div>
+							    </label>
+								
+								<output id="list"></output>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="col-md-6">
+								<b>Lưu ý:</b>
+								<ul>
+									<li>- Hình có dạng: <b class="orange">.png</b>; <b class="orange">.jpeg</b>; <b class="orange">.jpg</b></li>
+									<li>- Kích thước màn hình: <b class="orange">1200px x 1200px</b></li>
+									<li>- Dung lượng hình: <b class="orange">350Kb</b></li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<ul>
+									<li>- Số hình chính: <b class="orange">01 hình</b></li>
+									<li>- Số hình phụ: Tối đa <b class="orange">5 hình</b></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6"></div>
+					</div>
+				</div>
+				<div class="part_information">
+					<h3 class="title_supplier">Thông tin sản phẩm</h3>
+					<div class="col-md-6">
+						<ul>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Tên sản phẩm</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập tên sản phẩm">
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Tên Alias</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập tên sản phẩm">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>SKU (myMall)</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập mã SKU. Vd: AD12DAR8914">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>SKU (Nhà cung cấp)</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập mã SKU. Vd: AD12DAR8914">
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Nhà cung cấp</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Chọn nhà cung cấp</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Thương hiệu:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Chọn thương hiệu</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Hợp đồng:</label>
+								</div>
+								<div class="col-md-6">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Chọn loại hợp đồng</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+								<div class="col-md-2 wr_lock">
+									<label class="lock">Khóa</label>
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox0" class="slider-toggle" checked/>
+										<label class="slider-viewport" for="checkbox0">
+										  	<div class="slider">
+										    	<div class="slider-button">&nbsp;</div>
+										    	<div class="slider-content left"><span>On</span></div>
+										    	<div class="slider-content right"><span>Off</span></div>
+										  	</div>
+										</label>
+									</div>
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Địa điểm lấy hàng:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Chọn địa điểm lấy hàng</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Danh mục chính:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Chọn danh mục chính</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Danh mục phụ 1:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Chọn danh mục phụ 1</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>	
+							<li class="row">
+								<div class="col-md-4">
+									<label>Danh mục phụ 2:</label>
+								</div>
+								<div class="col-md-8">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Chọn danh mục phụ 2</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										    <option>CÔNG TY TNHH SẮC MÀU PHA LÊ</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>						
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Số lượng sản phẩm:</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập số lượng sản phẩm">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Khối lượng sản phẩm:</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="" placeholder="Nhập khối lượng sản phẩm">
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Giá nhà cung cấp:</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" name="" placeholder="Nhập giá sản phẩm từ nhà cung cấp">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>VNĐ</option>
+										    <option>$</option>
+										    <option>EURO</option>
+										    <option>YEN</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Giá thị trường:</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" name="" placeholder="Nhập giá sản phẩm trên thị trường">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>VNĐ</option>
+										    <option>$</option>
+										    <option>EURO</option>
+										    <option>YEN</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>Giá bán (myMall):</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" name="" placeholder="Nhập giá bán trên myMall">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>VNĐ</option>
+										    <option>$</option>
+										    <option>EURO</option>
+										    <option>YEN</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<label>% Giảm/ Giá thị truòng:</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" name="" placeholder="Nhập số % giảm giá trên myMall/ Giá thị trường">
+								</div>
+								<div class="col-md-2">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>VNĐ</option>
+										    <option>$</option>
+										    <option>EURO</option>
+										    <option>YEN</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="col-md-4">
+									<span><b>Giá bán (myMall)</b> <br> áp dụng từ ngày:</span>
+								</div>
+								<div class="col-md-8">
+									<div class="time">
+										<div class="input-group date">
+						                    <input class="form-control form_datetime" size="20" type="text" value="" placeholder="Thời gian : Ngày-Tháng-Năm ">
+											<span class="fa fa-calendar"></span>
+						                </div>
+										<input type="hidden" id="dtp_input1" value="">
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="part_property">
+					<h3 class="title_supplier">Thuộc tính sản phẩm</h3>
+					<div class="col-md-6">
+						<div class="top_box row">
+							<div class="col-md-3">
+								<b>Nhóm thuộc tính: </b>
+							</div>
+							<div class="col-md-9">
+								<div class="wrap_select">
+									<select class="form-control">
+										<option>Chọn thuộc tính</option>
+									    <option>Xuất xứ</option>
+									    <option>ads</option>
+									</select>
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_box row">
+							<div class="content collapse in">
+			    				<div class="scrollbar">
+			    					<div class="col-md-4">
+										<p>
+										    <input class="custom" type="checkbox" id="test1" checked="" />
+										    <label for="test1">Mỹ</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test2" checked="" />
+										    <label for="test2">Canada</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test3" />
+										    <label for="test3">Nhật Bản</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test4" />
+										    <label for="test4">Hàn Quốc</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test5" />
+										    <label for="test5">Pháp</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test6" />
+										    <label for="test6">Việt Nam</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test7" />
+										    <label for="test7">Malaysia</label>
+										</p>
+									</div>
+									<div class="col-md-4">
+										<p>
+										    <input class="custom" type="checkbox" id="test8" />
+										    <label for="test8">Đài Loan</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test9" />
+										    <label for="test9">Thái Lan</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test10" />
+										    <label for="test10">Indonesia</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test11" />
+										    <label for="test11">Cambodia</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test12" />
+										    <label for="test12">Thụy Điển</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test13" />
+										    <label for="test13">Thụy Sĩ</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test14" checked="" />
+										    <label for="test14">Anh</label>
+										</p>
+									</div>
+									<div class="col-md-4">
+										<p>
+										    <input class="custom" type="checkbox" id="test15" />
+										    <label for="test15">Cộng Hòa Séc</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test16" />
+										    <label for="test16">Đan Mạch</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test17" />
+										    <label for="test17">Thổ Nhĩ Kỳ</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test18" />
+										    <label for="test18">Singapore</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test19" />
+										    <label for="test19">Philipines</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test20" />
+										    <label for="test20">Phần Lan</label>
+										</p>
+										<p>
+										    <input class="custom" type="checkbox" id="test21" checked="" />
+										    <label for="test21">Tây Ban Nha</label>
+										</p>
+									</div>
+			    				</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<p class="subtitle">Các thuộc tính đã chọn</p>
+						<div class="property_choosed">
+							<div class="wrap_property">
+								<b class="title">Xuất xứ</b>
+								<span>Mỹ <i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>Anh <i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>Tây Ban Nha <i class="fa fa-times" aria-hidden="true"></i></span>
+							</div>
+							<div class="wrap_property size">
+								<b class="title">Size</b>
+								<span>S<i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>M <i class="fa fa-times" aria-hidden="true"></i></span>
+								<span>L<i class="fa fa-times" aria-hidden="true"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="part_pro_vanhanh">
+					<h3 class="title_supplier">Thuộc tính vận hành</h3>
+					<div class="maketting">
+						<b>Maketting</b>
+						<div class="wrap-pro row">
+							<div class="col-md-6">
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testa">
+									    <label for="testa">Khuyến mãi</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testb">
+									    <label for="testb">Yêu thích nhất</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testc">
+									    <label for="testc">Mới nhất</label>
+									</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-6">
+									<p>
+									    <input class="custom" type="checkbox" id="testd">
+									    <label for="testd">Giảm giá</label>
+									</p>
+								</div>
+								<div class="col-md-6">
+									<p>
+									    <input class="custom" type="checkbox" id="teste">
+									    <label for="teste">Bán chạy nhất</label>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content">
+						<b>Nội dung</b>
+						<div class="wrap-pro row">
+							<div class="col-md-6">
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testf">
+									    <label for="testf">Hiển thị icon quảng cáo</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testg">
+									    <label for="testg">Sản phẩm nhạy cảm</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+								</div>
+							</div>
+							<div class="col-md-6">
+							</div>
+						</div>
+					</div>
+					<div class="kho">
+						<b>Kho</b>
+						<div class="wrap-pro row">
+							<div class="col-md-6">
+								<div class="col-md-4">
+									<p>
+									    <input class="custom" type="checkbox" id="testh">
+									    <label for="testh">Sản phẩm nhập kho</label>
+									</p>
+								</div>
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-4">
+								</div>
+							</div>
+							<div class="col-md-6">
+							</div>
+						</div>
+					</div>
+					<div class="send_recive">
+						<b>Giao nhận</b>
+						<div class="wrap-pro row">
+							<div class="col-md-5">
+								<p>
+								    <input class="custom" type="checkbox" id="testk">
+								    <label for="testk">Sản phẩm giao trong vòng 24h</label>
+								</p>
+							</div>
+							<div class="col-md-5 offset-md-2 ">
+								<div class="col-md-5">
+									<p>
+									    <input class="custom" type="checkbox" id="testl">
+									    <label for="testl">Chỉ giao sản phẩm tại:</label>
+									</p>
+								</div>
+								<div class="col-md-7">
+									<div class="wrap_select">
+										<select class="form-control">
+										    <option>Chọn Tỉnh/ Thành phố</option>
+										    <option>TP Hồ Chí Minh</option>
+										    <option>Hà Nội</option>
+										</select>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="input_information">
+					<div class="row">
+						<div class="col-md-6">
+							<h3 class="title_supplier">Giới thiệu sản phẩm</h3>
+							<div class="style-textarea">
+		                        <textarea name="comment" id="styled" placeholder="Nhập thông tin giới thiệu cho sản phẩm ...."></textarea>
+		                        <div class="text_area">
+		                            <i class="fa fa-quote-left" aria-hidden="true"></i>
+		                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+		                        </div>
+		                    </div>
+						</div>
+						<div class="col-md-6">
+							<h3 class="title_supplier">Khuyến cáo sản phẩm</h3>
+							<div class="style-textarea">
+	              <textarea name="comment" id="styled1" placeholder="Nhập nội dung khuyến cáo cho sản phẩm ...."></textarea>
+	              <div class="text_area">
+	                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+	                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+	              </div>
+	            </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<h3 class="title_supplier">Mô tả ngắn sản phẩm</h3>
+							<div class="style-textarea">
+	                <textarea name="comment" id="styled2" placeholder="Nhập mô tả ngắn cho sản phẩm ...."></textarea>
+	                <div class="text_area">
+	                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+	                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+	                </div>
+	            </div>
+						</div>
+						<div class="col-md-6">
+							<div class="row">
+								<h3 class="title_supplier">THông số sản phẩm</h3>
+								<div class="right_corner">
+									<span>SKU hiển thị trên myMall: </span>
+									<span class="code">AD12DAR8914DF</span>
+								</div>
+							</div>
+							<div class="style-textarea">
+	              <textarea name="comment" id="styled3" placeholder="Nhập thông số cho sản phẩm ...."></textarea>
+	              <div class="text_area">
+	                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+	                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+	              </div>
+	            </div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn_edit col-md-2 col-md-offset-10" value="" data-toggle="modal" data-target="#Modal">Lưu sản phẩm</button>
+			</div>
+			
+			<!-- popup -->
+			<div class="modal fade" id="Modal" role="dialog">
+				<div class="modal-dialog modal_success">
+					<div class="modal-content ">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<div class="content">
+							<i class="icon_success">&nbsp</i>
+							<h2>TẠO SẢN MỚI PHẨM THÀNH CÔNG</h2>
+							<p>Bạn có thể xem <a href="#">Chi tiết</a> hoặc <a href="#">Danh sách sản phẩm</a></p>
+							<button type="button" class="btn_next btn-save">Tiếp tục</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- end -->
+		</div>
+		
+	</div>
+</div>
+{% endblock %}

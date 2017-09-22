@@ -1,0 +1,19 @@
+/*
+ * Component: Form
+ * ---------------
+ */
+.form-control {
+    height: 40px;
+    padding: 6px 8px;
+    .border-radius(@input-radius);
+    box-shadow: none;
+    border-color: @line-color-1;
+    &:focus {
+    box-shadow: none;
+    }
+    &:not(select) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+}

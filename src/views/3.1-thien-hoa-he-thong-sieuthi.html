@@ -1,0 +1,142 @@
+{% set current_page = 'sieuthi-system' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+    <section class="section section-banner">
+        <h3 class="title-section">hệ thống siêu thị</h3>
+        <div class="panel box-panel">
+            <div class="top">
+                <h3 class="title">Banner</h3>
+                <a class="pull-right update-action">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    <span>Cập nhật</span>
+                </a>
+            </div>
+            <div class="banner">
+                <img src="assets/images/banner-indoduce.png" alt="banner">
+            </div>
+        </div>
+    </section>
+    <section class="section section-infor">
+        <div class="panel box-panel">
+            <div class="top">
+                <h3 class="title">Thông tin siêu thị</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box">
+                        <div class="header-box">
+                            <h4>Siêu thị sắp khai trương</h4>
+                            <a class="pull-right add-action">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <span>Thêm mới</span>
+                            </a>
+                        </div>
+                        <div class="body-box">
+                            <div class="scrollbar">
+                                <ul class="list-super">
+                                    <li>
+                                        <strong>Trung tâm Mua Sắm Trực Tuyến</strong>
+                                        <p>Địa chỉ: Lầu 7, số 277B Cách Mạng Tháng 08 Phường 12, Quận 10, Tp HCM </p>
+                                        <div class="pull-right">
+                                            <a class="tooltip">
+                                                <i class="fa fa-times action-delete" aria-hidden="true"></i>
+                                                <span class="tooltiptext">Xóa</span>
+                                            </a>
+                                            <a class="tooltip">
+                                                <i class="fa fa-pencil-square-o action-update" aria-hidden="true"></i>
+                                                <span class="tooltiptext">Cập nhật</span>
+                                            </a>                                            
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong>Trung tâm Mua Sắm Trực Tuyến</strong>
+                                        <p>Địa chỉ: Lầu 7, số 277B Cách Mạng Tháng 08 Phường 12, Quận 10, Tp HCM </p>
+                                        <div class="pull-right">
+                                            <a class="tooltip">
+                                                <i class="fa fa-times action-delete" aria-hidden="true"></i>
+                                                <span class="tooltiptext">Xóa</span>
+                                            </a>
+                                            <a class="tooltip">
+                                                <i class="fa fa-pencil-square-o action-update" aria-hidden="true"></i>
+                                                <span class="tooltiptext">Cập nhật</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box">
+                        <div class="header-box">
+                            <h4>Siêu thị hiện có/ Đang hoạt động</h4>
+                            <a class="pull-right add-action">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <span>Thêm mới</span>
+                            </a>
+                        </div>
+                        <div class="body-box">
+                            <div class="scrollbar">
+                                <div class="city">
+                                    <h4 class="title-city"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Thành phố Hồ Chí Minh</span></h4>
+                                    <ul class="list-super">
+                                        {% for x in [1,2,3,4] %}
+                                            <li>
+                                                <strong>Trung tâm Mua Sắm Trực Tuyến</strong>
+                                                <p>Địa chỉ: Lầu 7, số 277B Cách Mạng Tháng 08 Phường 12, Quận 10, Tp HCM </p>
+                                                <div class="pull-right">
+                                                    <a class="tooltip">
+                                                        <i class="fa fa-times action-delete" aria-hidden="true"></i>
+                                                        <span class="tooltiptext">Xóa</span>
+                                                    </a>
+                                                    <a class="tooltip">
+                                                        <i class="fa fa-pencil-square-o action-update" aria-hidden="true"></i>
+                                                        <span class="tooltiptext">Cập nhật</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        {% endfor %} 
+                                    </ul>
+                                </div>
+                                <div class="city">
+                                    <h4 class="title-city"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Thành phố Bình Dương</span></h4>
+                                    <ul class="list-super">
+                                        <li>
+                                            <strong>Trung tâm Mua Sắm Trực Tuyến</strong>
+                                            <p>Địa chỉ: Lầu 7, số 277B Cách Mạng Tháng 08 Phường 12, Quận 10, Tp HCM </p>
+                                            <div class="pull-right">
+                                                <a class="tooltip">
+                                                    <i class="fa fa-times action-delete" aria-hidden="true"></i>
+                                                    <span class="tooltiptext">Xóa</span>
+                                                </a>
+                                                <a class="tooltip">
+                                                    <i class="fa fa-pencil-square-o action-update" aria-hidden="true"></i>
+                                                    <span class="tooltiptext">Cập nhật</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                             
+                        </div>                                               
+                    </div>
+                </div>
+            </div>
+            <div class="row intro-supper">
+                <div class="top">
+                    <h3 class="title">Giới thiệu hệ thống siêu thị</h3>
+                    <a class="pull-right update-action">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Cập nhật</span>
+                    </a>
+                </div>
+                <div class="content">
+                    Công ty TNHH TM&DV Thiên Nam Hòa chính thức được thành lập và đi vào hoạt động ngày 24/11/2001 với ngành nghề kinh doanh chủ yếu là điện máy – nội thất. Bắt đầu hoạt động từ một cửa hàng kinh doanh các mặt hàng điện – điện tử - điện lạnh nhỏ tại TP HCM, đến nay Thiên Hòa đã phát triển thành chuỗi Hệ thống trung tâm Điện máy – Nội thất quy mô với 7 trung tâm lớn tiện nghi thu hút đông đảo khách hàng đến tham quan và mua sắm.
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

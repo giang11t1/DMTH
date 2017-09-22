@@ -1,0 +1,122 @@
+/*
+ * Core: General Layout Style
+ * -------------------------
+ */
+html,
+body {
+    min-height: 100%;
+    color: @text-color-1;
+    .layout-boxed & {
+        height: 100%;
+    }
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    line-height: 1.4;
+    background: #fff;
+}
+/* ::selection style */
+p,
+span,
+label,
+strong,
+img {
+    &::-moz-selection { /* Code for Firefox */
+        color: #fff;
+        background: @primary-color;
+    }
+
+    &::selection {
+        color: #fff;
+        background: @primary-color;
+    }
+}
+/* H1 - H6 font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.4;
+    &::-moz-selection { /* Code for Firefox */
+        color: #fff;
+        background: @primary-color;
+    }
+
+    &::selection {
+        color: #fff;
+        background: @primary-color;
+    }
+}
+/* General Links */
+a {
+    color: @link-color;
+    &::-moz-selection { /* Code for Firefox */
+        color: #fff;
+        background: @secondary-color;
+    }
+
+    &::selection {
+        color: #fff;
+        background: @secondary-color;
+    }
+}
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+    color: @link-hover-color;
+}
+img {
+    max-width: 100%;
+}
+main {
+    width: 100%;
+    min-height: 300px;
+    float: left;
+}
+.cover-background {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+section {
+    margin-bottom: 30px;
+    .col-md-12 {
+        padding: 0;
+    }
+    .panel {
+        padding: 25px;
+    }
+}
+.panel-heading {
+    border-bottom: @border;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.panel-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    i {
+        cursor: pointer;
+        &:hover {
+            color: @primary-color;
+        }
+    }
+}

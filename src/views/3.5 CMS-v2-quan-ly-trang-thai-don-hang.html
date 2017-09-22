@@ -1,0 +1,348 @@
+{% set current_page = 'xemdonhang' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view">
+		<div class="header">
+			<h2 class="title">Quản lý trạng thái đơn hàng</h2>
+			<a href="3.5.1 CMS-v2-Tao-trang-thai-moi.html"><i class="icon-add">&nbsp</i> <span>Tạo trạng thái đơn hàng mới</span></a>
+		</div>
+		<div class="body">
+			<div class="wrap-table">
+				<div class="table-status">
+					<div class="header_table">
+						<div class="col-md-6">
+							<div class="col-md-3">
+								<span>ID Trạng thái</span>
+							</div>
+							<div class="col-md-9">
+								<span>Tên trạng thái</span>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="col-md-4">
+								<span>Ngày khởi tạo</span>
+							</div>
+							<div class="col-md-3">
+								<span>Trạng thái</span>
+							</div>
+							<div class="col-md-2">
+								<span>Thứ tự</span>
+							</div>
+							<div class="col-md-3"></div>
+						</div>
+					</div>
+					<ul>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0001</span></div>
+								<div class="col-md-9"><span>Đặt hàng thành công</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>01</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0002</span></div>
+								<div class="col-md-9"><span>Chưa liên hệ được</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox1" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox1">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>02</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0003</span></div>
+								<div class="col-md-9"><span>Chờ thanh toán</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox2" class="slider-toggle"  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox2">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>03</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0004</span></div>
+								<div class="col-md-9"><span>Đã xác nhận</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox3" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox3">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>04</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0005</span></div>
+								<div class="col-md-9"><span>Thiếu thông tin khách hàng</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox4" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox4">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>05</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0006</span></div>
+								<div class="col-md-9"><span>Đủ thông tin khách hàng</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox5" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox5">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>06</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0007</span></div>
+								<div class="col-md-9"><span>Khách hàng đồng ý lấy</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox6" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox6">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>07</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0008</span></div>
+								<div class="col-md-9"><span>Khách hàng đồng ý đợi</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox7" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox7">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>08</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0009</span></div>
+								<div class="col-md-9"><span>Đang chuẩn bị đặt hàng (Đặt hàng trước)</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox8" class="slider-toggle"  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox8">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>09</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+						<li class="row">
+							<div class="col-md-6">
+								<div class="col-md-3"><span>0010</span></div>
+								<div class="col-md-9"><span>Hủy đơn đặt hàng (Chuyển đơn hàng khác)</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-4"><span>09:35 SA - 12/02/2017</span></div>
+								<div class="col-md-3">
+									<div class="wrapper">
+									  <input type="checkbox" id="checkbox9" class="slider-toggle" checked  onclick="return false;" onkeydown="return false;"/>
+										<label class="slider-viewport" for="checkbox9">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2"><span>10</span></div>
+								<div class="col-md-3">
+									<a href="3.5.2 CMS-v2-sua-trang-thai-don-hang.html"><i class="icon-edit" title="Sửa trạng thái">&nbsp</i></a>
+									<i class="icon-edit-hover" title="Sửa trạng thái">&nbsp</i>
+									<i class="icon-delete" title="Xóa trạng thái">&nbsp</i>
+									<i class="icon-delete-hover" title="Xóa trạng thái">&nbsp</i>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="bottoom_table">
+						<p class="left">Tổng trạng thái: <span>10/40</span></p>
+						<div class="page">
+							<div class="wrap">
+								<div class="left">
+									<i class="fa fa-angle-double-left">&nbsp</i>
+									<div> <p>Trước</p></div>
+								</div>
+								<p class="display">Trang 1/4</p>
+								<div class="right">
+									<div><p>Sau</p></div>
+									<i class="fa fa-angle-double-right">&nbsp</i>
+								</div>
+							</div>
+							
+							<div class="per_page">
+								<select class="form-control">
+								    <option>10 dòng/ Trang</option>
+								    <option>20 dòng/ Trang</option>
+								    <option>30 dòng/ Trang</option>
+								    <option>40 dòng/ Trang</option>
+								</select>
+								<i class="fa fa-angle-down">&nbsp</i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

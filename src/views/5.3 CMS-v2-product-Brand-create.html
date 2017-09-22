@@ -1,0 +1,157 @@
+{% set current_page = 'product' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+	<div class="wrap_view manage_brand">
+		<div class="header ">
+			<h2 class="title">Tạo thương hiệu mới</h2>
+			<a href="5.1 CMS-v2-product-Brand.html"><i class="fa fa-reply" aria-hidden="true"></i>  Quay lại</a>
+		</div>
+		<div class="view_detail_brand create_brand" >
+			<div class="col-md-12">
+				<h3 class="title ">Thông tin chi tiết thương hiệu</h3>
+			</div>
+			<div class="col-md-6">
+				<div class="box box1_edit">
+					<div class="top">
+						<div class="col-md-2">
+							<div class="image-upload">
+							    <label for="file-input">
+							        <img id="blah" src="../assets/images/upload-logo.png" alt="your image"  />
+							    </label>
+
+							    <input id="file-input" type='file' onchange="readURL(this);"/>
+							</div>
+						</div>
+						<div class="col-md-10">
+							<h4>Thương hiệu mới</h4>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="row">
+							<div class="col-md-3">
+								<label>Tên thương hiệu:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" value="" placeholder="Nhập tên thương hiệu">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Tên tiếng anh:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" value="" placeholder="Nhập tên tiếng anh của thương hiệu">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Tên Alias:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" value="" placeholder="Nhập tên Alias của thương hiệu">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Thuộc danh mục:</label>
+							</div>
+							<div class="col-md-9">
+								<div class="wrap_select">
+									<select class="form-control">
+									    <option>Chọn danh mục</option>
+									    <option>Làm đẹp</option>
+									    <option>Đồ gia dụng</option>
+									</select>
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Nhà cug cấp:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" value="" placeholder="Nhập tên nhà cung cấp">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Trạng thái:</label>
+							</div>
+							<div class="col-md-9">
+								<div class="wrapper">
+								  <input type="checkbox" id="checkbox" class="slider-toggle" checked />
+									<label class="slider-viewport" for="checkbox">
+									  	<div class="slider">
+									    	<div class="slider-button">&nbsp;</div>
+									    	<div class="slider-content left"><span>On</span></div>
+									    	<div class="slider-content right"><span>Off</span></div>
+									  	</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<label>Link thương hiệu:</label>
+							</div>
+							<div class="col-md-9">
+								<input class="in_link" type="text" value="" placeholder="Nhập link thương hiệu">
+							</div>
+						</div>
+						<div class="wrap_btn">
+							<span class="cancel">Hủy bỏ</span>
+							<button type="button" class="btn-save" data-toggle="modal" data-target="#Modal">Lưu</button>
+						</div>
+					</div>
+				</div>
+				<!-- popup -->
+				<div class="modal fade" id="Modal" role="dialog">
+						<div class="modal-dialog modal_success">
+							<div class="modal-content ">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<div class="content">
+									<i class="icon_success">&nbsp</i>
+									<h2>TẠO THƯƠNG HIỆU MỚI THÀNH CÔNG</h2>
+									<p>Bạn có thể xem <a href="#">Chi tiết</a> hoặc <a href="#">Danh sách thương hiệu</a></p>
+									<button type="button" class="btn_next btn-save">Tiếp tục</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- end -->
+			</div>
+			<div class="col-md-6">
+				<div class="box box_descript">
+  					<div class="header_box">
+						<b class="title"> Mô tả thương hiệu </b>
+					</div>
+					<div class="body_box">
+						<div class="edit edit_vietnam">
+							<strong>Mô tả thương hiệu bằng tiếng Việt</strong>
+							<textarea class="edit_content" placeholder="Nhập mô tả thương hiệu bằng tiếng Việt"></textarea>
+							<div class="wrap_btn">
+								<span class="cancel">Hủy bỏ</span>
+								<button type="button" class="btn-save" data-toggle="modal" data-target="#Modal">Lưu</button>
+							</div>
+						</div>
+						<div class="edit edit_engish">
+							<strong>Mô tả thương hiệu bằng tiếng Anh</strong>
+							<textarea class="edit_content" placeholder="Nhập mô tả thương hiệu bằng tiếng Anh"></textarea>
+							<div class="wrap_btn">
+								<span class="cancel">Hủy bỏ</span>
+								<button type="button" class="btn-save" data-toggle="modal" data-target="#Modal">Lưu</button>
+							</div>
+						</div>
+					</div>
+  				</div>
+				<p class="bottom">
+				    <input type="checkbox" name="choose" id="test1">
+				    <label for="test1">Hiển thị trên trang chủ myMall.vn</label>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

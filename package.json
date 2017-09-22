@@ -1,0 +1,26 @@
+{
+  "name": "mymall",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-swig": "latest",
+    "gulp-substituter": "latest",
+    "gulp-connect": "latest",
+    "gulp-less": "latest",
+    "del": "latest"
+  },
+  "devDependencies": {
+    "gulp-util": "^3.0.7"
+  },
+  "description": "Frontend Development Guidelines\r ===",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mymall"
+  ],
+  "author": "wendy",
+  "license": "ISC"
+}
