@@ -23,7 +23,44 @@
 	}
 }
 .no-banner {
-	display: none;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	margin-bottom: 10px;
+	p {
+		margin-bottom: 15px;
+		color: @text-color-3;
+	}
+	button {
+		text-transform: uppercase;
+		color: #fff;
+		background: @bg-color;
+	    padding: 6px 16px;
+		&:hover,
+		&:focus,
+		&:active {
+			color: #fff;
+		}
+		i {
+			margin-right: 8px;
+		}
+	}
+}
+.action {
+	display: inline-block;
+	margin-top: 20px;
+	.cancel {
+		text-decoration: underline;
+		margin-right: 10px;
+		cursor: pointer;
+	}
+	.button-update {
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: bold;
+		background: @primary-color;
+	}
 }
 .section-banner {	
 	.banner {
@@ -36,10 +73,52 @@
 	}
 	.banner-update {
 		display: none;
+		.col-md-3 {
+			padding-right: 0;
+		}
+		.col-md-9 {
+			padding-left: 0;
+			img {
+				height: 305px;
+				width: 100%;
+			}
+		}
+		.wrap_btn {
+			padding-left: 0;
+			float: none;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+		.btn-loadfile {
+			display: inline-block;
+		    padding: 5px 22px;
+			border: 1px solid @primary-color;
+			border-radius: 3px;
+    		position: relative;
+    		text-decoration: none;
+    		input[type=file] {
+    			position: absolute;
+			    top: 0;
+			    height: 35px;
+			    width: 100%;
+			    cursor: pointer;
+			    left: 0;
+    		}
+		}
+		.size-note {
+			font-size: 13px;
+			color: @text-color-3;
+			margin-bottom: 15px;
+			display: block;
+		}
 	}
 }
 
 .section-infor {
+	.no-banner {
+		margin-bottom: 50px;
+		margin-top: 20px;
+	}
 	.box {
 		border-radius: 0;
 		.header-box {
@@ -126,6 +205,37 @@
 	}
 	.update-list {
 		display: none;
+		margin-top: 15px;
+		height: 580px;
+		.col-md-6 {
+			&:first-child {
+				padding: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}		
+		.row {
+			margin-bottom: 15px;
+		}
+		.main-label {
+			display: block;
+		}
+		.row-time {
+			.col-md-6 {
+				margin-bottom: 10px;
+				&:nth-child(even) {
+					padding: 0;
+				}
+				&:nth-child(odd){
+					padding-right: 0;
+				}
+				&:nth-child(5),
+				&:nth-child(4) {
+					margin-bottom: 0;
+				}
+			}
+		}
 	}
 	.intro-supper {
 		margin-top: 15px;
@@ -135,6 +245,13 @@
 		}
 		.update-content {
 			display: none;
+			textarea {
+				width: 100%;
+				resize: none;
+				padding: 15px 20px;
+				height: 110px;
+				border: @border;
+			}
 		}
 	}
 }

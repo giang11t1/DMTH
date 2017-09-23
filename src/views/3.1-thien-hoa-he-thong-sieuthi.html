@@ -16,25 +16,32 @@
                 <img src="assets/images/banner-indoduce.png" alt="banner">
             </div>
             <div class="banner-update">
-                <div class="col-md-10">
+                <div class="col-md-9">
                     <img src="assets/images/banner-indoduce.png" alt="banner">
                 </div>
-                <div class="col-md-2">
-                    <a href="#" style="background: rgb(255, 255, 255); color: rgb(70, 70, 70);">
-                        <i class="icon-browser">&nbsp;</i>
-                        <span>Browse ...</span>
-                        <input type="file" name="newfile">
-                    </a>
+                <div class="col-md-3">
+                    <ul class="wrap_btn">
+                        <li>
+                            <a href="#" class="btn-loadfile">
+                                <i class="icon-browser">&nbsp;</i>
+                                <span>Browse ...</span>
+                                <input type="file" name="newfile">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="show_file">
+                        <span class="file_name"></span>
+                    </div>                    
                     <span class="size-note">Kích thước 900 x 300 px</span>
                     <label>Link banner</label>
-                    <input type="text" name="" placeholder="Nhập link banner"> 
-                    <div class="action">
+                    <input type="text" name="" class="form-control" placeholder="Nhập link banner"> 
+                    <div class="action pull-right">
                         <span class="cancel">Hủy bỏ</span>
-                        <button class="btn button-update">Cập nhật thông tin</button>
+                        <button class="btn button-update" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
                     </div>
                 </div>
             </div>
-            <div class="no-banner">
+            <div class="no-banner" style="display: none;">
                 <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
                 <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
             </div>
@@ -62,7 +69,7 @@
                                         <strong>Trung tâm Mua Sắm Trực Tuyến</strong>
                                         <p>Địa chỉ: Lầu 7, số 277B Cách Mạng Tháng 08 Phường 12, Quận 10, Tp HCM </p>
                                         <div class="pull-right">
-                                            <a class="tooltip">
+                                            <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
                                                 <i class="fa fa-times action-delete" aria-hidden="true"></i>
                                                 <span class="tooltiptext">Xóa</span>
                                             </a>
@@ -76,7 +83,7 @@
                                         <strong>Trung tâm Mua Sắm Trực Tuyến</strong>
                                         <p>Địa chỉ: Lầu 7, số 277B Cách Mạng Tháng 08 Phường 12, Quận 10, Tp HCM </p>
                                         <div class="pull-right">
-                                            <a class="tooltip">
+                                            <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
                                                 <i class="fa fa-times action-delete" aria-hidden="true"></i>
                                                 <span class="tooltiptext">Xóa</span>
                                             </a>
@@ -90,7 +97,7 @@
                             </div>                            
                         </div>
                         <div class="body-box update-list">
-                            <div class="form-group">
+                            <div class="row form-group">
                                 <label>Tên siêu thị</label>
                                 <input type="text" name="" class="form-control" placeholder="Nhập tên siêu thị">
                             </div>  
@@ -149,12 +156,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row action">
+                            <div class="row action pull-right">
                                 <span class="cancel">Hủy bỏ</span>
-                                <button class="btn button-update">Cập nhật thông tin</button>
+                                <button class="btn button-update" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
                             </div>
                         </div>
-                        <div class="no-banner">
+                        <div class="no-banner" style="display: none;">
                             <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
                             <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
                         </div>
@@ -169,7 +176,7 @@
                                 <span>Thêm mới</span>
                             </a>
                         </div>
-                        <div class="body-box display-list">
+                        <div class="body-box display-list" >
                             <div class="scrollbar">
                                 <div class="city">
                                     <h4 class="title-city"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Thành phố Hồ Chí Minh</span></h4>
@@ -179,7 +186,7 @@
                                                 <strong>Trung tâm Mua Sắm Trực Tuyến</strong>
                                                 <p>Địa chỉ: Lầu 7, số 277B Cách Mạng Tháng 08 Phường 12, Quận 10, Tp HCM </p>
                                                 <div class="pull-right">
-                                                    <a class="tooltip">
+                                                    <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
                                                         <i class="fa fa-times action-delete" aria-hidden="true"></i>
                                                         <span class="tooltiptext">Xóa</span>
                                                     </a>
@@ -199,7 +206,7 @@
                                             <strong>Trung tâm Mua Sắm Trực Tuyến</strong>
                                             <p>Địa chỉ: Lầu 7, số 277B Cách Mạng Tháng 08 Phường 12, Quận 10, Tp HCM </p>
                                             <div class="pull-right">
-                                                <a class="tooltip">
+                                                <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
                                                     <i class="fa fa-times action-delete" aria-hidden="true"></i>
                                                     <span class="tooltiptext">Xóa</span>
                                                 </a>
@@ -214,7 +221,7 @@
                             </div>                             
                         </div>  
                         <div class="body-box update-list">
-                            <div class="form-group">
+                            <div class="row">
                                 <label>Tên siêu thị</label>
                                 <input type="text" name="" class="form-control" placeholder="Nhập tên siêu thị">
                             </div>  
@@ -277,8 +284,8 @@
                                 <label>Số điện thoại</label>
                                 <input type="text" name="" class="form-control" placeholder="Nhập số điện thoại liên hệ">
                             </div>
-                            <div class="row">
-                                <label>Thời gian mở cửa</label>
+                            <div class="row row-time">
+                                <label class="main-label">Thời gian mở cửa</label>
                                 <div class="col-md-6">
                                     <label>Từ</label>
                                     <div class="wrap_select">
@@ -332,12 +339,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row action">
+                            <div class="row action pull-right">
                                 <span class="cancel">Hủy bỏ</span>
-                                <button class="btn button-update">Cập nhật thông tin</button>
+                                <button class="btn button-update" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
                             </div>
                         </div>  
-                        <div class="no-banner">
+                        <div class="no-banner" style="display: none;">
                             <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
                             <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
                         </div>                                           
@@ -357,12 +364,12 @@
                 </div>
                 <div class="update-content">
                     <textarea placeholder="Nhập thông tin giới thiệu về hệ thống siêu thị" rows="5" cols="20"></textarea>
-                    <div class="row action">
+                    <div class="row action pull-right">
                         <span class="cancel">Hủy bỏ</span>
-                        <button class="btn button-update">Cập nhật thông tin</button>
+                        <button class="btn button-update" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
                     </div>
                 </div>
-                <div class="no-banner">
+                <div class="no-banner" style="display: none;">
                     <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
                     <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
                 </div>
@@ -370,4 +377,6 @@
         </div>
     </section>
 </div>
+{% include "block/_modal-success.html" %}
+{% include "block/_modal-delete.html" %}
 {% endblock %}

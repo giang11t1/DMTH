@@ -16,7 +16,44 @@
     }
     .transition(all 0.2s ease-in-out 0s);
 }
-
+.btn-del {
+    background-color: @primary-color;
+    .border-radius(3px);
+    border: 1px solid @primary-color;
+    font-weight: bold;
+    color: #fff;
+    padding: 4px 16px;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:hover,
+    &:active:focus {
+        background-color: #0498d0;
+        border-color: #0498d0;
+        outline: none;
+        color: #fff;
+    }
+    .transition(all 0.2s ease-in-out 0s);
+}
+.btn-cancel {
+    background-color: #fff;
+    .border-radius(3px);
+    border: 1px solid @primary-color;
+    font-weight: bold;
+    padding: 4px 16px;
+    color: @text-color-1;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:hover,
+    &:active:focus {
+        background-color: rgba(62, 59, 59, 0.16);
+        border-color: rgba(62, 59, 59, 0.16);
+        outline: none;
+        color: #fff;
+    }
+    .transition(all 0.2s ease-in-out 0s);
+}
 .btn_edit {
     text-transform: uppercase;
     color: #fff;

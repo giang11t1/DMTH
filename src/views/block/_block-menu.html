@@ -135,16 +135,16 @@
 				    		</ul>
 				      </div>
 				    </li>
-				    <li class="item-menu panel">
+				    <li class="item-menu panel {% if current_page == 'sieuthi-system'%}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
 				          	<i class="icon icon-web">&nbsp</i>
 				    		<span>Về Thiên Hòa</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse7" class="panel-collapse collapse">
+				      	<div id="collapse7" class="panel-collapse collapse {% if current_page == 'sieuthi-system'%}in{% endif %}">
 					        <ul class="sub-menu" >
-				    			<li class="item-sub">
+				    			<li class="item-sub {% if current_page == 'sieuthi-system' %}active{% endif %}">
 				    				<a href="3.1-thien-hoa-he-thong-sieuthi.html">
 				    					<p>Hệ thống siêu thị</p>
 				    				</a>

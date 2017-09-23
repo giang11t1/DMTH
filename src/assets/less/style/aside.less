@@ -60,14 +60,29 @@ aside .menu .list-menu .active-menu.item-menu a {
 	font-weight: bold;
 	background: #99e6ff;
 }
+aside .menu .list-menu {
+	>li {
+		&.active-menu {
+			>.sub-menu {
+                display: block;
+            }
+		}
+		.sub-menu {
+	        >li {
+	            &.active {
+	                >a {
+	                    color: @primary-color;
+	                    font-weight: bold;
+	                }
+	            }
+	        }
+	    }
+	}
+}
 aside .menu .list-menu .item-menu .sub-menu li a {
 	color: #464646;
 	background: #fff;
 	font-weight: normal;
-}
-aside .menu .list-menu .item-menu .sub-menu li.active_sub a {
-	color: @primary-color;
-	font-weight: bold;
 }
 .affix {
     position: fixed !important;

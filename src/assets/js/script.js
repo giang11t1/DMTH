@@ -894,7 +894,7 @@ $(document).ready(function() {
         $(".banner-update").slideDown();
     });
 
-    $(".section-banner .banner-update .button-update").click(function(){
+    $(".section-banner .banner-update .cancel").click(function(){
         $(".section-banner .update-action").show();
         $(".banner-display").slideDown();
         $(".banner-update").slideUp();
@@ -906,7 +906,7 @@ $(document).ready(function() {
         $(this).closest(".box-left").find(".update-list").slideDown();
     });
 
-    $(".section-infor .box-left .button-update").click(function(){
+    $(".section-infor .box-left .cancel").click(function(){
         $(".section-infor .box-left .add-action").show();
         $(this).closest(".box-left").find(".update-list").slideUp();
         $(this).closest(".box-left").find(".display-list").slideDown();
@@ -918,7 +918,7 @@ $(document).ready(function() {
         $(this).closest(".box-right").find(".update-list").slideDown();
     });
 
-    $(".section-infor .box-right .button-update").click(function(){
+    $(".section-infor .box-right .cancel").click(function(){
         $(".section-infor .box-right .add-action").show();
         $(this).closest(".box-right").find(".update-list").slideUp();
         $(this).closest(".box-right").find(".display-list").slideDown();
@@ -930,7 +930,7 @@ $(document).ready(function() {
         $(this).closest(".intro-supper").find(".update-content").slideDown();
     });
 
-    $(".section-infor .intro-supper .button-update").click(function(){
+    $(".section-infor .intro-supper .cancel").click(function(){
         $(".section-infor .intro-supper .update-action").show();
         $(this).closest(".intro-supper").find(".content-display").slideDown();
         $(this).closest(".intro-supper").find(".update-content").slideUp();
