@@ -135,32 +135,32 @@
 				    		</ul>
 				      </div>
 				    </li>
-				    <li class="item-menu panel {% if current_page == 'sieuthi-system'%}active{% endif %}">
+				    <li class="item-menu panel {% if current_page == 'sieuthi-system' or current_page == 'introduce-thienhoa' or current_page == 'thienhoa-tragop' or current_page == 'sale-b2b'%}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
 				          	<i class="icon icon-web">&nbsp</i>
 				    		<span>Về Thiên Hòa</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse7" class="panel-collapse collapse {% if current_page == 'sieuthi-system'%}in{% endif %}">
+				      	<div id="collapse7" class="panel-collapse collapse {% if current_page == 'sieuthi-system' or current_page == 'introduce-thienhoa' or current_page == 'thienhoa-tragop' or current_page == 'sale-b2b'%}in{% endif %}">
 					        <ul class="sub-menu" >
 				    			<li class="item-sub {% if current_page == 'sieuthi-system' %}active{% endif %}">
 				    				<a href="3.1-thien-hoa-he-thong-sieuthi.html">
 				    					<p>Hệ thống siêu thị</p>
 				    				</a>
 				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
+				    			<li class="item-sub {% if current_page == 'introduce-thienhoa' %}active{% endif %}">
+				    				<a href="3.2-thien-hoa-gioi-thieu.html">
 				    					<p>Giới thiệu công ty</p>
 				    				</a>
 				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
+				    			<li class="item-sub {% if current_page == 'thienhoa-tragop' %}active{% endif %}">
+				    				<a href="3.3-thien-hoa-tra-gop.html">
 				    					<p>Trả góp</p>
 				    				</a>
 				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
+				    			<li class="item-sub {% if current_page == 'sale-b2b' %}active{% endif %}">
+				    				<a href="3.4-ban-hang-B2B.html">
 				    					<p>Bán hàng B2B</p>
 				    				</a>
 				    			</li>

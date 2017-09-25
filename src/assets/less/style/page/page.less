@@ -62,6 +62,52 @@
 		background: @primary-color;
 	}
 }
+.banner-update,
+.banner-add {
+	display: none;
+}
+.banner-update,
+.update-banner,
+.banner-add {
+	.col-md-3 {
+		padding-right: 0;
+	}
+	.col-md-9 {
+		padding-left: 0;
+		img {
+			height: 305px;
+			width: 100%;
+		}
+	}
+	.wrap_btn {
+		padding-left: 0;
+		float: none;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	.btn-loadfile {
+		display: inline-block;
+	    padding: 5px 22px;
+		border: 1px solid @primary-color;
+		border-radius: 3px;
+		position: relative;
+		text-decoration: none;
+		input[type=file] {
+			position: absolute;
+		    top: 0;
+		    height: 35px;
+		    width: 100%;
+		    cursor: pointer;
+		    left: 0;
+		}
+	}
+	.size-note {
+		font-size: 13px;
+		color: @text-color-3;
+		margin-bottom: 15px;
+		display: block;
+	}
+}
 .section-banner {	
 	.banner {
 		width: 100%;
@@ -70,50 +116,8 @@
 			width: 100%;
 			height: 100%;
 		}
-	}
-	.banner-update {
-		display: none;
-		.col-md-3 {
-			padding-right: 0;
-		}
-		.col-md-9 {
-			padding-left: 0;
-			img {
-				height: 305px;
-				width: 100%;
-			}
-		}
-		.wrap_btn {
-			padding-left: 0;
-			float: none;
-			margin: 0;
-			margin-bottom: 10px;
-		}
-		.btn-loadfile {
-			display: inline-block;
-		    padding: 5px 22px;
-			border: 1px solid @primary-color;
-			border-radius: 3px;
-    		position: relative;
-    		text-decoration: none;
-    		input[type=file] {
-    			position: absolute;
-			    top: 0;
-			    height: 35px;
-			    width: 100%;
-			    cursor: pointer;
-			    left: 0;
-    		}
-		}
-		.size-note {
-			font-size: 13px;
-			color: @text-color-3;
-			margin-bottom: 15px;
-			display: block;
-		}
-	}
+	}	
 }
-
 .section-infor {
 	.no-banner {
 		margin-bottom: 50px;
@@ -251,6 +255,213 @@
 				padding: 15px 20px;
 				height: 110px;
 				border: @border;
+			}
+		}
+	}
+}
+/*page introduce thien hoa*/
+.section-infor-listsuper {
+	.box-panel {
+		display: inline-block;
+		width: 100%;		
+		padding: 20px;
+		border: none;
+		label.title-box {
+			display: block;
+			text-decoration: underline;
+			margin-bottom: 15px;
+		}
+		.box-img {
+			height: 205px;
+			margin-bottom: 30px;
+			width: 100%;
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.box-content {
+			padding: 15px 20px;
+			border: @border;
+			border-radius: 3px;
+			display: inline-block;
+			width: 100%;
+			.content {
+				color: @text-color-3;
+				line-height: 24px;
+			}
+			.descrip-content {
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				.list-category {
+					padding-left: 0;
+					color: @text-color-3;
+					li {
+						display: inline-block;
+						width: 100%;
+						padding: 7px 15px;
+						position: relative;
+						&:nth-child(odd){
+							background: #f0fbff;
+						}
+						.action {
+							margin-top: 0;
+						}
+						.col-md-1,.col-md-3,.col-md-8 {
+							padding: 0;
+						}
+					}
+					.col-md-3.name-cate {
+						padding-left: 20px;
+						&:before {
+						    content: "\f111";
+						    font: normal normal normal 14px/1 FontAwesome;
+						    position: absolute;
+						    top: 5px;
+						    left: 0;
+						    font-size: 8px;
+						    display: inline-block;
+						}
+					}
+					.col-md-8.link {
+						padding-left: 30px;
+						&:before {
+					        content: "\f0c1";
+						    font: normal normal normal 14px/1 FontAwesome;
+						    position: absolute;
+						    top: 3px;
+						    left: 0;
+						    font-size: 18px;
+						    display: inline-block;
+						    color: @primary-color;
+						    -ms-transform: rotate(-44deg); /* IE 9 */
+						    -webkit-transform: rotate(-44deg); /* Chrome, Safari, Opera */
+						    transform: rotate(-44deg);
+						}
+						a {
+							text-decoration: underline;
+							color: @text-color-1;
+							&:hover {
+								color: @primary-color;
+							}
+						}
+					}
+					.col-md-1.text-right {
+						.action-delete {
+							margin-right: 10px;
+							color: @bg-color;
+						}
+					}
+				}
+			}
+		}
+		.box-update,
+		.box-add {
+			padding: 15px 20px;
+			border: @border;
+			border-radius: 3px;
+			width: 100%;
+			.action {
+				display: block;
+				margin-bottom: 10px;
+			}
+			img {
+				height: 205px;
+				width: 100%;
+			}
+		}
+	}
+	.update-content {
+		display: inline-block;
+		width: 100%;
+		label.title-box {
+			margin-top: 20px;
+		}
+		label.title-short {
+			margin-top: 0;
+		}
+		textarea {
+			width: 100%;
+			resize: none;
+			padding: 15px 20px;
+			height: 110px;
+			border: @border;
+		}
+		.col-md-4 {
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+		.add-action {
+			position: relative;
+			top: 32px;
+			text-decoration: underline;
+			color: @bg-color;
+			font-weight: bold;
+		}
+	}
+	.box-update,
+	.box-add {
+		display: none;
+	}
+}
+.no-padding {
+	.update-content {
+		label.title-box {
+			margin-top: 0;
+		}
+	}
+}
+.section-infor-listsuper {
+	.box-line {
+		.box-update {
+			.action {
+				display: inline-block;
+			    margin-top: 20px;
+			    width: 100%;
+			    padding-top: 15px;
+			    border-top: @border;
+			}
+		}
+		.box-img {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*page tra gop*/
+.list-logo {
+	display: inline-block;
+	padding-left: 0;
+	li {
+		float: left;
+		width: 140px;
+		height: 140px;
+		border: 1px solid @primary-color;
+		border-radius: 2px;
+		margin-right: 15px;
+		text-align: center;
+		position: relative;
+		img {
+			.img;
+		}
+	}
+}
+.infor-tragop {
+	.upcase {
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+	ul {
+		li {
+			position: relative;
+			&:before {
+				content: '-';
+				position: absolute;
+				top: 0;
+				left: -10px;
 			}
 		}
 	}

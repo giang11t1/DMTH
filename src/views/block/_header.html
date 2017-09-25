@@ -30,56 +30,58 @@
                             {% if current_page == 'product' %}Sản phẩm{% endif %}
                         </p>
         			</div>
-        			<form class="form-search">
-                        <span class="label-search">Tìm kiếm thông tin theo</span>
-                        <select class="selectpicker" data-live-search="true" title="Mã đơn hàng">
-                          <option>Đơn hàng</option>
-                          <option>ID đơn hàng</option>
-                          <option>Mã sản phẩm</option>
-                          <option>Tên thành viên </option>
-                        </select>
-		                <input type="text" placeholder="Điền thông tin" class="form-control" onkeyup="keyupFunction()" id="input-search">		                
-		                <button type="submit" class="btn btn-search"><span class="icon-search"></span></button>
-	              </form>
-                  <div class="navbar-custom-menu pull-right">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown notifications-menu">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <span class="label">3</span>
-                            </a>
-                        </li>
-                        <li class="block-list user-menu ">
-                            <div class="item-img">
-                                <img class="user-image" src="assets/images/account-img.png" alt="thien hoa">
-                            </div>
-                            <div class="item-info dropdown control-menu " >
-                                <a href="#" class="item-description dropdown-toggle" data-toggle="dropdown">Sunflowers<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="notifi-item">
-                                        <a href="#">
-                                            <p>Điều khoản sử dụng</p>
-                                        </a>
-                                    </li>
-                                    <li class="notifi-item">
-                                        <a href="#">
-                                            <p>Chính sách bảo mật</p>
-                                        </a>
-                                    </li>
-                                    <li class="notifi-item">
-                                        <a href="#">
-                                            <p>Đổi mật khẩu</p>
-                                        </a>
-                                    </li>
-                                    <li class="notifi-item">
-                                        <a href="#">
-                                            <p>Thoát</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="pull-right">
+                        <form class="form-search">
+                            <span class="label-search">Tìm kiếm thông tin theo</span>
+                            <select class="selectpicker" data-live-search="true" title="Mã đơn hàng">
+                              <option>Đơn hàng</option>
+                              <option>ID đơn hàng</option>
+                              <option>Mã sản phẩm</option>
+                              <option>Tên thành viên </option>
+                            </select>
+                            <input type="text" placeholder="Điền thông tin" class="form-control" onkeyup="keyupFunction()" id="input-search">                       
+                            <button type="submit" class="btn btn-search"><span class="icon-search"></span></button>
+                        </form>
+                        <div class="navbar-custom-menu">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown notifications-menu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <span class="label">3</span>
+                                    </a>
+                                </li>
+                                <li class="block-list user-menu ">
+                                    <div class="item-img">
+                                        <img class="user-image" src="assets/images/account-img.png" alt="thien hoa">
+                                    </div>
+                                    <div class="item-info dropdown control-menu " >
+                                        <a href="#" class="item-description dropdown-toggle" data-toggle="dropdown">Sunflowers<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="notifi-item">
+                                                <a href="#">
+                                                    <p>Điều khoản sử dụng</p>
+                                                </a>
+                                            </li>
+                                            <li class="notifi-item">
+                                                <a href="#">
+                                                    <p>Chính sách bảo mật</p>
+                                                </a>
+                                            </li>
+                                            <li class="notifi-item">
+                                                <a href="#">
+                                                    <p>Đổi mật khẩu</p>
+                                                </a>
+                                            </li>
+                                            <li class="notifi-item">
+                                                <a href="#">
+                                                    <p>Thoát</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>        			
         		</div>	
         	</div>
         </div>
