@@ -63,7 +63,7 @@
                     <input type="text" name="" class="form-control" placeholder="Nhập link banner"> 
                     <div class="action pull-right">
                         <span class="cancel">Hủy bỏ</span>
-                        <button class="btn button-update">Thêm mới thông tin</button>
+                        <button class="btn button-update" data-toggle="modal" data-target=".AddSuccessModal">Thêm mới thông tin</button>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="action text-right">
                     <span class="cancel">Hủy bỏ</span>
-                    <button class="btn button-update">Thêm mới thông tin</button>
+                    <button class="btn button-update" data-toggle="modal" data-target=".AddSuccessModal">Thêm mới thông tin</button>
                 </div>
             </div>
             <div class="no-banner" >
@@ -219,7 +219,7 @@
                 </div>
                 <div class="action text-right">
                     <span class="cancel">Hủy bỏ</span>
-                    <button class="btn button-update">Thêm mới thông tin</button>
+                    <button class="btn button-update" data-toggle="modal" data-target=".AddSuccessModal">Thêm mới thông tin</button>
                 </div>
             </div>
             <div class="no-banner" >
@@ -232,4 +232,5 @@
 </div>
 {% include "block/_modal-success.html" %}
 {% include "block/_modal-delete.html" %}
+{% include "block/_modal-add-success.html" %}
 {% endblock %}

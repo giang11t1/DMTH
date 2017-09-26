@@ -167,28 +167,33 @@
 				    		</ul>
 				      </div>
 				    </li>
-				    <li class="item-menu panel">
+				    <li class="item-menu panel {% if current_page == 'support-introdution'%}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
 				          	<i class="icon icon-admin">&nbsp</i>
 				    		<span>Hỗ trợ khách hàng</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse6" class="panel-collapse collapse">
+				      	<div id="collapse6" class="panel-collapse collapse {% if current_page == 'support-introdution'%}in{% endif %}">
 					        <ul class="sub-menu" >
-				    			<li class="item-sub">
-				    				<a href="#">
-				    					<p>Xem đơn hàng</p>
+				    			<li class="item-sub {% if current_page == 'support-introdution' %}active{% endif %}">
+				    				<a href="4.1-ho-tro-huong-dan.html">
+				    					<p>Hướng dẫn mua hàng</p>
 				    				</a>
 				    			</li>
 				    			<li class="item-sub">
 				    				<a href="#">
-				    					<p>Trạng thái đơn hàng</p>
+				    					<p>Giao hàng, lắp đặt</p>
 				    				</a>
 				    			</li>
 				    			<li class="item-sub">
 				    				<a href="#">
-				    					<p>Yêu cầu hỗ trợ</p>
+				    					<p>Bảo hành, đổi trả</p>
+				    				</a>
+				    			</li>
+				    			<li class="item-sub">
+				    				<a href="#">
+				    					<p>Trung tâm bảo hành</p>
 				    				</a>
 				    			</li>
 				    		</ul>

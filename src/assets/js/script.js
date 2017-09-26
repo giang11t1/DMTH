@@ -862,6 +862,12 @@ $(document).ready(function() {
         $(".banner-add").slideUp();
         $(".banner-update").slideUp();
     });
+    $(".section-banner .banner-add .cancel").click(function(){
+        $(this).closest(".box-panel").find(".update-action").hide();
+        $(".no-banner").slideDown();
+        $(".banner-add").slideUp();
+        $(".banner-update").slideUp();
+    });
     $(".section-banner .banner-add .button-update").click(function(){
         $(this).closest(".box-panel").find(".update-action").show();
         $(".banner-display").slideDown();
@@ -914,6 +920,12 @@ $(document).ready(function() {
     $(".section-infor-listsuper .box-update .cancel").click(function(){
         $(this).closest(".box-panel").find(".update-action").show();
         $(this).closest(".box-panel").find(".box-display").slideDown();
+        $(this).closest(".box-panel").find(".box-update").slideUp();
+        $(this).closest(".box-panel").find(".box-add").slideUp();
+    });
+    $(".section-infor-listsuper .box-add .cancel").click(function(){
+        $(this).closest(".box-panel").find(".update-action").hide();
+        $(this).closest(".box-panel").find(".no-banner").slideDown();
         $(this).closest(".box-panel").find(".box-update").slideUp();
         $(this).closest(".box-panel").find(".box-add").slideUp();
     });
