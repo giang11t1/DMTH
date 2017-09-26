@@ -118,7 +118,7 @@
 		}
 	}	
 }
-.section-infor {
+.section-infor{
 	.no-banner {
 		margin-bottom: 50px;
 		margin-top: 20px;
@@ -406,8 +406,105 @@
 	.box-add {
 		display: none;
 	}
+	.box {
+		border-radius: 0;
+		.header-box {
+			padding: 0;
+			height: auto;
+			padding-bottom: 10px;
+			border-bottom: @border;
+		    line-height: initial;
+			h4 {
+				font-size: 14px;
+				margin: 0;
+				display: inline-block;
+				text-transform: initial;
+			}
+			.add-action {
+				color: @bg-color;
+				cursor: pointer;
+			}			
+		}
+		.body-box {
+			.list-super {
+				padding-left: 0;
+				margin-top: 15px;
+				li {
+					background: #fff;
+					position: relative;
+					padding-left: 20px;
+					p {
+						color: @text-color-3;
+					}
+					&:before {
+					    content: "\f02e";
+				        font: normal normal normal 14px/1 FontAwesome;
+				        width: 20px;
+				        height: 20px;
+				        display: inline-block;
+				        position: absolute;
+				        top: 3px;
+				        left: 0;
+				        color: @text-color-3;
+					}
+					.pull-right {
+						position: absolute;
+						top: 0;
+						right: 0;
+						i {
+							cursor: pointer;
+						}
+						.action-delete {
+							color: @bg-color;
+							margin-right: 5px;
+						}
+						.action-update {
+							color: @primary-color;
+						}
+					}
+				}
+			}
+			.city {
+				.title-city {
+					font-size: 14px;
+					color: @primary-color;
+					margin: 0;
+					display: inline-block;
+					margin-top: 15px;
+					i {
+					    margin-right: 10px;
+    					font-size: 15px;
+					}
+					span {
+						border-bottom: 1px solid #bfeafb;
+					}
+				}
+			}
+		}
+	}
+	.maintain-panel {
+		.box-display {
+			.col-md-6 {
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+			.city {
+				margin-bottom: 10px;
+			}
+		}
+		.box-update,
+		.box-add {
+			.row {
+				margin-bottom: 15px;
+			}
+		}
+	}
 }
-.no-padding {
+.no-padding {	
 	.update-content {
 		label.title-box {
 			margin-top: 0;

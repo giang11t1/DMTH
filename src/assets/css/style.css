@@ -2425,7 +2425,7 @@ section .panel {
  * ---------------
  */
 .form-control {
-  height: 40px;
+  height: 36px;
   padding: 6px 8px;
   border-radius: 4px;
   box-shadow: none;
@@ -3169,6 +3169,11 @@ aside .menu .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   color: #00adef;
   font-size: 20px;
   display: inline-block;
+}
+@media (max-width: 1400px) {
+  .topnav .name_page {
+    font-size: 19px;
+  }
 }
 .topnav .name_page i {
   float: left;
@@ -12571,6 +12576,91 @@ section.table_supply .wrap-table.filter_child {
 .section-infor-listsuper .box-update,
 .section-infor-listsuper .box-add {
   display: none;
+}
+.section-infor-listsuper .box {
+  border-radius: 0;
+}
+.section-infor-listsuper .box .header-box {
+  padding: 0;
+  height: auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e1e1e1;
+  line-height: initial;
+}
+.section-infor-listsuper .box .header-box h4 {
+  font-size: 14px;
+  margin: 0;
+  display: inline-block;
+  text-transform: initial;
+}
+.section-infor-listsuper .box .header-box .add-action {
+  color: #ed1b24;
+  cursor: pointer;
+}
+.section-infor-listsuper .box .body-box .list-super {
+  padding-left: 0;
+  margin-top: 15px;
+}
+.section-infor-listsuper .box .body-box .list-super li {
+  background: #fff;
+  position: relative;
+  padding-left: 20px;
+}
+.section-infor-listsuper .box .body-box .list-super li p {
+  color: #818181;
+}
+.section-infor-listsuper .box .body-box .list-super li:before {
+  content: "\f02e";
+  font: normal normal normal 14px/1 FontAwesome;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  color: #818181;
+}
+.section-infor-listsuper .box .body-box .list-super li .pull-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.section-infor-listsuper .box .body-box .list-super li .pull-right i {
+  cursor: pointer;
+}
+.section-infor-listsuper .box .body-box .list-super li .pull-right .action-delete {
+  color: #ed1b24;
+  margin-right: 5px;
+}
+.section-infor-listsuper .box .body-box .list-super li .pull-right .action-update {
+  color: #00adef;
+}
+.section-infor-listsuper .box .body-box .city .title-city {
+  font-size: 14px;
+  color: #00adef;
+  margin: 0;
+  display: inline-block;
+  margin-top: 15px;
+}
+.section-infor-listsuper .box .body-box .city .title-city i {
+  margin-right: 10px;
+  font-size: 15px;
+}
+.section-infor-listsuper .box .body-box .city .title-city span {
+  border-bottom: 1px solid #bfeafb;
+}
+.section-infor-listsuper .maintain-panel .box-display .col-md-6:first-child {
+  padding-left: 0;
+}
+.section-infor-listsuper .maintain-panel .box-display .col-md-6:last-child {
+  padding-right: 0;
+}
+.section-infor-listsuper .maintain-panel .box-display .city {
+  margin-bottom: 10px;
+}
+.section-infor-listsuper .maintain-panel .box-update .row,
+.section-infor-listsuper .maintain-panel .box-add .row {
+  margin-bottom: 15px;
 }
 .no-padding .update-content label.title-box {
   margin-top: 0;

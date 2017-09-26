@@ -850,41 +850,53 @@ $(document).ready(function() {
         $(document).on('focus', '[data-toggle="tooltip"]', function() { $(this).tooltip('hide'); });
     });
     // update banner
-    $(".section-banner .update-action").click(function(){
+    $(".section-banner .UpdateAction").click(function(){
         $(this).hide();
-        $(".banner-display").slideUp();
-        $(".banner-update").slideDown();
+        $(".section-banner .DisplayData").slideUp();
+        $(".section-banner .UpdateData").slideDown();
     });
 
-    $(".section-banner .banner-update .cancel").click(function(){
-        $(this).closest(".box-panel").find(".update-action").show();
-        $(".banner-display").slideDown();
-        $(".banner-add").slideUp();
-        $(".banner-update").slideUp();
+    $(".section-banner .banner-update .Cancel").click(function(){
+        $(this).closest(".box-panel").find(".UpdateAction").show();
+        $(".section-banner .DisplayData").slideDown();
+        $(".section-banner .AddData").slideUp();
+        $(".section-banner .UpdateData").slideUp();
     });
-    $(".section-banner .banner-add .cancel").click(function(){
-        $(this).closest(".box-panel").find(".update-action").hide();
-        $(".no-banner").slideDown();
-        $(".banner-add").slideUp();
-        $(".banner-update").slideUp();
+    $(".section-banner .AddData .Cancel").click(function(){
+        $(this).closest(".box-panel").find(".UpdateAction").hide();
+        $(".section-banner .NoData").slideDown();
+        $(".section-banner .AddData").slideUp();
+        $(".section-banner .UpdateData").slideUp();
     });
-    $(".section-banner .banner-add .button-update").click(function(){
-        $(this).closest(".box-panel").find(".update-action").show();
-        $(".banner-display").slideDown();
-        $(".banner-update").slideUp();
-        $(".banner-add").slideUp();
+    $(".section-banner .AddData .BtnUpdate").click(function(){
+        $(this).closest(".box-panel").find(".UpdateAction").show();
+        $(".section-banner .DisplayData").slideDown();
+        $(".section-banner .UpdateData").slideUp();
+        $(".section-banner .AddData").slideUp();
     });
     // left-box
-    $(".section-infor .box-left .add-action").click(function(){
+    $(".section-infor .box-left .AddAction").click(function(){
         $(this).hide();
-        $(this).closest(".box-left").find(".display-list").slideUp();
-        $(this).closest(".box-left").find(".update-list").slideDown();
+        $(this).closest(".box-left").find(".DisplayData").slideUp();
+        $(this).closest(".box-left").find(".UpdateData").slideDown();
     });
 
-    $(".section-infor .box-left .cancel").click(function(){
-        $(".section-infor .box-left .add-action").show();
-        $(this).closest(".box-left").find(".update-list").slideUp();
-        $(this).closest(".box-left").find(".display-list").slideDown();
+    $(".section-infor .box-left .UpdateData .Cancel").click(function(){
+        $(".section-infor .box-left .AddAction").show();
+        $(this).closest(".box-left").find(".UpdateData").slideUp();
+        $(this).closest(".box-left").find(".DisplayData").slideDown();
+    });
+    $(".section-infor .AddData .Cancel").click(function(){
+        $(".section-infor .box-left .AddAction").hide();
+        $(".section-infor .NoData").slideDown();
+        $(".section-infor .AddData").slideUp();
+        $(".section-infor .UpdateData").slideUp();
+    });
+    $(".section-infor .AddData .BtnUpdate").click(function(){
+        $(".section-infor .box-left .AddAction").show();
+        $(".section-infor .DisplayData").slideDown();
+        $(".section-infor .UpdateData").slideUp();
+        $(".section-infor .AddData").slideUp();
     });
     // right-box
     $(".section-infor .box-right .add-action").click(function(){
@@ -938,11 +950,9 @@ $(document).ready(function() {
     });
     // click no data
     $(".no-banner button").click(function(){
-        $(this).closest(".box-panel").find(".no-banner").slideUp();
-        $(this).closest(".box-panel").find(".box-add").slideDown();
-        $(this).closest(".box-panel").find(".no-banner").slideUp();
-        $(this).closest(".box-panel").find(".banner-add").slideDown();
-        $(this).closest(".box-panel").find(".update-action").show();
+        $(this).closest(".box-panel").find(".NoData").slideUp();
+        $(this).closest(".box-panel").find(".AddData").slideDown();
+        $(this).closest(".box-panel").find(".UpdateAction").show();
     });
   // chart
  if ($('.chart')[0]) {
@@ -1053,4 +1063,4 @@ function handleFileSelect(evt) {
       reader.readAsDataURL(f);
     }
   }
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+  // document.getElementById('files').addEventListener('change', handleFileSelect, false);

@@ -167,32 +167,32 @@
 				    		</ul>
 				      </div>
 				    </li>
-				    <li class="item-menu panel {% if current_page == 'support-introdution'%}active{% endif %}">
+				    <li class="item-menu panel {% if current_page == 'support-introdution' or current_page == 'giaohang-lapdat' or current_page == 'baohanh-doitra' or current_page == 'trungtam-baohanh'%}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
 				          	<i class="icon icon-admin">&nbsp</i>
 				    		<span>Hỗ trợ khách hàng</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse6" class="panel-collapse collapse {% if current_page == 'support-introdution'%}in{% endif %}">
+				      	<div id="collapse6" class="panel-collapse collapse {% if current_page == 'support-introdution' or current_page == 'giaohang-lapdat' or current_page == 'baohanh-doitra' or current_page == 'trungtam-baohanh'%}in{% endif %}">
 					        <ul class="sub-menu" >
 				    			<li class="item-sub {% if current_page == 'support-introdution' %}active{% endif %}">
 				    				<a href="4.1-ho-tro-huong-dan.html">
 				    					<p>Hướng dẫn mua hàng</p>
 				    				</a>
 				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
+				    			<li class="item-sub {% if current_page == 'giaohang-lapdat' %}active{% endif %}">
+				    				<a href="4.2-giao-hang-lap-dat.html">
 				    					<p>Giao hàng, lắp đặt</p>
 				    				</a>
 				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
+				    			<li class="item-sub {% if current_page == 'baohanh-doitra' %}active{% endif %}">
+				    				<a href="4.3-bao-hanh-doi-tra.html">
 				    					<p>Bảo hành, đổi trả</p>
 				    				</a>
 				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
+				    			<li class="item-sub {% if current_page == 'trungtam-baohanh' %}active{% endif %}">
+				    				<a href="4.4-trung-tam-bao-hanh.html">
 				    					<p>Trung tâm bảo hành</p>
 				    				</a>
 				    			</li>
