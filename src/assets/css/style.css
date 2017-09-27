@@ -2294,6 +2294,10 @@ section .panel {
 .panel-title i:hover {
   color: #00adef;
 }
+label.error {
+  color: #ff4000;
+  display: block;
+}
 .img {
   position: absolute;
   left: -100%;
@@ -2305,13 +2309,6 @@ section .panel {
   max-width: 100%;
   width: auto;
   height: auto;
-}
-.error {
-  color: #ff0000;
-  position: absolute;
-  right: 15px;
-  top: 8px;
-  font-style: italic;
 }
 .transtation {
   -webkit-transition: all ease 0.3s;
@@ -3565,7 +3562,6 @@ body.wrap-login .wrap-login {
   color: #ff0000;
   position: absolute;
   right: 15px;
-  top: 8px;
   font-style: italic;
   top: 14px;
 }
@@ -3731,11 +3727,6 @@ main {
   position: relative;
 }
 .wrap_password .form_change_pass .row .error {
-  color: #ff0000;
-  position: absolute;
-  right: 15px;
-  top: 8px;
-  font-style: italic;
   right: 80px;
 }
 @media (max-width: 1280px) {

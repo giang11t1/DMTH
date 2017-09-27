@@ -2,20 +2,20 @@
 {% extends "layout/_layout.html" %}
 {% block page-content %}
 <div class="col-md-">
-    <section class="section section-banner">
+    <section class="section section-banner BannerAct">
         <h3 class="title-section">Giới thiệu công ty</h3>
-        <div class="panel box-panel">
+        <div class="panel box-panel Panel">
             <div class="top">
                 <h3 class="title">Banner giới thiệu</h3>
-                <a class="pull-right update-action">
+                <a class="pull-right update-action UpdateAction" style="display: none;">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     <span>Cập nhật</span>
                 </a>
             </div>
-            <div class="banner banner-display" >
+            <div class="banner banner-display DisplayData" style="display: none;">
                 <img src="assets/images/banner-tragop.png" alt="banner">
             </div>
-            <div class="banner-update">
+            <div class="banner-update UpdateData">
                 <div class="col-md-9">
                     <img src="assets/images/banner-tragop.png" alt="banner">
                 </div>
@@ -31,32 +31,60 @@
                     </ul>
                     <div class="show_file">
                         <span class="file_name"></span>
-                    </div>                    
+                    </div>
                     <span class="size-note">Kích thước 900 x 300 px</span>
                     <label>Link banner</label>
-                    <input type="text" name="" class="form-control" placeholder="Nhập link banner"> 
+                    <input type="text" name="" class="form-control" placeholder="Nhập link banner">
+                    <label class="error">Nhập link banner</label>
                     <div class="action pull-right">
-                        <span class="cancel">Hủy bỏ</span>
-                        <button class="btn button-update" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
+                        <span class="cancel Cancel">Hủy bỏ</span>
+                        <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
                     </div>
                 </div>
             </div>
-            <div class="no-banner" style="display: none;">
+            <div class="banner-update AddData">
+                <div class="col-md-9">
+                    <img src="assets/images/banner-tragop.png" alt="banner">
+                </div>
+                <div class="col-md-3">
+                    <ul class="wrap_btn">
+                        <li>
+                            <a href="#" class="btn-loadfile">
+                                <i class="icon-browser">&nbsp;</i>
+                                <span>Browse ...</span>
+                                <input type="file" name="newfile">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="show_file">
+                        <span class="file_name"></span>
+                    </div>
+                    <span class="size-note">Kích thước 900 x 300 px</span>
+                    <label>Link banner</label>
+                    <input type="text" name="" class="form-control" placeholder="Nhập link banner">
+                    <label class="error">Nhạp link banner</label>
+                    <div class="action pull-right">
+                        <span class="cancel Cancel">Hủy bỏ</span>
+                        <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Thêm mới thông tin</button>
+                    </div>
+                </div>
+            </div>
+            <div class="no-banner NoData">
                 <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
                 <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
             </div>
         </div>
     </section>
-    <section class="section section-infor-listsuper">
-        <div class="panel box-panel" >
+    <section class="section section-infor-listsuper ActionList">
+        <div class="panel box-panel Panel">
             <div class="top">
                 <h3 class="title">Logo ngân hàng, đối tác</h3>
-                <a class="pull-right update-action">
+                <a class="pull-right update-action UpdateAction" style="display: none;">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     <span>Cập nhật</span>
                 </a>
             </div>
-            <div class="box-content box-display">
+            <div class="box-content box-display DisplayData" style="display: none;"> 
                 <div class="list-bank">
                     <label class="title-box">Logo ngân hàng</label>  
                     <ul class="list-logo">
@@ -78,7 +106,7 @@
                     </ul> 
                 </div>
             </div>
-            <div class="box-update">
+            <div class="box-update UpdateData">
                 <div class="part_create">
                     <h3 class="title_supplier">Hình ảnh sản phẩm</h3>
                     <div class="row">
@@ -96,6 +124,7 @@
                             <div class="infor-img">
                                 <label>Link banner</label>
                                 <input type="text" name="" class="form-control" placeholder="Nhập link banner"> 
+                                <label class="error">Nhập link banner</label>
                                 <span>Kích thước: <b>250 x 250 px</b></span>
                                 <div class="action">
                                     <button type="button" class="btn button-update">Thêm</button>
@@ -130,6 +159,7 @@
                             <div class="infor-img">
                                 <label>Link banner</label>
                                 <input type="text" name="" class="form-control" placeholder="Nhập link banner"> 
+                                <label class="error">Nhập link banner</label>
                                 <span>Kích thước: <b>250 x 250 px</b></span>
                                 <div class="action">
                                     <button type="button" class="btn button-update">Thêm</button>
@@ -149,25 +179,102 @@
                     </div>
                 </div>
                 <div class="action text-right">
-                    <span class="cancel">Hủy bỏ</span>
-                    <button class="btn button-update" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
+                    <span class="cancel Cancel">Hủy bỏ</span>
+                    <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
                 </div>
             </div>
-            <div class="no-banner" style="display: none;">
+            <div class="box-update AddData">
+                <div class="part_create">
+                    <h3 class="title_supplier">Hình ảnh sản phẩm</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><b>Logo ngân hàng</b></p>
+                            <div class="image-upload">
+                                <label for="file-input">
+                                    <img id="blah" src="assets/images/img_upload.png" alt="your image">
+                                    <div class="wrap-bg" style="display: none;">
+                                        <img class="display " src="assets/images/icon-camera.png" alt="your image" >
+                                    </div>
+                                    <input id="file-input" type="file" onchange="readURL1(this);">
+                                </label>
+                            </div>
+                            <div class="infor-img">
+                                <label>Link banner</label>
+                                <input type="text" name="" class="form-control" placeholder="Nhập link banner"> 
+                                <label class="error">Nhập link banner</label>
+                                <span>Kích thước: <b>250 x 250 px</b></span>
+                                <div class="action">
+                                    <button type="button" class="btn button-update">Thêm</button>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="col-md-8">
+                            <div class="wrap_images image-upload">
+                                <output id="list">
+                                    <span><img src="assets/images/logo/logo1.png"></span>
+                                    <span><img src="assets/images/logo/logo2.png"></span>
+                                    <span><img src="assets/images/logo/logo3.png"></span>
+                                    <span><img src="assets/images/logo/logo4.png"></span>
+                                    <span><img src="assets/images/logo/logo3.png"></span>
+                                    <span><img src="assets/images/logo/logo4.png"></span>
+                                </output>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><b>Logo đối tác</b></p>
+                            <div class="image-upload">
+                                <label for="file-input">
+                                    <img id="blah1" src="assets/images/img_upload.png" alt="your image">
+                                    <div class="wrap-bg" style="display: none;">
+                                        <img class="display " src="assets/images/icon-camera.png" alt="your image" >
+                                    </div>
+                                    <input id="file-input" type="file" onchange="readURL(this);">
+                                </label>
+                            </div>
+                            <div class="infor-img">
+                                <label>Link banner</label>
+                                <input type="text" name="" class="form-control" placeholder="Nhập link banner"> 
+                                <label class="error">Nhập link banner</label>
+                                <span>Kích thước: <b>250 x 250 px</b></span>
+                                <div class="action">
+                                    <button type="button" class="btn button-update">Thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="wrap_images image-upload">
+                                <output id="list">
+                                    <span><img src="assets/images/logo/logo1.png"></span>
+                                    <span><img src="assets/images/logo/logo2.png"></span>
+                                    <span><img src="assets/images/logo/logo3.png"></span>
+                                    <span><img src="assets/images/logo/logo4.png"></span>
+                                </output>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action text-right">
+                    <span class="cancel Cancel">Hủy bỏ</span>
+                    <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Thêm mới thông tin</button>
+                </div>
+            </div>
+            <div class="no-banner NoData">
                 <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
                 <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
             </div>
         </div>
         <!-- end box pannel -->
-        <div class="panel box-panel no-padding">
+        <div class="panel box-panel no-padding Panel">
             <div class="top">
                 <h3 class="title">Giới thiệu chương trình trả góp</h3>
-                <a class="pull-right update-action">
+                <a class="pull-right update-action UpdateAction" style="display: none;">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     <span>Cập nhật</span>
                 </a>
             </div>
-            <div class="box-content box-display infor-tragop">
+            <div class="box-content box-display infor-tragop DisplayData" style="display: none;">
                 <div class="scrollbar">
                     <label class="title-box">Thông tin về chương trình trả góp</label>
                     <div class="content">
@@ -197,37 +304,49 @@
                     </div>
                 </div>              
             </div>
-            <div class="box-update">
+            <div class="box-update UpdateData">
                 <div class="update-content">
                     <label class="title-box">Mô tả ngắn</label>
                     <textarea placeholder="Nhập thông tin mô tả" rows="5" cols="20"></textarea>
+                    <label class="error">Vui lòng nhập thông tin mô tả</label>
                 </div>
                 <div class="action text-right">
-                    <span class="cancel">Hủy bỏ</span>
-                    <button class="btn button-update" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
+                    <span class="cancel Cancel">Hủy bỏ</span>
+                    <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
                 </div>
             </div>
-            <div class="no-banner" style="display: none;">
+            <div class="box-update AddData">
+                <div class="update-content">
+                    <label class="title-box">Mô tả ngắn</label>
+                    <textarea placeholder="Nhập thông tin mô tả" rows="5" cols="20"></textarea>
+                    <label class="error">Vui lòng nhập thông tin mô tả</label>
+                </div>
+                <div class="action text-right">
+                    <span class="cancel Cancel">Hủy bỏ</span>
+                    <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Thêm mới thông tin</button>
+                </div>
+            </div>
+            <div class="no-banner NoData" >
                 <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
                 <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
             </div>
         </div>
         <!-- end box pannel -->
-        <div class="panel box-panel box-line">
+        <div class="panel box-panel box-line Panel">
             <div class="top">
                 <h3 class="title">Quy trình mua hàng trả góp</h3>
-                <a class="pull-right update-action">
+                <a class="pull-right update-action UpdateAction" style="display: none;">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     <span>Cập nhật</span>
                 </a>
             </div>
-            <div class="box-content box-display">
+            <div class="box-content box-display DisplayData" style="display: none;">
                 <label class="title-box">Banner</label>
                 <div class="box-img">
                     <img src="assets/images/banner-tragop-2.png">
                 </div>                
             </div>
-            <div class="box-update">
+            <div class="box-update UpdateData" >
                 <div class="update-banner">
                     <div class="col-md-9">
                         <img src="assets/images/banner-tragop-2.png" alt="banner">
@@ -249,29 +368,61 @@
                         <span class="size-note">Dung lượng: <b>500kb</b></span>
                         <span class="size-note">Định dạng: <b>jpg, png</b></span>
                         <label>Link banner</label>
-                        <input type="text" name="" class="form-control" placeholder="Nhập link banner">                     
+                        <input type="text" name="" class="form-control" placeholder="Nhập link banner"> 
+                        <label class="error">Nhập link banner</label>                    
                     </div>
                 </div>                
                 <div class="action text-right">
-                    <span class="cancel">Hủy bỏ</span>
-                    <button class="btn button-update" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
+                    <span class="cancel Cancel">Hủy bỏ</span>
+                    <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
                 </div>
             </div>
-            <div class="no-banner" style="display: none;">
+            <div class="box-update AddData" >
+                <div class="update-banner">
+                    <div class="col-md-9">
+                        <img src="assets/images/banner-tragop-2.png" alt="banner">
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="wrap_btn">
+                            <li>
+                                <a href="#" class="btn-loadfile">
+                                    <i class="icon-browser">&nbsp;</i>
+                                    <span>Browse ...</span>
+                                    <input type="file" name="newfile">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="show_file">
+                            <span class="file_name"></span>
+                        </div>                    
+                        <span class="size-note">Kích thước: <b>900 x 300 px</b></span>
+                        <span class="size-note">Dung lượng: <b>500kb</b></span>
+                        <span class="size-note">Định dạng: <b>jpg, png</b></span>
+                        <label>Link banner</label>
+                        <input type="text" name="" class="form-control" placeholder="Nhập link banner">  
+                        <label class="error">Vui lòng nhập link banner</label>                   
+                    </div>
+                </div>                
+                <div class="action text-right">
+                    <span class="cancel Cancel">Hủy bỏ</span>
+                    <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Thêm mới thông tin</button>
+                </div>
+            </div>
+            <div class="no-banner NoData">
                 <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
                 <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
             </div>
         </div>
         <!-- end box pannel -->
-        <div class="panel box-panel no-padding">
+        <div class="panel box-panel no-padding Panel">
             <div class="top">
                 <h3 class="title">ngành hàng áp dụng trả góp</h3>
-                <a class="pull-right update-action">
+                <a class="pull-right update-action UpdateAction" style="display: none;">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     <span>Cập nhật</span>
                 </a>
             </div>
-            <div class="box-content box-display" >
+            <div class="box-content box-display DisplayData" style="display: none;">
                 <div class="descrip-content">
                     <label class="title-box">Ngành hàng kinh doanh</label>
                     <ul class="list-category">
@@ -294,17 +445,19 @@
                     </ul>
                 </div>                
             </div>
-            <div class="box-update">
+            <div class="box-update UpdateData">
                 <div class="update-content">
                     <label class="title-box">Ngành hàng kinh doanh</label>
                     <div class="row">
                         <div class="col-md-4">
                             <label>Tên ngành hàng</label>
                             <input type="text" name="" class="form-control" placeholder="Nhập tên ngành hàng">
+                            <label class="error">Vui lòng nhập tên ngành hàng</label>
                         </div>
                         <div class="col-md-4">
                             <label>Link ngành hàng</label>
                             <input type="text" name="" class="form-control" placeholder="Nhập link ngành hàng">
+                            <label class="error">Vui lòng nhập link ngành hàng</label>
                         </div>
                         <div class="col-md-4">
                             <a href="#" class="add-action"><i class="fa fa-plus" aria-hidden="true"></i> Thêm ngành hàng</a>
@@ -312,11 +465,35 @@
                     </div>
                 </div>
                 <div class="action text-right">
-                    <span class="cancel">Hủy bỏ</span>
-                    <button class="btn button-update" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
+                    <span class="cancel Cancel">Hủy bỏ</span>
+                    <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Cập nhật thông tin</button>
                 </div>
             </div>
-            <div class="no-banner" style="display: none;">
+            <div class="box-update AddData">
+                <div class="update-content">
+                    <label class="title-box">Ngành hàng kinh doanh</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Tên ngành hàng</label>
+                            <input type="text" name="" class="form-control" placeholder="Nhập tên ngành hàng">
+                            <label class="error">Vui lòng nhập tên ngành hàng</label>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Link ngành hàng</label>
+                            <input type="text" name="" class="form-control" placeholder="Nhập link ngành hàng">
+                            <label class="error">Vui lòng nhập link ngành hàng</label>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#" class="add-action"><i class="fa fa-plus" aria-hidden="true"></i> Thêm ngành hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="action text-right">
+                    <span class="cancel Cancel">Hủy bỏ</span>
+                    <button class="btn button-update BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Thêm mới thông tin</button>
+                </div>
+            </div>
+            <div class="no-banner NoData">
                 <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
                 <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
             </div>
@@ -325,4 +502,5 @@
 </div>
 {% include "block/_modal-success.html" %}
 {% include "block/_modal-delete.html" %}
+{% include "block/_modal-add-success.html" %}
 {% endblock %}
