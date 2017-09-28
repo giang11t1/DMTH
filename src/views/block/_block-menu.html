@@ -199,28 +199,23 @@
 				    		</ul>
 				      </div>
 				    </li>
-				    <li class="item-menu panel">
+				    <li class="item-menu panel {% if current_page == 'category-news'%}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
 				          	<i class="icon icon-news">&nbsp</i>
 				    		<span>Tin tức</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse9" class="panel-collapse collapse">
-					        <ul class="sub-menu" >
-				    			<li class="item-sub">
-				    				<a href="#">
-				    					<p>Xem đơn hàng</p>
+				      	<div id="collapse9" class="panel-collapse collapse {% if current_page == 'category-news'%}in{% endif %}">
+					        <ul class="sub-menu">
+				    			<li class="item-sub {% if current_page == 'category-news'%}active{% endif %}">
+				    				<a href="5.1-danh-muc-tin-tuc.html">
+				    					<p>Danh mục tin tức</p>
 				    				</a>
 				    			</li>
 				    			<li class="item-sub">
 				    				<a href="#">
-				    					<p>Trạng thái đơn hàng</p>
-				    				</a>
-				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
-				    					<p>Yêu cầu hỗ trợ</p>
+				    					<p>Bài viết</p>
 				    				</a>
 				    			</li>
 				    		</ul>
