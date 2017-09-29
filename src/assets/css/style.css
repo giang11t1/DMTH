@@ -2317,9 +2317,9 @@ label.error {
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
-.btn {
-  margin-right: 10px;
-}
+/*.btn {
+    margin-right: 10px;
+}*/
 .btn-primary {
   background-color: #00adef;
   border-radius: 4px;
@@ -2421,6 +2421,7 @@ label.error {
   background: #00adef;
   margin-bottom: 10px;
   float: left;
+  margin-right: 10px;
 }
 @media (max-width: 1400px) {
   .btn_primary {
@@ -13005,6 +13006,9 @@ section.table_supply .wrap-table.filter_child {
 .form-create .form-group {
   width: 100%;
   display: inline-block;
+}
+.form-create .form-group label span {
+  color: #ff4000;
 }
 .form-create .form-group .col-md-4 {
   text-align: right;

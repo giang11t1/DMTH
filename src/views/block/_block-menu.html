@@ -199,22 +199,22 @@
 				    		</ul>
 				      </div>
 				    </li>
-				    <li class="item-menu panel {% if current_page == 'category-news'%}active{% endif %}">
+				    <li class="item-menu panel {% if current_page == 'category-news' or current_page == 'article'%}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
 				          	<i class="icon icon-news">&nbsp</i>
 				    		<span>Tin tức</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse9" class="panel-collapse collapse {% if current_page == 'category-news'%}in{% endif %}">
+				      	<div id="collapse9" class="panel-collapse collapse {% if current_page == 'category-news' or current_page == 'article'%}in{% endif %}">
 					        <ul class="sub-menu">
 				    			<li class="item-sub {% if current_page == 'category-news'%}active{% endif %}">
 				    				<a href="5.1-danh-muc-tin-tuc.html">
 				    					<p>Danh mục tin tức</p>
 				    				</a>
 				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
+				    			<li class="item-sub {% if current_page == 'article'%}active{% endif %}">
+				    				<a href="5.2-bai-viet.html">
 				    					<p>Bài viết</p>
 				    				</a>
 				    			</li>
