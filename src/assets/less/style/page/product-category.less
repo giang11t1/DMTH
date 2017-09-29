@@ -5,31 +5,7 @@
 	    font-family: 'fontregular';
 	}
 }
-.icon-delete {
-	width: 14px;
-	height: 18px;
-	display: inline-block;
-	cursor: pointer;
-	background: url('../images/upload/account/icon-delete.png')no-repeat;
-}
-.icon-delete-hover {
-	display: none;
-	width: 14px;
-	height: 18px;
-	cursor: pointer;
-	background: url('../images/upload/account/icon-delete-hover.png')no-repeat;
-}
-.icon_edit {
-    height: 15px;
-    width: 15px;
-    margin-right: 8px;
-    margin-left: 6px;
-    position: relative;
-    top: 2px;
-    display: inline-block;
-    cursor: pointer;
-    background: url(../images/upload/account/icon-edit.png) no-repeat;
-}
+
 .wrapper_ {
     position: relative;
     top: 4px;
@@ -257,7 +233,7 @@
 	.col-md-5 {
 		.col-md-4 {
 			&:first-child{
-				padding-left: 8%;
+				padding-left: 6%;
 			}
 			&:nth-child(2){
 				padding-left: 5%;
@@ -265,6 +241,11 @@
 			&:last-child{
 				padding-left: 20px;
 			}
+			@media(max-width: 1400px) {
+		        &:first-child{
+					padding-left: 8%;
+				}
+		    }
 		}
 	}
 }

@@ -2411,7 +2411,7 @@ label.error {
 }
 .btn_primary {
   text-transform: uppercase;
-  padding: 6px 18px;
+  padding: 6px 35px;
   color: #fff;
   font-size: 16px;
   font-family: 'fontbold';
@@ -2421,6 +2421,11 @@ label.error {
   background: #00adef;
   margin-bottom: 10px;
   float: left;
+}
+@media (max-width: 1400px) {
+  .btn_primary {
+    padding: 6px 18px;
+  }
 }
 .btn_primary:hover,
 .btn_primary:focus,
@@ -3132,6 +3137,9 @@ aside .menu .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
 .DeleteModal .content .btn-cancel {
   margin-right: 15px;
 }
+i.active {
+  display: inline-block !important;
+}
 .icon-edit-pen {
   height: 15px;
   width: 15px;
@@ -3139,7 +3147,7 @@ aside .menu .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   margin-left: 6px;
   position: relative;
   top: 2px;
-  display: inline-block;
+  display: none !important;
   cursor: pointer;
   background: url('../images/upload/account/icon-edit.png') no-repeat;
 }
@@ -3149,8 +3157,6 @@ aside .menu .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   width: 15px;
   margin-right: 8px;
   margin-left: 6px;
-  position: relative;
-  top: 2px;
   cursor: pointer;
   background: url('../images/upload/account/icon-edit-hover.png') no-repeat;
 }
@@ -3158,7 +3164,7 @@ aside .menu .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   width: 14px;
   height: 14px;
   cursor: pointer;
-  display: inline-block;
+  display: none;
   background: url('../images/upload/icon-list.png') no-repeat;
 }
 .icon-list-hover {
@@ -3167,6 +3173,35 @@ aside .menu .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   height: 14px;
   cursor: pointer;
   background: url('../images/upload/icon-list-hover.png') no-repeat;
+}
+.icon-delete {
+  width: 14px;
+  height: 18px;
+  display: none;
+  cursor: pointer;
+  top: 3px;
+  position: relative;
+  background: url('../images/upload/account/icon-delete.png') no-repeat;
+}
+.icon-delete-hover {
+  display: none;
+  width: 14px;
+  height: 18px;
+  cursor: pointer;
+  /*	top: 3px;
+    position: relative;*/
+  background: url('../images/upload/account/icon-delete-hover.png') no-repeat;
+}
+.icon_edit {
+  height: 15px;
+  width: 15px;
+  margin-right: 8px;
+  margin-left: 6px;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  cursor: pointer;
+  background: url(../images/upload/account/icon-edit.png) no-repeat;
 }
 .topnav {
   height: 57px;
@@ -3565,39 +3600,6 @@ footer .container {
 }
 .table-display ul li:nth-child(odd) {
   background: #fff;
-}
-.table-display ul .wrapper .slider-button {
-  height: 20px;
-  width: 20px;
-}
-.table-display ul .wrapper .slider-viewport {
-  height: 24px;
-  width: 50px;
-}
-.table-display ul .wrapper .slider-content span {
-  line-height: 20px;
-}
-.table-display ul .wrapper .right span {
-  margin: 2px 6px;
-}
-.table-display ul .wrapper .slider-toggle + .slider-viewport > .slider {
-  left: 0;
-}
-.table-display ul .wrapper .slider-toggle + .slider-viewport .slider-button {
-  left: 50px;
-}
-.table-display ul .wrapper .slider-toggle + .slider-viewport .slider-content {
-  width: 50px;
-}
-.table-display ul .wrapper .slider-toggle + .slider-viewport .left:before {
-  content: '✔';
-  position: absolute;
-  top: 7px;
-  left: 33px;
-  font-size: 11px;
-}
-.table-display ul .wrapper .slider-toggle:checked + .slider-viewport .slider-button {
-  left: 27px;
 }
 .table-display .bottoom_table {
   margin-top: 15px;
@@ -10655,31 +10657,6 @@ input[type=file] {
   text-transform: initial;
   font-family: 'fontregular';
 }
-.icon-delete {
-  width: 14px;
-  height: 18px;
-  display: inline-block;
-  cursor: pointer;
-  background: url('../images/upload/account/icon-delete.png') no-repeat;
-}
-.icon-delete-hover {
-  display: none;
-  width: 14px;
-  height: 18px;
-  cursor: pointer;
-  background: url('../images/upload/account/icon-delete-hover.png') no-repeat;
-}
-.icon_edit {
-  height: 15px;
-  width: 15px;
-  margin-right: 8px;
-  margin-left: 6px;
-  position: relative;
-  top: 2px;
-  display: inline-block;
-  cursor: pointer;
-  background: url(../images/upload/account/icon-edit.png) no-repeat;
-}
 .wrapper_ {
   position: relative;
   top: 4px;
@@ -10886,13 +10863,18 @@ input[type=file] {
   display: inline-block !important;
 }
 .category_product .col-md-5 .col-md-4:first-child {
-  padding-left: 8%;
+  padding-left: 6%;
 }
 .category_product .col-md-5 .col-md-4:nth-child(2) {
   padding-left: 5%;
 }
 .category_product .col-md-5 .col-md-4:last-child {
   padding-left: 20px;
+}
+@media (max-width: 1400px) {
+  .category_product .col-md-5 .col-md-4:first-child {
+    padding-left: 8%;
+  }
 }
 .infor_category_detail {
   display: inline-block;
@@ -12346,7 +12328,7 @@ section.table_supply .wrap-table.filter_child {
   font-size: 18px;
   text-transform: uppercase;
   margin: 0;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 .top {
@@ -12909,9 +12891,9 @@ section.table_supply .wrap-table.filter_child {
 .wrapper .slider-viewport {
   border: 1px solid #a6a6a6;
   display: block;
-  height: 30px;
+  height: 24px;
   overflow: hidden;
-  width: 70px;
+  width: 50px;
   position: relative;
   cursor: pointer;
   -webkit-border-radius: 3px;
@@ -12939,8 +12921,8 @@ section.table_supply .wrap-table.filter_child {
   position: absolute;
   display: block;
   top: 1px;
-  height: 26px;
-  width: 26px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -12957,7 +12939,7 @@ section.table_supply .wrap-table.filter_child {
 }
 .wrapper .slider-content span {
   height: 100%;
-  line-height: 23px;
+  line-height: 20px;
   float: left;
 }
 .wrapper .left {
@@ -12970,15 +12952,15 @@ section.table_supply .wrap-table.filter_child {
 }
 .wrapper .right span {
   float: right;
-  margin: 2px 0;
+  margin: 2px 6px;
   color: #818181;
   font-weight: normal;
 }
 .wrapper .slider-toggle + .slider-viewport > .slider {
-  left: -60%;
+  left: -100%;
 }
 .wrapper .slider-toggle + .slider-viewport .slider-button {
-  left: 41px;
+  left: 50px;
 }
 .wrapper .slider-toggle + .slider-viewport .slider-content {
   width: 50px;
@@ -12994,9 +12976,9 @@ section.table_supply .wrap-table.filter_child {
 .wrapper .slider-toggle + .slider-viewport .left:before {
   content: '✔';
   position: absolute;
-  top: 9px;
-  left: 48px;
-  font-size: 12px;
+  top: 7px;
+  left: 33px;
+  font-size: 11px;
   line-height: 0.8;
   color: #fff;
   transition: all .2s;
@@ -13008,7 +12990,7 @@ section.table_supply .wrap-table.filter_child {
   border: 1px solid #30aa00;
 }
 .wrapper .slider-toggle:checked + .slider-viewport .slider-button {
-  left: 40px;
+  left: 27px;
   background: #30aa00;
 }
 .wrapper .slider-toggle:checked + .slider-viewport .left {
@@ -13055,6 +13037,6 @@ section.table_supply .wrap-table.filter_child {
 .form-create .wrap-btn {
   margin-top: 15px;
 }
-.section-news .back {
+.section-news .link {
   color: #ed1b24;
 }

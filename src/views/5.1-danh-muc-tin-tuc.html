@@ -7,7 +7,8 @@
         <div class="panel box-panel Panel">
             <div class="top">
                 <h3 class="title">Danh sách danh mục</h3>
-                <a href="#" class="pull-right back BackAction"><i class="fa fa-reply" aria-hidden="true"></i> Quay lại</a>
+                <a href="#" class="pull-right link BackAction" style="display: none;"><i class="fa fa-reply" aria-hidden="true"></i> Quay lại</a>
+                <a href="#" class="pull-right link AddAction" style="display: none;"><i class="fa fa-plus-circle" aria-hidden="true"></i> Thêm mới</a>
             </div>
             <div class="banner banner-display DisplayData" style="display: none;">
                 <div class="table-display">
@@ -36,7 +37,7 @@
                             <div class="col-md-5">
                                 <div class="col-md-4"><span>01</span></div>
                                 <div class="col-md-8">
-                                    <a href="#">Tin nội bộ</a>
+                                    <span>Tin nội bộ</span>
                                 </div>
                             </div>
                             <div class="col-md-7">
@@ -44,8 +45,8 @@
                                     <span>Có 10 bài viết</span>
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="wrapper">
-                                      <input type="checkbox" id="checkbox" class="slider-toggle"   />
+                                    <div class="wrapper tooltip">
+                                      <input type="checkbox" id="checkbox" class="slider-toggle" onclick="return false;" onkeydown="return false;"/>
                                         <label class="slider-viewport" for="checkbox">
                                             <div class="slider">
                                                 <div class="slider-button">&nbsp;</div>
@@ -53,13 +54,20 @@
                                                 <div class="slider-content right"><span>Off</span></div>
                                             </div>
                                         </label>
+                                        <span class="tooltiptext">Chưa kích hoạt</span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
-                                    <a href="#"><i class="icon-edit-pen" title="Chỉnh sửa">&nbsp</i></a>
-                                    <a href="#"><i class="icon-edit-pen-hover" title="Chỉnh sửa">&nbsp</i></a>
-                                    <i class="icon-delete" title="Xóa">&nbsp</i>
-                                    <i class="icon-delete-hover" title="Xóa">&nbsp</i>
+                                    <a class="tooltip">
+                                        <i class="icon-edit-pen active UpdateAction" aria-hidden="true"></i>
+                                        <i class="icon-edit-pen-hover UpdateHover" title="Chỉnh sửa">&nbsp</i>
+                                        <span class="tooltiptext">Cập nhật</span>
+                                    </a>
+                                    <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
+                                        <i class="icon-delete active DeleteAction" aria-hidden="true"></i>
+                                        <i class="icon-delete-hover DeleteHover" title="Xóa">&nbsp</i>
+                                        <span class="tooltiptext">Xóa</span>
+                                    </a>
                                 </div>
                             </div>
                         </li>
@@ -68,7 +76,7 @@
                                 <div class="col-md-5">
                                     <div class="col-md-4"><span>02</span></div>
                                     <div class="col-md-8">
-                                        <a href="#">Tin khuyến mãi</a>
+                                        <span>Tin khuyến mãi</span>
                                     </div>
                                 </div>
                                 <div class="col-md-7">
@@ -76,8 +84,8 @@
                                         <span>Có 15 bài viết</span>
                                     </div>
                                     <div class="col-md-5">
-                                        <div class="wrapper">
-                                          <input type="checkbox" id="checkbox" class="slider-toggle" checked  />
+                                        <div class="wrapper tooltip">
+                                          <input type="checkbox" id="checkbox" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
                                             <label class="slider-viewport" for="checkbox">
                                                 <div class="slider">
                                                     <div class="slider-button">&nbsp;</div>
@@ -85,27 +93,34 @@
                                                     <div class="slider-content right"><span>Off</span></div>
                                                 </div>
                                             </label>
+                                            <span class="tooltiptext">Kích hoạt</span>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
-                                        <a href="#"><i class="icon-edit-pen" title="Chỉnh sửa">&nbsp</i></a>
-                                        <i class="icon-edit-pen-hover" title="Chỉnh sửa">&nbsp</i>
-                                        <i class="icon-delete" title="Xóa">&nbsp</i>
-                                        <i class="icon-delete-hover" title="Xóa">&nbsp</i>
+                                        <a class="tooltip">
+                                            <i class="icon-edit-pen active UpdateAction"></i>
+                                            <i class="icon-edit-pen-hover UpdateHover">&nbsp</i>
+                                            <span class="tooltiptext">Cập nhật</span>
+                                        </a>
+                                        <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
+                                            <i class="icon-delete active DeleteAction"></i>
+                                            <i class="icon-delete-hover DeleteHover">&nbsp</i>
+                                            <span class="tooltiptext">Xóa</span>
+                                        </a>
                                     </div>
                                 </div>
                             </li>
                         {% endfor %} 
                     </ul>
                     <div class="bottoom_table">
-                        <p class="left">Tổng trạng thái: <span>10/202</span></p>
+                        <p class="left">Tổng trạng thái: <span>10/40</span></p>
                         <div class="page">
                             <div class="wrap">
                                 <div class="left">
                                     <i class="fa fa-angle-double-left">&nbsp</i>
                                     <div> <p>Trước</p></div>
                                 </div>
-                                <p class="display">Trang 1/21</p>
+                                <p class="display">Trang 1/4</p>
                                 <div class="right">
                                     <div><p>Sau</p></div>
                                     <i class="fa fa-angle-double-right">&nbsp</i>
@@ -126,7 +141,7 @@
                 </div>
             </div>
             <div class="banner-update UpdateData">
-                <form class="form-create">
+                <form class="form-create FormCreate">
                     <div class="col-md-7 col-md-offset-2">
                         <div class="form-group">
                             <div class="col-md-4">
@@ -170,8 +185,8 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="wrapper">
-                                  <input type="checkbox" id="checkbox1" class="slider-toggle" checked />
-                                    <label class="slider-viewport" for="checkbox1">
+                                  <input type="checkbox" id="checkbox2" class="slider-toggle" checked />
+                                    <label class="slider-viewport" for="checkbox2">
                                     <div class="slider">
                                         <div class="slider-button">&nbsp;</div>
                                         <div class="slider-content left"><span>On</span></div>
@@ -195,7 +210,7 @@
                 </form>
             </div>
             <div class="banner-add AddData">
-                <form class="form-create">
+                <form class="form-create FormCreate">
                     <div class="col-md-7 col-md-offset-2">
                         <div class="form-group">
                             <div class="col-md-4">

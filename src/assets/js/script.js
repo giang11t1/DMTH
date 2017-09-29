@@ -346,23 +346,6 @@ $(document).ready(function() {
         }, 700);
     });
 
-    $(".table-status .icon-edit").click(function() {
-        $(this).hide();
-        $(this).parent().find(".icon-edit-hover").css("display", "inline-block");
-    });
-
-    $(".table-status .icon-delete").click(function() {
-        $(this).hide();
-        $(this).parent().find(".icon-delete-hover").css("display", "inline-block");
-        // $(this).parent().parent().parent().hide();
-    });
-
-    $(".icon-delete").click(function() {
-        $(this).hide();
-        $(this).parent().find(".icon-delete-hover").css("display", "inline-block");
-        // $(this).parent().parent().parent().hide();
-    });
-
     $(".styled").on('change keyup paste', function() {
         var length = $(this).val().length;
         if (length > 0) {
@@ -406,15 +389,6 @@ $(document).ready(function() {
     $(".table-supply li .icon-view-fast-hover").click(function() {
         $(this).hide();
         $(this).parent().find(".icon-view-fast").show();
-    });
-
-    $(".table-supply li .icon-edit").click(function() {
-        $(this).hide();
-        $(this).parent().find(".icon-edit-hover").css("display", "inline-block");
-    });
-    $(".table-supply li .icon-edit-hover").click(function() {
-        $(this).hide();
-        $(this).parent().find(".icon-edit").show();
     });
 
     $(".table-supply li .icon-list").click(function() {
@@ -983,11 +957,11 @@ $(document).ready(function() {
         $(this).closest(".box-panel").find(".UpdateData").slideUp();
         $(this).closest(".box-panel").find(".AddData").slideUp();
     });
-    $(".ActionList .UpdateData .BtnUpdate").click(function() {
-        $(this).closest(".box-panel").find(".UpdateAction").show();
-        $(this).closest(".box-panel").find(".DisplayData").slideDown();
-        $(this).closest(".box-panel").find(".UpdateData").slideUp();
-        $(this).closest(".box-panel").find(".AddData").slideUp();
+    $(".UpdateData .BtnUpdate").click(function() {
+        $(this).closest(".Panel").find(".UpdateAction").show();
+        $(this).closest(".Panel").find(".DisplayData").slideDown();
+        $(this).closest(".Panel").find(".UpdateData").slideUp();
+        $(this).closest(".Panel").find(".AddData").slideUp();
     });
     $(".ActionList .AddData .Cancel").click(function() {
         $(this).closest(".box-panel").find(".UpdateAction").hide();
@@ -1007,6 +981,7 @@ $(document).ready(function() {
         $(this).closest(".Panel").find(".NoData").slideUp();
         $(this).closest(".Panel").find(".AddData").slideDown();
         $(this).closest(".Panel").find(".UpdateAction").show();
+        $(this).closest(".Panel").find(".BackAction").show();
     });
     $(".Wrapbox .box-right .NoData button").click(function() {
         $(this).closest(".box-right").find(".NoData").slideUp();
@@ -1018,8 +993,45 @@ $(document).ready(function() {
         $(this).closest(".box-left").find(".AddData").slideDown();
         $(this).closest(".box-left").find(".UpdateAction").show();
     });
-    // show modal==================
-    
+    // action table=====
+    $(".BackAction, .FormCreate .Cancel").click(function(){
+        $(this).closest(".Panel").find(".BackAction").hide();
+        $(this).closest(".Panel").find(".NoData").slideDown();
+        $(this).closest(".Panel").find(".UpdateData").slideUp();
+        $(this).closest(".Panel").find(".AddData").slideUp();
+    });
+    $(".FormCreate .BtnUpdate").click(function() {
+        $(this).closest(".Panel").find(".AddAction").show();
+        $(this).closest(".Panel").find(".BackAction").hide();
+    });
+
+    $(".top .AddAction").click(function(){
+        $(this).closest(".Panel").find(".NoData").slideUp();
+        $(this).closest(".Panel").find(".AddData").slideDown();
+        $(this).closest(".box-panel").find(".DisplayData").slideUp();
+        $(this).closest(".Panel").find(".BackAction").show();
+        $(this).closest(".Panel").find(".AddAction").hide();
+    });
+    $(".DisplayData .UpdateAction").click(function(){
+        $(this).closest(".Panel").find(".NoData").slideUp();
+        $(this).closest(".Panel").find(".UpadteData").slideDown();
+        $(this).closest(".box-panel").find(".DisplayData").slideUp();
+        $(this).closest(".Panel").find(".BackAction").show();
+        $(this).closest(".Panel").find(".AddAction").hide();
+    });
+
+    $(".DisplayData .DeleteAction").click(function(){
+        $(".DisplayData .DeleteHover").removeClass("active");
+        $(".DisplayData .DeleteAction").addClass("active");
+        $(this).closest(".tooltip").find('.DeleteAction').removeClass("active");
+        $(this).closest(".tooltip").find('.DeleteHover').addClass("active");
+    });
+    $(".DisplayData .UpdateAction").click(function(){
+        $(".DisplayData .UpdateHover").removeClass("active");
+        $(".DisplayData .UpdateAction").addClass("active");
+        $(this).closest(".tooltip").find('.UpdateAction').removeClass("active");
+        $(this).closest(".tooltip").find('.UpdateHover').addClass("active");
+    });
     // chart
     if ($('.chart')[0]) {
         $(function() {

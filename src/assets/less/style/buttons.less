@@ -83,7 +83,7 @@
 }
 .btn_primary {
     text-transform: uppercase;
-    padding: 6px 18px;
+    padding: 6px 35px;
     color: #fff;
     font-size: 16px;
     font-family: 'fontbold';
@@ -93,6 +93,9 @@
     background: @primary-color;
     margin-bottom: 10px;
     float: left;
+    @media(max-width: 1400px) {
+        padding: 6px 18px;
+    }
     &:hover,
     &:focus,
     &:active {
