@@ -2299,6 +2299,9 @@ label.error {
   display: block;
   margin-bottom: 0;
 }
+.no-padding {
+  padding: 0;
+}
 .img {
   position: absolute;
   left: -100%;
@@ -11513,31 +11516,38 @@ select {
   max-width: 140px;
   width: auto;
 }
-.part_create .col-md-4 {
+.part_create .col-md-4,
+.part_create .left-load {
   border-right: 1px solid #e1e1e1;
 }
-.part_create .col-md-4 .image-upload .wrap-bg img {
+.part_create .col-md-4 .image-upload .wrap-bg img,
+.part_create .left-load .image-upload .wrap-bg img {
   height: auto;
   width: auto;
 }
-.part_create .col-md-8 {
+.part_create .col-md-8,
+.part_create .right-load {
   padding-right: 0;
 }
-.part_create .col-md-8 .image-upload label {
+.part_create .col-md-8 .image-upload label,
+.part_create .right-load .image-upload label {
   border: none;
 }
-.part_create .col-md-8 #list {
+.part_create .col-md-8 #list,
+.part_create .right-load #list {
   white-space: nowrap;
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
 }
 @media (max-width: 1600px) {
-  .part_create .col-md-8 #list {
+  .part_create .col-md-8 #list,
+  .part_create .right-load #list {
     width: 100%;
   }
 }
-.part_create .col-md-8 #list span {
+.part_create .col-md-8 #list span,
+.part_create .right-load #list span {
   position: relative;
   display: inline-block;
   height: 140px;
@@ -11546,7 +11556,8 @@ select {
   margin: 7px;
   border: 1px solid #00adef;
 }
-.part_create .col-md-8 #list span:before {
+.part_create .col-md-8 #list span:before,
+.part_create .right-load #list span:before {
   content: "×";
   position: absolute;
   z-index: 2;
@@ -11556,7 +11567,8 @@ select {
   display: inline-block;
   cursor: pointer;
 }
-.part_create .col-md-8 #list span:after {
+.part_create .col-md-8 #list span:after,
+.part_create .right-load #list span:after {
   content: "";
   position: absolute;
   right: -6px;
@@ -11569,7 +11581,8 @@ select {
   border-radius: 50%;
   cursor: pointer;
 }
-.part_create .col-md-8 #list span img {
+.part_create .col-md-8 #list span img,
+.part_create .right-load #list span img {
   position: absolute;
   left: -100%;
   right: -100%;
@@ -13043,4 +13056,31 @@ section.table_supply .wrap-table.filter_child {
 }
 .section-news .link {
   color: #ed1b24;
+}
+/*page article*/
+.section-article .form-create {
+  padding: 0;
+}
+.section-article .form-create .col-md-6,
+.section-article .form-create .col-md-2,
+.section-article .form-create .col-md-1 {
+  padding: 0;
+}
+.section-article .form-create textarea {
+  width: 100%;
+  height: 65px;
+  border-radius: 3px;
+  resize: none;
+}
+.section-article .table-display .header_table .no-padding {
+  padding: 0px;
+}
+.section-article .table-display .content {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  max-height: 2.125em;
+  word-wrap: break-word;
 }
