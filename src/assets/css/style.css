@@ -2423,7 +2423,6 @@ label.error {
   border: none;
   background: #00adef;
   margin-bottom: 10px;
-  float: left;
   margin-right: 10px;
 }
 @media (max-width: 1400px) {
@@ -12967,7 +12966,7 @@ section.table_supply .wrap-table.filter_child {
 .wrapper .right span {
   float: right;
   margin: 2px 6px;
-  color: #818181;
+  color: #818181 !important;
   font-weight: normal;
 }
 .wrapper .slider-toggle + .slider-viewport > .slider {
@@ -13057,13 +13056,21 @@ section.table_supply .wrap-table.filter_child {
 .section-news .link {
   color: #ed1b24;
 }
+.link {
+  color: #ed1b24;
+}
+.link:hover,
+.link:focus {
+  color: #ed1b24;
+}
 /*page article*/
 .section-article .form-create {
   padding: 0;
 }
 .section-article .form-create .col-md-6,
 .section-article .form-create .col-md-2,
-.section-article .form-create .col-md-1 {
+.section-article .form-create .col-md-1,
+.section-article .form-create .col-md-5 {
   padding: 0;
 }
 .section-article .form-create textarea {
@@ -13071,6 +13078,12 @@ section.table_supply .wrap-table.filter_child {
   height: 65px;
   border-radius: 3px;
   resize: none;
+}
+.section-article .form-create .infor-img .size-note {
+  margin-bottom: 10px;
+}
+.section-article .form-create .form-group:last-child {
+  margin-bottom: 0;
 }
 .section-article .table-display .header_table .no-padding {
   padding: 0px;

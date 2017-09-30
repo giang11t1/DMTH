@@ -6,7 +6,9 @@
         <h3 class="title-section">Bài viết</h3>
         <div class="panel box-panel Panel">
             <div class="top">
-                <h3 class="title">Tạo bài viết mới</h3>
+                <h3 class="title TitleCreate">Tạo bài viết mới</h3>
+                <h3 class="title TitleUpdate" style="display: none;">Cập nhật bài viết</h3>
+                <h3 class="title TitleDisplay" style="display: none;">Danh sách viết mới</h3>
                 <a href="#" class="pull-right link BackAction" style="display: none;"><i class="fa fa-reply" aria-hidden="true"></i> Quay lại</a>
                 <a href="#" class="pull-right link AddAction" style="display: none;"><i class="fa fa-plus-circle" aria-hidden="true"></i> Thêm mới</a>
             </div>
@@ -103,7 +105,7 @@
                                         <span>Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết </span>
                                     </div>
                                     <div class="col-md-3 content">
-                                        <span>hotline</span>
+                                        <span>hotline, giảm giá</span>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="wrapper tooltip">
@@ -163,10 +165,10 @@
                 </div>
             </div>
             <div class="banner-add AddData">
-                <div class="form-create CreateArticle">
+                <div class="form-create FormCreate">
                     <div class="form-group">
                         <div class="col-md-6">
-                            <div class="col-md-2">
+                            <div class="col-md-2 text-right">
                                 <label>Tên bài viết <span>*</span></label>
                             </div>
                             <div class="col-md-10">
@@ -186,7 +188,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-6">
-                            <div class="col-md-2">
+                            <div class="col-md-2 text-right">
                                 <label>Danh mục <span>*</span></label>
                             </div>
                             <div class="col-md-10">
@@ -214,31 +216,22 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-md-1">
+                        <div class="col-md-1 text-right">
                             <label>Hình đại diện<span>*</span></label>
                         </div>
                         <div class="col-md-11">
                             <div class="part_create">
                                 <div class="col-md-5 left-load">
                                     <div class="image-upload">
-                                        <label for="file-input">
-                                            <img id="blah" src="assets/images/img_upload.png" alt="your image">
+                                        <label>
+                                            <input type='file' onchange="readURL2(this);" />
+                                            <img src="assets/images/img_upload.png" alt="">
                                             <div class="wrap-bg" style="display: none;">
                                                 <img class="display " src="assets/images/icon-camera.png" alt="your image" >
                                             </div>
-                                            <input id="file-input" type="file" onchange="readURL1(this);">
                                         </label>
                                     </div>
                                     <div class="infor-img">
-                                        <ul class="wrap_btn">
-                                            <li>
-                                                <a href="#" class="btn-loadfile">
-                                                    <i class="icon-browser">&nbsp;</i>
-                                                    <span>Browse ...</span>
-                                                    <input type="file" name="newfile">
-                                                </a>
-                                            </li>
-                                        </ul>
                                         <div class="show_file">
                                             <span class="file_name"></span>
                                         </div>                    
@@ -249,61 +242,54 @@
                                 </div>
                                 <div class="col-md-7 right-load">
                                     <div class="wrap_images image-upload">
-                                        <output id="list">
-                                            <span><img src="assets/images/logo/logo1.png"></span>
-                                            <span><img src="assets/images/logo/logo2.png"></span>
-                                            <span><img src="assets/images/logo/logo3.png"></span>
-                                            <span><img src="assets/images/logo/logo4.png"></span>
-                                            <span><img src="assets/images/logo/logo3.png"></span>
-                                            <span><img src="assets/images/logo/logo4.png"></span>
-                                        </output>
+                                        <img id="blah" src="assets/images/img-news.jpg" alt="your image" />
                                     </div>
                                 </div>
                             </div>
-                        </div>                       
+                        </div>                        
                     </div>
                     <div class="form-group">
-                        <div class="col-md-1">
+                        <div class="col-md-1 text-right">
                             <label>Nội dung<span>*</span></label>
                         </div>
                         <div class="col-md-11">
                             <textarea class="form-control" cols="" placeholder="Nhập nội dung bài viết"></textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-md-1">
+                    <div class="form-group">    
+                        <div class="col-md-1 text-right">
                             <label>Trạng thái <span>*</span></label>
                         </div>
                         <div class="col-md-11">
-                            <div class="wrapper">
-                              <input type="checkbox" id="checkbox2" class="slider-toggle" checked />
-                                <label class="slider-viewport" for="checkbox2">
-                                <div class="slider">
-                                    <div class="slider-button">&nbsp;</div>
-                                    <div class="slider-content left"><span>On</span></div>
-                                    <div class="slider-content right"><span>Off</span></div>
+                            <div class="col-md-7">
+                                <div class="wrapper">
+                                  <input type="checkbox" id="checkbox2" class="slider-toggle" checked />
+                                    <label class="slider-viewport" for="checkbox2">
+                                    <div class="slider">
+                                        <div class="slider-button">&nbsp;</div>
+                                        <div class="slider-content left"><span>On</span></div>
+                                        <div class="slider-content right"><span>Off</span></div>
+                                    </div>
+                                    </label>
                                 </div>
-                                </label>
+                                <span class="note">Chọn để kích hoạt trạng thái</span>
                             </div>
-                            <span class="note">Chọn để kích hoạt trạng thái</span>
-                        </div>
-                    </div>
-                    <div class="form-group wrap-btn">
-                        <div class="col-md-1 text-right">
-                            <span class="cancel Cancel">Hủy bỏ</span>
-                        </div>
-                        <div class="col-md-11">
-                            <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Lưu</button>
-                            <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".AddSuccessModal">Lưu & Thêm bài viết mới</button>
-                        </div>
+                            <div class="col-md-5 text-right">
+                                <div class="action">
+                                    <span class="cancel Cancel">Hủy bỏ</span>
+                                    <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Lưu</button>
+                                    <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".AddSuccessModal">Lưu & Thêm bài viết mới</button>
+                                </div>                            
+                            </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
             <div class="banner-update UpdateData">
-                <div class="form-create CreateArticle">
+                <div class="form-create FormCreate">
                     <div class="form-group">
                         <div class="col-md-6">
-                            <div class="col-md-2">
+                            <div class="col-md-2 text-right">
                                 <label>Tên bài viết <span>*</span></label>
                             </div>
                             <div class="col-md-10">
@@ -323,7 +309,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-6">
-                            <div class="col-md-2">
+                            <div class="col-md-2 text-right">
                                 <label>Danh mục <span>*</span></label>
                             </div>
                             <div class="col-md-10">
@@ -351,31 +337,22 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-md-1">
+                        <div class="col-md-1 text-right">
                             <label>Hình đại diện<span>*</span></label>
                         </div>
                         <div class="col-md-11">
                             <div class="part_create">
                                 <div class="col-md-5 left-load">
                                     <div class="image-upload">
-                                        <label for="file-input">
-                                            <img id="blah" src="assets/images/img_upload.png" alt="your image">
+                                        <label>
+                                            <input type='file' onchange="readURL3(this);" />
+                                            <img src="assets/images/img_upload.png" alt="">
                                             <div class="wrap-bg" style="display: none;">
                                                 <img class="display " src="assets/images/icon-camera.png" alt="your image" >
                                             </div>
-                                            <input id="file-input" type="file" onchange="readURL1(this);">
                                         </label>
                                     </div>
                                     <div class="infor-img">
-                                        <ul class="wrap_btn">
-                                            <li>
-                                                <a href="#" class="btn-loadfile">
-                                                    <i class="icon-browser">&nbsp;</i>
-                                                    <span>Browse ...</span>
-                                                    <input type="file" name="newfile">
-                                                </a>
-                                            </li>
-                                        </ul>
                                         <div class="show_file">
                                             <span class="file_name"></span>
                                         </div>                    
@@ -386,21 +363,14 @@
                                 </div>
                                 <div class="col-md-7 right-load">
                                     <div class="wrap_images image-upload">
-                                        <output id="list">
-                                            <span><img src="assets/images/logo/logo1.png"></span>
-                                            <span><img src="assets/images/logo/logo2.png"></span>
-                                            <span><img src="assets/images/logo/logo3.png"></span>
-                                            <span><img src="assets/images/logo/logo4.png"></span>
-                                            <span><img src="assets/images/logo/logo3.png"></span>
-                                            <span><img src="assets/images/logo/logo4.png"></span>
-                                        </output>
+                                        <img id="blah" src="assets/images/img-news.jpg" alt="your image" />
                                     </div>
                                 </div>
                             </div>
-                        </div>                       
+                        </div>                     
                     </div>
                     <div class="form-group">
-                        <div class="col-md-1">
+                        <div class="col-md-1 text-right">
                             <label>Nội dung<span>*</span></label>
                         </div>
                         <div class="col-md-11">
@@ -408,31 +378,31 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-md-1">
+                        <div class="col-md-1 text-right">
                             <label>Trạng thái <span>*</span></label>
                         </div>
                         <div class="col-md-11">
-                            <div class="wrapper">
-                              <input type="checkbox" id="checkbox2" class="slider-toggle" checked />
-                                <label class="slider-viewport" for="checkbox2">
-                                <div class="slider">
-                                    <div class="slider-button">&nbsp;</div>
-                                    <div class="slider-content left"><span>On</span></div>
-                                    <div class="slider-content right"><span>Off</span></div>
+                            <div class="col-md-7">
+                                <div class="wrapper">
+                                  <input type="checkbox" id="checkbox2" class="slider-toggle" checked />
+                                    <label class="slider-viewport" for="checkbox2">
+                                    <div class="slider">
+                                        <div class="slider-button">&nbsp;</div>
+                                        <div class="slider-content left"><span>On</span></div>
+                                        <div class="slider-content right"><span>Off</span></div>
+                                    </div>
+                                    </label>
                                 </div>
-                                </label>
+                                <span class="note">Chọn để kích hoạt trạng thái</span>
                             </div>
-                            <span class="note">Chọn để kích hoạt trạng thái</span>
-                        </div>
-                    </div>
-                    <div class="form-group wrap-btn">
-                        <div class="col-md-1 text-right">
-                            <span class="cancel Cancel">Hủy bỏ</span>
-                        </div>
-                        <div class="col-md-11">
-                            <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Lưu</button>
-                            <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".SuccessModal">Lưu & Cập nhật bài viết</button>
-                        </div>
+                            <div class="col-md-5 text-right">
+                                <div class="action">
+                                    <span class="cancel Cancel">Hủy bỏ</span>
+                                    <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Lưu</button>
+                                    <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".SuccessModal">Lưu & Cập nhật bài viết </button>
+                                </div>                            
+                            </div>
+                        </div>                        
                     </div>
                 </div>
             </div>            

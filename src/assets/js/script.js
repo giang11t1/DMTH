@@ -774,6 +774,36 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+function readURL2(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result)
+                .width(540)
+                .height(75);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+function readURL3(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result)
+                .width(540)
+                .height(75);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 // edit image =========
 
 function doSomething(e) {
@@ -1003,6 +1033,9 @@ $(document).ready(function() {
     $(".FormCreate .BtnUpdate").click(function() {
         $(this).closest(".Panel").find(".AddAction").show();
         $(this).closest(".Panel").find(".BackAction").hide();
+        $(this).closest(".Panel").find(".TitleDisplay").show();
+        $(this).closest(".Panel").find(".TitleCreate").hide();
+        $(this).closest(".Panel").find(".TitleUpdate").hide();
     });
 
     $(".top .AddAction").click(function(){
@@ -1011,6 +1044,9 @@ $(document).ready(function() {
         $(this).closest(".box-panel").find(".DisplayData").slideUp();
         $(this).closest(".Panel").find(".BackAction").show();
         $(this).closest(".Panel").find(".AddAction").hide();
+        $(this).closest(".Panel").find(".TitleDisplay").hide();
+        $(this).closest(".Panel").find(".TitleCreate").show();
+        $(this).closest(".Panel").find(".TitleUpdate").hide();
     });
     $(".DisplayData .UpdateAction").click(function(){
         $(this).closest(".Panel").find(".NoData").slideUp();
@@ -1031,6 +1067,9 @@ $(document).ready(function() {
         $(".DisplayData .UpdateAction").addClass("active");
         $(this).closest(".tooltip").find('.UpdateAction').removeClass("active");
         $(this).closest(".tooltip").find('.UpdateHover').addClass("active");
+        $(this).closest(".Panel").find(".TitleDisplay").hide();
+        $(this).closest(".Panel").find(".TitleCreate").hide();
+        $(this).closest(".Panel").find(".TitleUpdate").show();
     });
     // chart
     if ($('.chart')[0]) {
