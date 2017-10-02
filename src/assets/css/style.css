@@ -2299,6 +2299,11 @@ label.error {
   display: block;
   margin-bottom: 0;
 }
+label .since {
+  display: block;
+  color: #818181 !important;
+  font-style: italic;
+}
 .no-padding {
   padding: 0;
 }
@@ -2428,6 +2433,7 @@ label.error {
 @media (max-width: 1400px) {
   .btn_primary {
     padding: 6px 18px;
+    margin-right: 5px;
   }
 }
 .btn_primary:hover,
@@ -12395,6 +12401,11 @@ section.table_supply .wrap-table.filter_child {
   margin-right: 10px;
   cursor: pointer;
 }
+@media (max-width: 1400px) {
+  .action .cancel {
+    margin-right: 5px;
+  }
+}
 .action .button-update {
   text-transform: uppercase;
   color: #fff;
@@ -13064,31 +13075,41 @@ section.table_supply .wrap-table.filter_child {
   color: #ed1b24;
 }
 /*page article*/
-.section-article .form-create {
+.section-article .form-create,
+.section-career .form-create {
   padding: 0;
 }
 .section-article .form-create .col-md-6,
+.section-career .form-create .col-md-6,
 .section-article .form-create .col-md-2,
+.section-career .form-create .col-md-2,
 .section-article .form-create .col-md-1,
-.section-article .form-create .col-md-5 {
+.section-career .form-create .col-md-1,
+.section-article .form-create .col-md-5,
+.section-career .form-create .col-md-5 {
   padding: 0;
 }
-.section-article .form-create textarea {
+.section-article .form-create textarea,
+.section-career .form-create textarea {
   width: 100%;
   height: 65px;
   border-radius: 3px;
   resize: none;
 }
-.section-article .form-create .infor-img .size-note {
+.section-article .form-create .infor-img .size-note,
+.section-career .form-create .infor-img .size-note {
   margin-bottom: 10px;
 }
-.section-article .form-create .form-group:last-child {
+.section-article .form-create .form-group:last-child,
+.section-career .form-create .form-group:last-child {
   margin-bottom: 0;
 }
-.section-article .table-display .header_table .no-padding {
+.section-article .table-display .header_table .no-padding,
+.section-career .table-display .header_table .no-padding {
   padding: 0px;
 }
-.section-article .table-display .content {
+.section-article .table-display .content,
+.section-career .table-display .content {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -13096,4 +13117,7 @@ section.table_supply .wrap-table.filter_child {
   text-overflow: ellipsis;
   max-height: 2.125em;
   word-wrap: break-word;
+}
+.section-career .form-create textarea {
+  height: 130px;
 }

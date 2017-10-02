@@ -221,28 +221,28 @@
 				    		</ul>
 				      </div>
 				    </li>	
-				    <li class="item-menu panel">
+				    <li class="item-menu panel {% if current_page == 'category-career' or current_page == 'position-career'%}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
 				          	<i class="icon icon-jobs">&nbsp</i>
 				    		<span>Tuyển dụng</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse10" class="panel-collapse collapse">
+				      	<div id="collapse10" class="panel-collapse collapse {% if current_page == 'category-career' or current_page == 'position-career'%}in{% endif %}">
 					        <ul class="sub-menu" >
-				    			<li class="item-sub">
-				    				<a href="#">
-				    					<p>Xem đơn hàng</p>
+				    			<li class="item-sub {% if current_page == 'category-career'%}active{% endif %}">
+				    				<a href="6.1-danh-muc-tuyen-dung.html">
+				    					<p>Danh mục tuyển dụng</p>
+				    				</a>
+				    			</li>
+				    			<li class="item-sub {% if current_page == 'position-career'%}active{% endif %}">
+				    				<a href="6.2-vi-tri-tuyen-dung.html">
+				    					<p>Vị trí tuyển dụng</p>
 				    				</a>
 				    			</li>
 				    			<li class="item-sub">
 				    				<a href="#">
-				    					<p>Trạng thái đơn hàng</p>
-				    				</a>
-				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
-				    					<p>Yêu cầu hỗ trợ</p>
+				    					<p>CV ứng tuyển</p>
 				    				</a>
 				    			</li>
 				    		</ul>

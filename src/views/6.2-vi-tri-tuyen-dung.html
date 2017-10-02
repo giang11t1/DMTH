@@ -1,0 +1,465 @@
+{% set current_page = 'position-career' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+    <section class="section section-career BannerAct">
+        <h3 class="title-section">Vị trí tuyển dụng</h3>
+        <div class="panel box-panel Panel">
+            <div class="top">
+                <h3 class="title TitleCreate">Thêm mới vị trí tuyển dụng</h3>
+                <h3 class="title TitleUpdate" style="display: none;">Cập nhật vị trí tuyển dụng</h3>
+                <h3 class="title TitleDisplay" style="display: none;">Danh sách vị trí tuyển dụng</h3>
+                <a href="#" class="pull-right link BackAction" style="display: none;"><i class="fa fa-reply" aria-hidden="true"></i> Quay lại</a>
+                <a href="#" class="pull-right link AddAction" style="display: none;"><i class="fa fa-plus-circle" aria-hidden="true"></i> Thêm mới</a>
+            </div>
+            <div class="banner banner-display DisplayData" style="display: none;">
+                <div class="table-display">
+                    <div class="header_table">
+                        <div class="col-md-6">
+                            <div class="col-md-1">
+                                <input type="checkbox" data-toggle="checkall" data-target="input[name=choose]" class="checkbox_check">
+                            </div>
+                            <div class="col-md-4 no-padding">
+                                <span>Tên vị trí</span>
+                            </div>
+                            <div class="col-md-4">
+                                <span>Danh mục</span>
+                            </div>
+                            <div class="col-md-3 no-padding">
+                                <span>Tỉnh/ Thành phố</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 no-padding ">
+                            <div class="col-md-4 no-padding">
+                                <span>Mô tả công việc </span>
+                            </div>
+                            <div class="col-md-4">
+                                <span>Yêu cầu công việc</span>
+                            </div>
+                            <div class="col-md-2 no-padding">
+                                <span>Trạng thái</span>
+                            </div>
+                            <div class="col-md-2">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="category_product">
+                        <li class="row text-center">
+                            <div class="col-md-3 no-padding">
+                                <div class="wrap_select">
+                                    <select class="form-control">
+                                        <option>Chọn danh mục</option>
+                                        <option>Hành chính - Nhân sự</option>
+                                        <option>Danh mục 2</option>
+                                        <option>Danh mục 3</option>
+                                        <option>Danh mục 4</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="wrap_select">
+                                    <select class="form-control">
+                                        <option>Chọn Tỉnh/ Thành</option>
+                                        <option>Hồ Chí Minh</option>
+                                        <option>Hà Nội</option>
+                                        <option>Nghệ An</option>
+                                        <option>Hà Giang</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-2 no-padding">
+                                <div class="wrap_select">
+                                    <select class="form-control">
+                                        <option>Chọn Trạng Thái</option>
+                                        <option>Kích hoạt</option>
+                                        <option>Chưa kích hoạt</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-left">
+                                <button type="button" value="" class="btn btn_primary">Lọc</button>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-1">
+                                    <input type="checkbox" name="choose"  class="checkbox_check">
+                                </div>
+                                <div class="col-md-4 no-padding content">
+                                    <span>Nhân viên Marketing</span>
+                                </div>
+                                <div class="col-md-4 content">
+                                    <span>Marketing</span>
+                                </div>
+                                <div class="col-md-3 content">
+                                    <span>Hồ Chí Minh</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 no-padding">
+                                <div class="col-md-4 no-padding content">
+                                    <span>Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết </span>
+                                </div>
+                                <div class="col-md-4 content">
+                                    <span>Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="wrapper tooltip">
+                                      <input type="checkbox" id="checkbox" class="slider-toggle" onclick="return false;" onkeydown="return false;"/>
+                                        <label class="slider-viewport" for="checkbox">
+                                            <div class="slider">
+                                                <div class="slider-button">&nbsp;</div>
+                                                <div class="slider-content left"><span>On</span></div>
+                                                <div class="slider-content right"><span>Off</span></div>
+                                            </div>
+                                        </label>
+                                        <span class="tooltiptext">Chưa kích hoạt</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <a class="tooltip">
+                                        <i class="icon-edit-pen active UpdateAction" aria-hidden="true"></i>
+                                        <i class="icon-edit-pen-hover UpdateHover" title="Chỉnh sửa">&nbsp</i>
+                                        <span class="tooltiptext">Cập nhật</span>
+                                    </a>
+                                    <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
+                                        <i class="icon-delete active DeleteAction" aria-hidden="true"></i>
+                                        <i class="icon-delete-hover DeleteHover" title="Xóa">&nbsp</i>
+                                        <span class="tooltiptext">Xóa</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        {% for x in [1,2,3,4,5,6,7,8,9] %}
+                        <li class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-1">
+                                    <input type="checkbox" name="choose"  class="checkbox_check">
+                                </div>
+                                <div class="col-md-4 no-padding content">
+                                    <span>Web Design</span>
+                                </div>
+                                <div class="col-md-4 content">
+                                    <span>Product Design</span>
+                                </div>
+                                <div class="col-md-3 content">
+                                    <span>Hồ Chí Minh</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 no-padding">
+                                <div class="col-md-4 no-padding content">
+                                    <span>Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết </span>
+                                </div>
+                                <div class="col-md-4 content">
+                                    <span>Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết Nội dung bài viết</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="wrapper tooltip">
+                                      <input type="checkbox" id="checkbox" checked class="slider-toggle" onclick="return false;" onkeydown="return false;"/>
+                                        <label class="slider-viewport" for="checkbox">
+                                            <div class="slider">
+                                                <div class="slider-button">&nbsp;</div>
+                                                <div class="slider-content left"><span>On</span></div>
+                                                <div class="slider-content right"><span>Off</span></div>
+                                            </div>
+                                        </label>
+                                        <span class="tooltiptext">Kích hoạt</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <a class="tooltip">
+                                        <i class="icon-edit-pen active UpdateAction" aria-hidden="true"></i>
+                                        <i class="icon-edit-pen-hover UpdateHover" title="Chỉnh sửa">&nbsp</i>
+                                        <span class="tooltiptext">Cập nhật</span>
+                                    </a>
+                                    <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
+                                        <i class="icon-delete active DeleteAction" aria-hidden="true"></i>
+                                        <i class="icon-delete-hover DeleteHover" title="Xóa">&nbsp</i>
+                                        <span class="tooltiptext">Xóa</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %} 
+                    </ul>
+                    <div class="bottoom_table">
+                        <p class="left">Tổng trạng thái: <span>10/40</span></p>
+                        <div class="page">
+                            <div class="wrap">
+                                <div class="left">
+                                    <i class="fa fa-angle-double-left">&nbsp</i>
+                                    <div> <p>Trước</p></div>
+                                </div>
+                                <p class="display">Trang 1/4</p>
+                                <div class="right">
+                                    <div><p>Sau</p></div>
+                                    <i class="fa fa-angle-double-right">&nbsp</i>
+                                </div>
+                            </div>
+                            
+                            <div class="per_page">
+                                <select class="form-control">
+                                    <option>10 dòng/ Trang</option>
+                                    <option>20 dòng/ Trang</option>
+                                    <option>30 dòng/ Trang</option>
+                                    <option>40 dòng/ Trang</option>
+                                </select>
+                                <i class="fa fa-angle-down">&nbsp</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-add AddData">
+                <div class="form-create FormCreate">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Tên vị trí <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="Nhập tên bài viết cần tạo">
+                                <label class="error">Nhập tên vị trí</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Tên Alias <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="Nhập tên alias mới cần tạo">
+                                <label class="error">Nhập tên tên alias cần tạo</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Danh mục <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="wrap_select">
+                                    <select class="form-control">
+                                        <option>Chọn danh mục bài viết</option>
+                                        <option>Danh mục 1</option>
+                                        <option>Danh mục 2</option>
+                                        <option>Danh mục 3</option>
+                                        <option>Danh mục 4</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                                <label class="error">Chọn danh mục bài viết</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Tỉnh/ TP <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="wrap_select">
+                                    <select class="form-control">
+                                        <option>Chọn tỉnh/ thành phố</option>
+                                        <option>TP HCM</option>
+                                        <option>Bình Dương</option>
+                                        <option>Nghệ An</option>
+                                        <option>Hà Nội</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                                <label class="error">Chọn tỉnh/ thành phố</label>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                             <div class="col-md-2 text-right">
+                                <label>Keyword <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="Nhập keyword, cách nhau bởi dấu phẩy">
+                                <label class="error">Nhập keyword, cách nhau bởi dấu phẩy</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Keyword <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="wrapper">
+                                  <input type="checkbox" id="checkbox2" class="slider-toggle" checked />
+                                    <label class="slider-viewport" for="checkbox2">
+                                    <div class="slider">
+                                        <div class="slider-button">&nbsp;</div>
+                                        <div class="slider-content left"><span>On</span></div>
+                                        <div class="slider-content right"><span>Off</span></div>
+                                    </div>
+                                    </label>
+                                </div>
+                                <span class="note">Chọn để kích hoạt trạng thái</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-1 text-right">
+                            <label>Mô tả công việc</label>
+                        </div>
+                        <div class="col-md-11">
+                            <textarea class="form-control" cols="" placeholder="Nhập mô tả công việc"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-1 text-right">
+                            <label>Yêu cầu</label>
+                        </div>
+                        <div class="col-md-11">
+                            <textarea class="form-control" cols="" placeholder="Nhập yêu cầu công việc"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-1 text-right">
+                            <label>Thông tin khác <span class="since">(nếu có)</span></label>
+                        </div>
+                        <div class="col-md-11">
+                            <textarea class="form-control" cols="" placeholder="Nhập thông tin khác"></textarea>
+                        </div>
+                    </div>
+                    <div class="action pull-right">
+                         <span class="cancel Cancel">Hủy bỏ</span>
+                        <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Lưu</button>
+                        <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".AddSuccessModal">Lưu & Thêm danh mục mới</button>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-add UpdateData">
+                <div class="form-create FormCreate">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Tên vị trí <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="Nhập tên bài viết cần tạo">
+                                <label class="error">Nhập tên vị trí</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Tên Alias <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="Nhập tên alias mới cần tạo">
+                                <label class="error">Nhập tên tên alias cần tạo</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Danh mục <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="wrap_select">
+                                    <select class="form-control">
+                                        <option>Chọn danh mục bài viết</option>
+                                        <option>Danh mục 1</option>
+                                        <option>Danh mục 2</option>
+                                        <option>Danh mục 3</option>
+                                        <option>Danh mục 4</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                                <label class="error">Chọn danh mục bài viết</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Tỉnh/ TP <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="wrap_select">
+                                    <select class="form-control">
+                                        <option>Chọn tỉnh/ thành phố</option>
+                                        <option>TP HCM</option>
+                                        <option>Bình Dương</option>
+                                        <option>Nghệ An</option>
+                                        <option>Hà Nội</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                                <label class="error">Chọn tỉnh/ thành phố</label>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                             <div class="col-md-2 text-right">
+                                <label>Keyword <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="Nhập keyword, cách nhau bởi dấu phẩy">
+                                <label class="error">Nhập keyword, cách nhau bởi dấu phẩy</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-2 text-right">
+                                <label>Keyword <span>*</span></label>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="wrapper">
+                                  <input type="checkbox" id="checkbox2" class="slider-toggle" checked />
+                                    <label class="slider-viewport" for="checkbox2">
+                                    <div class="slider">
+                                        <div class="slider-button">&nbsp;</div>
+                                        <div class="slider-content left"><span>On</span></div>
+                                        <div class="slider-content right"><span>Off</span></div>
+                                    </div>
+                                    </label>
+                                </div>
+                                <span class="note">Chọn để kích hoạt trạng thái</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-1 text-right">
+                            <label>Mô tả công việc</label>
+                        </div>
+                        <div class="col-md-11">
+                            <textarea class="form-control" cols="" placeholder="Nhập mô tả công việc"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-1 text-right">
+                            <label>Yêu cầu</label>
+                        </div>
+                        <div class="col-md-11">
+                            <textarea class="form-control" cols="" placeholder="Nhập yêu cầu công việc"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-1 text-right">
+                            <label>Thông tin khác <span class="since">(nếu có)</span></label>
+                        </div>
+                        <div class="col-md-11">
+                            <textarea class="form-control" cols="" placeholder="Nhập thông tin khác"></textarea>
+                        </div>
+                    </div>
+                    <div class="action pull-right">
+                         <span class="cancel Cancel">Hủy bỏ</span>
+                        <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Lưu</button>
+                        <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".SuccessModal">Lưu & Cập nhật danh mục</button>
+                    </div>
+                </div>
+            </div>      
+            <div class="no-banner NoData" >
+                <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
+                <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
+            </div>
+        </div>
+    </section>
+</div>
+{% include "block/_modal-success.html" %}
+{% include "block/_modal-add-success.html" %}
+{% include "block/_modal-delete.html" %}
+{% endblock %}

@@ -54,6 +54,9 @@
 		text-decoration: underline;
 		margin-right: 10px;
 		cursor: pointer;
+		 @media(max-width: 1400px) {
+	        margin-right: 5px;
+	    }
 	}
 	.button-update {
 		text-transform: uppercase;
@@ -767,7 +770,8 @@
 	}
 }
 /*page article*/
-.section-article {
+
+.section-article,.section-career {
 	.form-create {
 		padding: 0;
 		.col-md-6,.col-md-2, .col-md-1,.col-md-5 {
@@ -804,4 +808,11 @@
 		    word-wrap: break-word;
 		}
 	}
+}
+.section-career {
+	.form-create {
+		textarea {
+			height: 130px;
+		}
+	}	
 }
