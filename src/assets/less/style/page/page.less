@@ -863,6 +863,7 @@
 		position: relative;
 	    display: inline-block;
 		width: 100%;
+		background: #fff;
 		.input-group {
 			display: block;
 			input {
@@ -954,4 +955,135 @@
 			margin-right: 10px;
 		}
 	}
+	.row-filter {
+	    display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-box;
+		width: 100%;
+	    padding: 8px 0px;
+    	background: #e8f9ff;
+	}
 }
+.switch_bar {
+	background: #e8f9ff;
+	padding: 10px 20px;
+	display: none;
+	height: 54px;
+	.wrap-switch {
+		height: 34px;
+		width: 30%;
+	    display: inline-block;
+		@media(max-width: 1600px) {
+	        width: 45%;
+	    }
+		label {
+			float: left;
+			margin-right: 20px;
+			position: relative;
+			top: 6px;
+		} 
+		.select {
+			position: relative;
+			display: inline-block;
+			width: 40%;
+			background: #fff;
+			float: left;
+			opacity: 1;
+		    border-top-right-radius: 15px;
+		    border-top-left-radius: 15px;
+		    border-bottom-left-radius: 15px;
+		    border-bottom-right-radius: 15px;
+			select {
+				height: 34px;
+				float: left;
+			    padding: 6px 25px;
+				border: 1px solid @primary-color;
+				border-top-right-radius: 15px;
+			    border-top-left-radius: 15px;
+			    border-bottom-left-radius: 15px;
+			    border-bottom-right-radius: 15px;
+			    -moz-appearance: none;
+			    -o-appearance: none;
+			    -webkit-appearance: none;
+			    background: transparent;
+			    position: relative;
+			    z-index: 1;
+			}
+			i {
+				position: absolute;
+				top: 10px;
+				right: 20px;
+				z-index: 0;
+			}
+		}
+		.switch {
+		  position: relative;
+		  display: inline-block;
+		  width: 106px;
+		  height: 34px;
+		  margin-bottom: 0;
+		  margin-left: 5px;
+		  top: 1px;
+		}
+		.switch input {display:none;}
+		.slider {
+		  position: absolute;
+		  cursor: pointer;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background-color: #ccc;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		  i {
+	  	    position: absolute;
+		    top: 12px;
+		    left: 11px;
+		  }
+		}
+
+		.slider:before {
+		  position: absolute;
+		  content: "Chuyển";
+		  height: 26px;
+		  width: 70px;
+		  left: 5px;
+		  bottom: 4px;
+		  background-color: white;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		  text-align: center;
+	    	line-height: 26px;
+	    	color: #464646;
+	    	z-index: 2;
+	    	font-weight: normal;
+		}
+
+		input:checked + .slider {
+		  background-color: @primary-color;
+		}
+
+		input:focus + .slider {
+		  box-shadow: 0 0 1px @primary-color;
+		}
+
+		input:checked + .slider:before {
+		  -webkit-transform: translateX(26px);
+		  -ms-transform: translateX(26px);
+		  transform: translateX(26px);
+		}
+
+		/* Rounded sliders */
+		.slider.round {
+		  border-radius: 34px;
+		}
+
+		.slider.round:before {
+		  border-top-right-radius: 15px;
+		  border-top-left-radius: 15px;
+		  border-bottom-left-radius: 15px;
+		  border-bottom-right-radius: 15px;
+		}
+	}
+	}

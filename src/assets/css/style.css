@@ -3641,6 +3641,16 @@ footer .container {
 .table-display ul li:nth-child(odd) {
   background: #fff;
 }
+.table-display ul .form-group,
+.table-display ul .btn_primary {
+  margin-bottom: 0;
+}
+.table-display ul .form-control,
+.table-display ul input[type='text'] {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
 .table-display .bottoom_table {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -13195,6 +13205,7 @@ section.table_supply .wrap-table.filter_child {
   position: relative;
   display: inline-block;
   width: 100%;
+  background: #fff;
 }
 .section-career .time .input-group {
   display: block;
@@ -13290,4 +13301,133 @@ section.table_supply .wrap-table.filter_child {
 }
 .section-career .list-career i {
   margin-right: 10px;
+}
+.section-career .row-filter {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  width: 100%;
+  padding: 8px 0px;
+  background: #e8f9ff;
+}
+.switch_bar {
+  background: #e8f9ff;
+  padding: 10px 20px;
+  display: none;
+  height: 54px;
+}
+.switch_bar .wrap-switch {
+  height: 34px;
+  width: 30%;
+  display: inline-block;
+  /* Rounded sliders */
+}
+@media (max-width: 1600px) {
+  .switch_bar .wrap-switch {
+    width: 45%;
+  }
+}
+.switch_bar .wrap-switch label {
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  top: 6px;
+}
+.switch_bar .wrap-switch .select {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  background: #fff;
+  float: left;
+  opacity: 1;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.switch_bar .wrap-switch .select select {
+  height: 34px;
+  float: left;
+  padding: 6px 25px;
+  border: 1px solid #00adef;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+.switch_bar .wrap-switch .select i {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 0;
+}
+.switch_bar .wrap-switch .switch {
+  position: relative;
+  display: inline-block;
+  width: 106px;
+  height: 34px;
+  margin-bottom: 0;
+  margin-left: 5px;
+  top: 1px;
+}
+.switch_bar .wrap-switch .switch input {
+  display: none;
+}
+.switch_bar .wrap-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.switch_bar .wrap-switch .slider i {
+  position: absolute;
+  top: 12px;
+  left: 11px;
+}
+.switch_bar .wrap-switch .slider:before {
+  position: absolute;
+  content: "Chuyển";
+  height: 26px;
+  width: 70px;
+  left: 5px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  text-align: center;
+  line-height: 26px;
+  color: #464646;
+  z-index: 2;
+  font-weight: normal;
+}
+.switch_bar .wrap-switch input:checked + .slider {
+  background-color: #00adef;
+}
+.switch_bar .wrap-switch input:focus + .slider {
+  box-shadow: 0 0 1px #00adef;
+}
+.switch_bar .wrap-switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.switch_bar .wrap-switch .slider.round {
+  border-radius: 34px;
+}
+.switch_bar .wrap-switch .slider.round:before {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }

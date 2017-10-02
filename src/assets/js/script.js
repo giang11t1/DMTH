@@ -229,10 +229,12 @@ $(document).ready(function() {
             }
         }
         if (!checked) {
-            $(".switch_bar").slideUp();
+            $(".FilterRow").slideDown();
+            $(".SwitchBar").slideUp();
         }
         if (checked) {
-            $(".switch_bar").slideDown();
+            $(".SwitchBar").slideDown();
+            $(".FilterRow").slideUp();
         }
         return checked;
     }

@@ -44,8 +44,8 @@
                         </div>
                     </div>
                     <ul class="category_product">
-                        <li class="row text-center">
-                            <div class="col-md-3 no-padding">
+                        <div class="row-filter FilterRow text-center">
+                            <div class="col-md-offset-2 col-md-2 no-padding">
                                 <div class="wrap_select">
                                     <select class="form-control">
                                         <option>Chọn danh mục</option>
@@ -57,7 +57,7 @@
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <div class="wrap_select">
                                     <select class="form-control">
                                         <option>Chọn Tỉnh/ Thành</option>
@@ -79,10 +79,26 @@
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <div class="col-md-3 text-left">
+                            <div class="col-md-2 text-left submit">
                                 <button type="button" value="" class="btn btn_primary">Lọc</button>
                             </div>
-                        </li>
+                        </div>
+                        <div class="switch_bar SwitchBar">
+                            <div class="wrap-switch">
+                                <label>Chọn thao tác: </label>
+                                <div class="select">
+                                    <select class="form-control">
+                                        <option>Kích hoạt</option>
+                                        <option>Không kích hoạt</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>                                
+                                <label class="switch">
+                                  <input type="checkbox">
+                                  <div class="slider round"><i class="icon-check">&nbsp</i></div>
+                                </label>
+                            </div>
+                        </div>
                         <li class="row">
                             <div class="col-md-6">
                                 <div class="col-md-1">
@@ -328,7 +344,7 @@
                     <div class="action pull-right">
                          <span class="cancel Cancel">Hủy bỏ</span>
                         <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Lưu</button>
-                        <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".AddSuccessModal">Lưu & Thêm danh mục mới</button>
+                        <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".AddSuccessModal">Lưu & Thêm vị trí mới</button>
                     </div>
                 </div>
             </div>
@@ -448,7 +464,7 @@
                     <div class="action pull-right">
                          <span class="cancel Cancel">Hủy bỏ</span>
                         <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Lưu</button>
-                        <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".SuccessModal">Lưu & Cập nhật danh mục</button>
+                        <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".SuccessModal">Lưu & Cập nhật vị trí</button>
                     </div>
                 </div>
             </div>      
