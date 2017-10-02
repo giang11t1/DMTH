@@ -2305,7 +2305,7 @@ label .since {
   font-style: italic;
 }
 .no-padding {
-  padding: 0;
+  padding: 0 !important;
 }
 .img {
   position: absolute;
@@ -2440,6 +2440,27 @@ label .since {
 .btn_primary:focus,
 .btn_primary:active {
   color: #fff;
+}
+.btn-upload {
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 15px;
+  font-weight: bold;
+  background: #ed1b24;
+  border: none;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.btn-upload i {
+  margin-right: 5px;
+}
+.btn-upload:hover,
+.btn-upload:focus,
+.btn-upload:active {
+  background: #d4111a;
 }
 /*
  * Component: Form
@@ -3545,6 +3566,16 @@ footer .container {
   display: inline-block;
   opacity: 1;
   z-index: 2;
+}
+.tooltip i {
+  font-size: 15px;
+  color: #818181;
+}
+.tooltip .fa-download {
+  margin-right: 15px;
+}
+.tooltip:hover i {
+  color: #00adef;
 }
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -12367,6 +12398,31 @@ section.table_supply .wrap-table.filter_child {
 .top a {
   cursor: pointer;
 }
+.top .navigate ul {
+  padding-left: 0;
+}
+.top .navigate ul li {
+  float: left;
+  position: relative;
+  margin-right: 20px;
+}
+.top .navigate ul li:after {
+  content: '>';
+  position: absolute;
+  top: 0;
+  right: -17px;
+  width: 10px;
+  height: 10px;
+  font-size: 15px;
+  color: #00adef;
+  font-weight: bold;
+}
+.top .navigate ul li:last-child:after {
+  content: none;
+}
+.top .navigate ul li:hover a {
+  text-decoration: underline;
+}
 .no-banner {
   display: inline-block;
   width: 100%;
@@ -13075,6 +13131,9 @@ section.table_supply .wrap-table.filter_child {
   color: #ed1b24;
 }
 /*page article*/
+.title-section {
+  display: inline-block;
+}
 .section-article .form-create,
 .section-career .form-create {
   padding: 0;
@@ -13120,4 +13179,115 @@ section.table_supply .wrap-table.filter_child {
 }
 .section-career .form-create textarea {
   height: 130px;
+}
+.section-career .upload {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ed1b24;
+}
+.section-career .upload span {
+  border-bottom: 1px solid #ed1b24;
+}
+.section-career .upload i {
+  margin-right: 5px;
+}
+.section-career .time {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.section-career .time .input-group {
+  display: block;
+}
+.section-career .time .input-group input {
+  background: transparent;
+  cursor: default;
+}
+.section-career .time .input-group span {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 1;
+  font-size: 17px;
+  color: #818181;
+  padding-left: 8px;
+  border-left: 1px solid #e1e1e1;
+}
+@media (max-width: 1600px) {
+  .section-career .time .input-group span {
+    right: 8px;
+  }
+}
+.section-career .wrap-block:first-child .title-detail {
+  margin-top: 0;
+}
+.section-career .wrap-detail {
+  display: none;
+}
+.section-career .wrap-detail .title-detail {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.section-career .wrap-detail .title-detail i {
+  color: #818181;
+}
+.section-career .wrap-detail .box {
+  padding: 20px;
+}
+.section-career .wrap-detail .list-infor {
+  padding-left: 0;
+  color: #818181;
+}
+.section-career .wrap-detail .list-infor b {
+  color: #464646;
+}
+.section-career .wrap-detail .list-infor li {
+  line-height: 28px;
+}
+.section-career .wrap-detail .block-infor {
+  margin-bottom: 40px;
+}
+.section-career .wrap-detail .block-infor:last-child {
+  margin-bottom: 0;
+}
+.section-career .wrap-detail .block-infor:first-child .title {
+  margin-top: 0;
+}
+.section-career .wrap-detail .block-infor .title {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.section-career .wrap-detail .block-infor p {
+  color: #818181;
+}
+.section-career .wrap-detail .block-infor .time {
+  color: #464646;
+}
+.section-career .wrap-detail .wrap-img {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  overflow: hidden;
+}
+.section-career .wrap-detail .wrap-img img {
+  position: absolute;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.section-career .list-career {
+  padding: 7px 15px;
+  background: #00adef;
+  color: #fff;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.section-career .list-career i {
+  margin-right: 10px;
 }

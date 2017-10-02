@@ -21,6 +21,37 @@
 	a {
 		cursor: pointer;
 	}
+	.navigate {
+		ul {
+			padding-left: 0;
+			li {
+				float: left;
+				position: relative;
+				margin-right: 20px;
+				&:after {
+					content: '>';
+					position: absolute;
+					top: 0;
+					right: -17px;
+					width: 10px;
+					height: 10px;
+					font-size: 15px;
+					color: @primary-color;
+					font-weight: bold;
+				}
+				&:last-child {
+					&:after {
+						content: none;
+					}
+				}
+				&:hover {
+					a {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
 }
 .no-banner {
 	display: inline-block;
@@ -770,7 +801,9 @@
 	}
 }
 /*page article*/
-
+.title-section {
+	display: inline-block;
+}
 .section-article,.section-career {
 	.form-create {
 		padding: 0;
@@ -814,5 +847,111 @@
 		textarea {
 			height: 130px;
 		}
+	}
+	.upload {
+		font-size: 16px;
+		font-weight: bold;
+		color: @bg-color;
+		span{
+			border-bottom: 1px solid @bg-color;
+		}
+		i {
+			margin-right: 5px;
+		}
 	}	
+	.time {
+		position: relative;
+	    display: inline-block;
+		width: 100%;
+		.input-group {
+			display: block;
+			input {
+				background: transparent;
+				cursor: default;
+			}
+			span {
+			    position: absolute;
+		        top: 8px;
+			    right: 12px;
+			    z-index: 1;
+			    font-size: 17px;
+			    color: #818181;
+			    padding-left: 8px;
+			    border-left: @border;
+			    @media(max-width: 1600px) {
+			        right: 8px;
+			    }
+			}
+		}
+	}
+	.wrap-block {
+		&:first-child {
+			.title-detail {
+				margin-top: 0;
+			}
+		}
+	}
+	.wrap-detail {
+		display: none;
+		.title-detail {
+			font-size: 14px;
+			text-transform: uppercase;
+			i {
+				color: @text-color-3;
+			}
+		}
+		.box {
+			padding: 20px;
+		}
+		.list-infor {
+			padding-left: 0;
+			color: @text-color-3;
+			b{
+				color: @text-color-1;
+			}
+			li {
+				line-height: 28px;
+			}
+		}
+		.block-infor {
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:first-child {
+				.title {
+					margin-top: 0;
+				}
+			}
+			.title {
+				font-size: 18px;
+				margin-bottom: 0;
+			}
+			p {
+				color: @text-color-3;
+			}
+			.time {
+				color: @text-color-1;
+			}
+		}
+		.wrap-img {
+			width: 140px;
+			height: 140px;
+			position: relative;
+			overflow: hidden;
+			img {
+				.img;
+			}
+		}
+	}
+	.list-career {
+		padding: 7px 15px;
+		background: @primary-color;
+		color: #fff;
+		border-radius: 3px;
+		margin-bottom: 10px;
+		i {
+			margin-right: 10px;
+		}
+	}
 }

@@ -1,0 +1,290 @@
+{% set current_page = 'CV-career' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+    <section class="section section-career BannerAct">
+        <h3 class="title-section">CV ứng tuyển</h3>
+        <a href="#" class="list-career pull-right ListAction" style="display: none;"><i class="fa fa-file-text" aria-hidden="true"></i> <span>Danh sách ứng viên</span> </a>
+        <div class="panel box-panel Panel">
+            <div class="top">
+                <h3 class="title TitleDisplay">Danh sách ứng viên</h3>
+                <div class="navigate TitleDisplayDetail" style="display: none;">
+                    <ul>
+                        <li><a href="#" class="title"><b>Hồ sơ ứng viên</b></a></li>
+                        <li><a href="#" class="title">Nhân viên Marketing</a></li>
+                        <li><a href="#" class="title">Nguyễn Thị Ngọc Lan</a></li>
+                    </ul>
+                    <a href="#" class="upload pull-right"><i class="fa fa-upload" aria-hidden="true"></i> <span>Tải hồ sơ ứng viên</span></a>
+                </div>
+                <a href="#" class="pull-right link BackAction" style="display: none;"><i class="fa fa-reply" aria-hidden="true"></i> Quay lại</a>
+                <a href="#" class="pull-right link AddAction" style="display: none;"><i class="fa fa-plus-circle" aria-hidden="true"></i> Thêm mới</a>
+            </div>
+            <div class="banner banner-display DisplayData" >
+                <div class="table-display">
+                    <div class="header_table">
+                        <div class="col-md-7">
+                            <div class="col-md-1">
+                                <input type="checkbox" data-toggle="checkall" data-target="input[name=choose]" class="checkbox_check">
+                            </div>
+                            <div class="col-md-4 no-padding">
+                                <span>Tên vị trí</span>
+                            </div>
+                            <div class="col-md-4">
+                                <span>Danh mục</span>
+                            </div>
+                            <div class="col-md-3 no-padding">
+                                <span>Tỉnh/ Thành phố</span>
+                            </div>
+                        </div>
+                        <div class="col-md-5 no-padding ">
+                            <div class="col-md-4 no-padding">
+                                <span>Tên ứng viên </span>
+                            </div>
+                            <div class="col-md-4">
+                                <span>Ngày ứng tuyển</span>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="category_product">
+                        <li class="row text-center">
+                            <div class="col-md-3 no-padding">
+                                <div class="wrap_select">
+                                    <select class="form-control">
+                                        <option>Chọn danh mục</option>
+                                        <option>Hành chính - Nhân sự</option>
+                                        <option>Danh mục 2</option>
+                                        <option>Danh mục 3</option>
+                                        <option>Danh mục 4</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="wrap_select">
+                                    <select class="form-control">
+                                        <option>Chọn Tỉnh/ Thành</option>
+                                        <option>Hồ Chí Minh</option>
+                                        <option>Hà Nội</option>
+                                        <option>Nghệ An</option>
+                                        <option>Hà Giang</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-2 no-padding">
+                                <div class="form-group">
+                                    <div class="time">
+                                        <div class="input-group date" >
+                                            <input class="form-control DatePicker" size="20" type="text" value="" placeholder="Ngày bắt đầu">
+                                            <span class="fa fa-calendar"></span>
+                                        </div>
+                                        <input type="hidden" id="dtp_input1" value="" />
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <div class="time">
+                                        <div class="input-group date" >
+                                            <input class="form-control DatePicker" size="20" type="text" value="" placeholder="Ngày kết thúc">
+                                            <span class="fa fa-calendar"></span>
+                                        </div>
+                                        <input type="hidden" id="dtp_input1" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-left no-padding">
+                                <button type="button" value="" class="btn btn_primary">Lọc</button>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="col-md-7">
+                                <div class="col-md-1">
+                                    <input type="checkbox" name="choose"  class="checkbox_check">
+                                </div>
+                                <div class="col-md-4 no-padding content">
+                                    <span>Nhân viên Marketing</span>
+                                </div>
+                                <div class="col-md-4 content">
+                                    <span>Marketing</span>
+                                </div>
+                                <div class="col-md-3 content">
+                                    <span>Hồ Chí Minh</span>
+                                </div>
+                            </div>
+                            <div class="col-md-5 no-padding">
+                                <div class="col-md-4 no-padding content">
+                                    <span>Nguyễn Thị Ngọc Lan</span>
+                                </div>
+                                <div class="col-md-4 content text-center">
+                                    <span>15/09/2017</span>
+                                </div>                               
+                                <div class="col-md-4 text-center">
+                                    <a class="tooltip">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        <span class="tooltiptext">Tải xuống</span>
+                                    </a>
+                                    <a class="tooltip ViewAction">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                        <span class="tooltiptext">Xem chi tiết</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        {% for x in [1,2,3,4,5,6,7,8,9] %}
+                        <li class="row">
+                            <div class="col-md-7">
+                                <div class="col-md-1">
+                                    <input type="checkbox" name="choose" class="checkbox_check">
+                                </div>
+                                <div class="col-md-4 no-padding content">
+                                    <span>Web Design</span>
+                                </div>
+                                <div class="col-md-4 content">
+                                    <span>Product Design</span>
+                                </div>
+                                <div class="col-md-3 content">
+                                    <span>Hồ Chí Minh</span>
+                                </div>
+                            </div>
+                            <div class="col-md-5 no-padding">
+                                <div class="col-md-4 no-padding content ">
+                                    <span>Trần Thị Hồng Ngọc</span>
+                                </div>
+                                <div class="col-md-4 content text-center">
+                                    <span>14/09/2017</span>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <a class="tooltip">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        <span class="tooltiptext">Tải xuống</span>
+                                    </a>
+                                    <a class="tooltip ViewAction">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                        <span class="tooltiptext">Xem chi tiết</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %} 
+                    </ul>
+                    <div class="bottoom_table">
+                        <p class="left">Tổng trạng thái: <span>10/40</span></p>
+                        <div class="page">
+                            <div class="wrap">
+                                <div class="left">
+                                    <i class="fa fa-angle-double-left">&nbsp</i>
+                                    <div> <p>Trước</p></div>
+                                </div>
+                                <p class="display">Trang 1/4</p>
+                                <div class="right">
+                                    <div><p>Sau</p></div>
+                                    <i class="fa fa-angle-double-right">&nbsp</i>
+                                </div>
+                            </div>
+                            
+                            <div class="per_page">
+                                <select class="form-control">
+                                    <option>10 dòng/ Trang</option>
+                                    <option>20 dòng/ Trang</option>
+                                    <option>30 dòng/ Trang</option>
+                                    <option>40 dòng/ Trang</option>
+                                </select>
+                                <i class="fa fa-angle-down">&nbsp</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-detail DetailCV">
+                <div class="wrap-block">
+                    <h3 class="title-detail"><i class="fa fa-info-circle" aria-hidden="true"></i> Thông tin ứng viên</h3>
+                    <div class="box">
+                        <div class="col-md-2 no-padding">
+                            <div class="wrap-img">
+                                <img src="assets/images/account-CV.png">
+                            </div>
+                        </div>
+                        <div class="col-md-10 no-padding">
+                            <ul class="list-infor">
+                                <li><b>Vị trí ứng tuyển:</b> Nhân viên Marketing</li>
+                                <li><b>Nguyện vọng làm việc tại:</b> Quận Tân Bình, Tp Hồ Chí Minh</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-block">
+                    <h3 class="title-detail"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Thông tin cá nhân</h3>
+                    <div class="box">
+                        <div class="col-md-5 no-padding">
+                            <ul class="list-infor">
+                                <li><b>Họ và tên:</b> NGUYỄN THỊ NGỌC LAN</li>
+                                <li><b>Ngày sinh:</b> 01/01/1990</li>
+                                <li><b>Giới tính:</b> Nữ</li>
+                                <li><b>Nơi sinh:</b> Đồng Tháp</li>
+                                <li><b>Số CMND:</b> 1242425364</li>
+                                <li><b>Chiều cao:</b> 1m62 - <b>Cân nặng:</b> 51kg</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-7">
+                            <ul class="list-infor">
+                                <li><b>Tình trạng hôn nhân:</b> Độc thân</li>
+                                <li><b>Địa chỉ liên hệ:</b> Số nhà 11, Đường Thống Nhất, Phường 17, Quận Gò Vấp, TPHCM</li>
+                                <li><b>Điện thoại: </b> 0123.5.648.579</li>
+                                <li><b>Thu nhập mong muốn:</b> 12.000.000 VNĐ</li>
+                                <li><b>Email liên hệ:</b> lanntn@gmail.com</li>
+                                <li><b>Lý do ứng tuyển:</b> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-block">
+                    <h3 class="title-detail"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Trình độ học vấn</h3>
+                    <div class="box">
+                        <ul class="list-infor">
+                            <li><b>Trường:</b> Đại học tài chính Marketing</li>
+                            <li><b>Ngành:</b> Marketing Tổng Hợp</li>
+                            <li><b>Hệ đào tạo:</b> Đại học Chính Quy</li>
+                            <li><b>Các chứng chỉ khác:</b> Tin học B; Anh văn B; Chứng chỉ quản lý doanh nghiệp; Chứng chỉ kế toán cơ bản</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrap-block">
+                    <h3 class="title-detail"><i class="fa fa-university" aria-hidden="true"></i></i> Quá trình làm việc</h3>
+                    <div class="box">
+                        <div class="block-infor">
+                            <h3 class="title">Nhân viên Sale</h3>
+                            <p class="sub">Công Ty TNHH Phân Phối Thực Phẩm Sạch Clean Food</p>
+                            <p class="time">2012 - 7/2014 </p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                        </div>
+                        <div class="block-infor">
+                            <h3 class="title">Nhân viên Marketing</h3>
+                            <p class="sub">Công Ty TNHH Phân Phối Thực Phẩm Sạch Clean Food</p>
+                            <p class="time">2012 - 7/2014 </p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                        </div>
+                        <div class="block-infor">
+                            <h3 class="title">Nhân viên Sale</h3>
+                            <p class="sub">Công Ty TNHH Phân Phối Thực Phẩm Sạch Clean Food</p>
+                            <p class="time">4/2017 - nay</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="action pull-right">
+                    <button type="button" class="btn-upload" data-toggle="modal" data-target=".AddSuccessModal"><i class="fa fa-upload" aria-hidden="true"></i> Tải hồ sơ ứng viên</button>
+                </div>
+            </div>
+            <div class="no-banner NoData" style="display: none;">
+                <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
+            </div>
+        </div>
+    </section>
+</div>
+{% include "block/_modal-success.html" %}
+{% include "block/_modal-add-success.html" %}
+{% include "block/_modal-delete.html" %}
+{% endblock %}

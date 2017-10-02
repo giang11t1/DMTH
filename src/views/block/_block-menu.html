@@ -221,14 +221,14 @@
 				    		</ul>
 				      </div>
 				    </li>	
-				    <li class="item-menu panel {% if current_page == 'category-career' or current_page == 'position-career'%}active{% endif %}">
+				    <li class="item-menu panel {% if current_page == 'category-career' or current_page == 'position-career' or current_page == 'CV-career' %}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
 				          	<i class="icon icon-jobs">&nbsp</i>
 				    		<span>Tuyển dụng</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse10" class="panel-collapse collapse {% if current_page == 'category-career' or current_page == 'position-career'%}in{% endif %}">
+				      	<div id="collapse10" class="panel-collapse collapse {% if current_page == 'category-career' or current_page == 'position-career' or current_page == 'CV-career'%}in{% endif %}">
 					        <ul class="sub-menu" >
 				    			<li class="item-sub {% if current_page == 'category-career'%}active{% endif %}">
 				    				<a href="6.1-danh-muc-tuyen-dung.html">
@@ -240,8 +240,8 @@
 				    					<p>Vị trí tuyển dụng</p>
 				    				</a>
 				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
+				    			<li class="item-sub {% if current_page == 'CV-career'%}active{% endif %}">
+				    				<a href="6.3-CV-ung-tuyen.html">
 				    					<p>CV ứng tuyển</p>
 				    				</a>
 				    			</li>

@@ -187,7 +187,8 @@ $(document).ready(function() {
     }
     // page xem don hang
 
-    $(".form_datetime").datetimepicker({ format: 'hh:ii dd-mm-yyyy' });
+    // $(".form_datetime").datetimepicker({ format: 'hh:ii dd-mm-yyyy' });
+    $(".DatePicker").datepicker();
 
     $(".body_table li .icon-view-fast, .body_table li .icon-view-fast-hover").click(function() {
         $(".body_table li .icon-view-fast-hover").hide();
@@ -1070,6 +1071,20 @@ $(document).ready(function() {
         $(this).closest(".Panel").find(".TitleDisplay").hide();
         $(this).closest(".Panel").find(".TitleCreate").hide();
         $(this).closest(".Panel").find(".TitleUpdate").show();
+    });
+    $(".ViewAction").click(function(){
+        $(".ListAction").show();
+        $(this).closest(".Panel").find(".DisplayData").slideUp();
+        $(this).closest(".Panel").find(".DetailCV").slideDown();
+        $(this).closest(".Panel").find(".TitleDisplay").hide();
+        $(this).closest(".Panel").find(".TitleDisplayDetail").show();
+    });
+    $(".ListAction").click(function(){
+        $(this).hide();
+        $(this).closest(".BannerAct").find(".DisplayData").slideDown();
+        $(this).closest(".BannerAct").find(".DetailCV").slideUp();
+        $(this).closest(".BannerAct").find(".TitleDisplay").show();
+        $(this).closest(".BannerAct").find(".TitleDisplayDetail").hide();
     });
     // chart
     if ($('.chart')[0]) {
