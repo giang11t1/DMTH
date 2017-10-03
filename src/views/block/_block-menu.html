@@ -108,28 +108,33 @@
 				    		</ul>
 				      </div>
 				    </li>
-				    <li class="item-menu panel">
+				    <li class="item-menu panel {% if current_page == 'banner-sale'%}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
 				          	<i class="icon icon-ad">&nbsp</i>
 				    		<span>Khuyến mãi</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse8" class="panel-collapse collapse">
+				      	<div id="collapse8" class="panel-collapse collapse {% if current_page == 'banner-sale'%}in{% endif %}">
 					        <ul class="sub-menu" >
-				    			<li class="item-sub">
-				    				<a href="#">
-				    					<p>Xem đơn hàng</p>
+				    			<li class="item-sub {% if current_page == 'banner-sale'%}active{% endif %}">
+				    				<a href="7.1-banner-khuyen.mai.html">
+				    					<p>Banner</p>
 				    				</a>
 				    			</li>
 				    			<li class="item-sub">
 				    				<a href="#">
-				    					<p>Trạng thái đơn hàng</p>
+				    					<p>Hình ảnh</p>
 				    				</a>
 				    			</li>
 				    			<li class="item-sub">
 				    				<a href="#">
-				    					<p>Yêu cầu hỗ trợ</p>
+				    					<p>Khuyến mãi qùa tặng</p>
+				    				</a>
+				    			</li>
+				    			<li class="item-sub">
+				    				<a href="#">
+				    					<p>Promotion landing page</p>
 				    				</a>
 				    			</li>
 				    		</ul>

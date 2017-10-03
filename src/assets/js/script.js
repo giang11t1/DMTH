@@ -837,6 +837,7 @@ doSomething();
 
 // thien hoa
 $(document).ready(function() {
+    
     // slider
     var appendNumber = 4;
     var prependNumber = 1;
@@ -1088,6 +1089,7 @@ $(document).ready(function() {
         $(this).closest(".BannerAct").find(".TitleDisplay").show();
         $(this).closest(".BannerAct").find(".TitleDisplayDetail").hide();
     });
+
     // chart
     if ($('.chart')[0]) {
         $(function() {
