@@ -2298,6 +2298,8 @@ label.error {
   color: #ff4000;
   display: block;
   margin-bottom: 0;
+  font-weight: normal;
+  font-style: italic;
 }
 label .since {
   display: block;
