@@ -807,6 +807,31 @@ function readURL3(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+function readURL4(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result)
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+function readURL5(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah1')
+                .attr('src', e.target.result)
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 // edit image =========
 
 function doSomething(e) {
@@ -1017,6 +1042,7 @@ $(document).ready(function() {
         $(this).closest(".Panel").find(".UpdateAction").show();
         $(this).closest(".Panel").find(".BackAction").show();
     });
+
     $(".Wrapbox .box-right .NoData button").click(function() {
         $(this).closest(".box-right").find(".NoData").slideUp();
         $(this).closest(".box-right").find(".AddData").slideDown();
@@ -1089,7 +1115,83 @@ $(document).ready(function() {
         $(this).closest(".BannerAct").find(".TitleDisplay").show();
         $(this).closest(".BannerAct").find(".TitleDisplayDetail").hide();
     });
+    // promotion page=======
+    $(".NoDataPromotion button").click(function(){
+        $(this).closest(".tabcontent").find(".NoDataPromotion").slideUp();
+        $(this).closest(".tabcontent").find(".CreatePromotion").slideDown();
+        $(this).closest(".tabcontent").find(".UpdateAction").show();
+        $(this).closest(".tabcontent").find(".BackAction").show();
+    });
+     $(".CreatePromotion .Cancel").click(function(){
+        $(this).closest(".tabcontent").find(".BackAction").hide();
+        $(this).closest(".tabcontent").find(".NoDataPromotion").slideDown();
+        $(this).closest(".tabcontent").find(".UpatePromotion").slideUp();
+        $(this).closest(".tabcontent").find(".CreatePromotion").slideUp();
+    });
+    $(".CreatePromotion .BtnUpdate").click(function() {
+        $(this).closest(".promotion").find(".AddAction").show();
+        $(this).closest(".box-panel").find(".BackAction").hide();
+        $(this).closest(".box-panel").find(".TitleDisplay").show();
+        $(this).closest(".box-panel").find(".TitleCreate").hide();
+        $(this).closest(".box-panel").find(".TitleUpdate").hide();
+        $(this).closest(".box-panel").find(".UpdateAction").show();
 
+        $(this).closest(".tabcontent").find(".DisplayPromotion").slideDown();
+        $(this).closest(".tabcontent").find(".UpatePromotion").slideUp();
+        $(this).closest(".tabcontent").find(".CreatePromotion").slideUp();
+
+    });
+
+    $(".UpatePromotion .BtnUpdate").click(function() {
+        $(this).closest(".promotion").find(".AddAction").show();
+        $(this).closest(".box-panel").find(".BackAction").hide();
+        $(this).closest(".box-panel").find(".TitleDisplay").show();
+        $(this).closest(".box-panel").find(".TitleCreate").hide();
+        $(this).closest(".box-panel").find(".TitleUpdate").hide();
+        $(this).closest(".box-panel").find(".UpdateAction").show();
+
+        $(this).closest(".tabcontent").find(".DisplayPromotion").slideDown();
+        $(this).closest(".tabcontent").find(".UpatePromotion").slideUp();
+        $(this).closest(".tabcontent").find(".CreatePromotion").slideUp();
+
+    });
+
+     $(".DisplayPromotion .DeleteAction").click(function(){
+        $(".DisplayPromotion .DeleteHover").removeClass("active");
+        $(".DisplayPromotion .DeleteAction").addClass("active");
+        $(this).closest(".tooltip").find('.DeleteAction').removeClass("active");
+        $(this).closest(".tooltip").find('.DeleteHover').addClass("active");
+    });
+    $(".DisplayPromotion .UpdateAction").click(function(){
+        $(".DisplayPromotion .UpdateHover").removeClass("active");
+        $(".DisplayPromotion .UpdateAction").addClass("active");
+        $(this).closest(".tooltip").find('.UpdateAction').removeClass("active");
+        $(this).closest(".tooltip").find('.UpdateHover').addClass("active");
+        $(this).closest(".box-panel").find(".TitleDisplay").hide();
+        $(this).closest(".box-panel").find(".TitleCreate").hide();
+        $(this).closest(".box-panel").find(".TitleUpdate").show();
+        $(this).closest(".promotion").find(".AddAction").hide();
+
+        $(this).closest(".tabcontent").find(".DisplayPromotion").slideUp();
+        $(this).closest(".tabcontent").find(".UpatePromotion").slideDown();
+        $(this).closest(".tabcontent").find(".CreatePromotion").slideUp();
+
+    });
+
+    // $(".promotion .AddAction").click(function(){
+        if($(".tab a").hasClass("active")) {
+            $(".promotion .AddAction").click(function(){
+                $(this).closest(".promotion").find(".NoDataPromotion").slideUp();
+                $(this).closest(".promotion").find(".CreatePromotion").slideDown();
+                $(this).closest(".box-panel").find(".DisplayPromotion").slideUp();
+                $(this).closest(".promotion").find(".AddAction").hide();
+                $(this).closest(".box-panel").find(".TitleDisplay").hide();
+                $(this).closest(".box-panel").find(".TitleCreate").show();
+                $(this).closest(".box-panel").find(".TitleUpdate").hide();
+            });
+            
+        }        
+    // });
     // chart
     if ($('.chart')[0]) {
         $(function() {

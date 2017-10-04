@@ -1,0 +1,109 @@
+<div class="banner-add CreatePromotion">
+    <form class="form-create">
+        <div class="col-md-7">
+            <div class="form-group">
+                <div class="col-md-3 text-right">
+                    <label>Tên banner <span>*</span></label>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" placeholder="Nhập tên banner mới cần tạo">
+                    <label class="error">Nhập tên banner</label>
+                </div>
+            </div>            
+            <div class="form-group">
+                <div class="col-md-3 text-right">
+                    <label>Vị trí <span>*</span></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="wrap_select">
+                        <select class="form-control">
+                            <option>Main A</option>
+                            <option>Main B</option>
+                            <option>Main C</option>
+                            <option>Main D</option>
+                            <option>Main E</option>
+                        </select>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <label class="error">Chọn vị trí hiển thị</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 text-right">
+                    <label>Thứ tự hiển thị <span>*</span></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="wrap_select">
+                        <select class="form-control">
+                            <option>Số 01</option>
+                            <option>Số 02</option>
+                            <option>Số 03</option>
+                            <option>Số 04</option>
+                            <option>Số 05</option>
+                        </select>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <label class="error">Chọn thứ tự hiển thị</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 text-right">
+                    <label>Link <span>*</span></label>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" placeholder="Nhập link banner cần tạo">
+                    <label class="error">Nhập link banner</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 text-right">
+                    <label>Trạng thái <span>*</span></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="wrapper">
+                      <input type="checkbox" id="checkbox1" class="slider-toggle" checked />
+                        <label class="slider-viewport" for="checkbox1">
+                        <div class="slider">
+                            <div class="slider-button">&nbsp;</div>
+                            <div class="slider-content left"><span>On</span></div>
+                            <div class="slider-content right"><span>Off</span></div>
+                        </div>
+                        </label>
+                    </div>
+                    <span class="note">Chọn để kích hoạt trạng thái</span>
+                </div>
+            </div>
+            <div class="form-group wrap-btn">
+                <div class="col-md-3 text-right">
+                    <span class="cancel Cancel">Hủy bỏ</span>
+                </div>
+                <div class="col-md-9">
+                    <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Lưu</button>
+                    <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".AddSuccessModal">Lưu & Thêm banner mới</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="choose-banner">
+                <label>Hình banner <span>*</span></label>
+                <div class="wrap-choose">
+                    <ul class="wrap_btn">
+                        <li>
+                            <a href="#" class="btn-loadfile">
+                                <i class="icon-browser">&nbsp;</i>
+                                <span>Browse ...</span>
+                                <input type="file" name="newfile" onchange="readURL4(this);">
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="size-note">Kích thước: <b>470 x 570 px</b></span>
+                    <span class="size-note">Dung lượng: <b>500kb</b></span>
+                    <span class="size-note">Định dạng: <b>jpg, png</b></span>
+                </div>                
+            </div>           
+            <div class="display-banner">
+                <img id="blah" src="assets/images/banner-promotion.png" alt="thien hoa promotion" />
+            </div>
+        </div>
+    </form>
+</div>

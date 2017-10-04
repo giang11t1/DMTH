@@ -1,0 +1,161 @@
+<div class="banner-promotion DisplayPromotion" style="display: none;">
+    <div class="table-display">
+        <div class="header_table">
+            <div class="col-md-6">
+                <div class="col-md-1">
+                    <input type="checkbox" data-toggle="checkall" data-target="input[name=choose]" class="checkbox_check">
+                </div>
+                <div class="col-md-4 no-padding">
+                    <span>Tên banner</span>
+                </div>
+                <div class="col-md-4">
+                    <span>Hình banner</span>
+                </div>
+                <div class="col-md-3 text-center">
+                    <span>Vị trí</span>
+                </div>
+            </div>
+            <div class="col-md-6 no-padding ">
+                <div class="col-md-4 no-padding text-center">
+                    <span>Thứ tự hiển thị</span>
+                </div>
+                <div class="col-md-4 text-left">
+                    <span>Link</span>
+                </div>
+                <div class="col-md-2 no-padding">
+                    <span>Trạng thái</span>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+        </div>
+        <ul class="category_product">
+            <li class="row">
+                <div class="col-md-6">
+                    <div class="col-md-1">
+                        <input type="checkbox" name="choose"  class="checkbox_check">
+                    </div>
+                    <div class="col-md-4 no-padding content">
+                        <span>Giảm giá 49%</span>
+                    </div>
+                    <div class="col-md-4 wrap-banner">
+                        <img src="assets/images/promotion1.png" alt="thien hoa promotion">
+                    </div>
+                    <div class="col-md-3 content text-center">
+                        <span>Main A1</span>
+                    </div>
+                </div>
+                <div class="col-md-6 no-padding">
+                    <div class="col-md-4 text-center">
+                        <span>01</span>
+                    </div>
+                    <div class="col-md-4 content no-padding">
+                        <span>www.banner-giam-gia-49%</span>
+                    </div>   
+                    <div class="col-md-2">
+                        <div class="wrapper tooltip">
+                          <input type="checkbox" id="checkbox" class="slider-toggle" onclick="return false;" onkeydown="return false;"/>
+                            <label class="slider-viewport" for="checkbox">
+                                <div class="slider">
+                                    <div class="slider-button">&nbsp;</div>
+                                    <div class="slider-content left"><span>On</span></div>
+                                    <div class="slider-content right"><span>Off</span></div>
+                                </div>
+                            </label>
+                            <span class="tooltiptext">Chưa kích hoạt</span>
+                        </div>
+                    </div>                            
+                    <div class="col-md-2">
+                        <a class="tooltip">
+                            <i class="icon-edit-pen active UpdateAction" aria-hidden="true"></i>
+                            <i class="icon-edit-pen-hover UpdateHover" title="Chỉnh sửa">&nbsp</i>
+                            <span class="tooltiptext">Cập nhật</span>
+                        </a>
+                        <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
+                            <i class="icon-delete active DeleteAction" aria-hidden="true"></i>
+                            <i class="icon-delete-hover DeleteHover" title="Xóa">&nbsp</i>
+                            <span class="tooltiptext">Xóa</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {% for x in [1,2,3,4,5] %}
+            <li class="row">
+                <div class="col-md-6">
+                    <div class="col-md-1">
+                        <input type="checkbox" name="choose"  class="checkbox_check">
+                    </div>
+                    <div class="col-md-4 no-padding content">
+                        <span>Giảm giá 40% đồ gia dụng</span>
+                    </div>
+                    <div class="col-md-4 wrap-banner">
+                        <img src="assets/images/promotion2.png" alt="thien hoa promotion">
+                    </div>
+                    <div class="col-md-3 content text-center">
+                        <span>Main A1</span>
+                    </div>
+                </div>
+                <div class="col-md-6 no-padding">
+                    <div class="col-md-4 text-center">
+                        <span>01</span>
+                    </div>
+                    <div class="col-md-4 content no-padding">
+                        <span>www.banner-giam-gia-40%</span>
+                    </div>   
+                    <div class="col-md-2">
+                        <div class="wrapper tooltip">
+                          <input type="checkbox" id="checkbox" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+                            <label class="slider-viewport" for="checkbox">
+                                <div class="slider">
+                                    <div class="slider-button">&nbsp;</div>
+                                    <div class="slider-content left"><span>On</span></div>
+                                    <div class="slider-content right"><span>Off</span></div>
+                                </div>
+                            </label>
+                            <span class="tooltiptext">Kích hoạt</span>
+                        </div>
+                    </div>                            
+                    <div class="col-md-2">
+                        <a class="tooltip">
+                            <i class="icon-edit-pen active UpdateAction" aria-hidden="true"></i>
+                            <i class="icon-edit-pen-hover UpdateHover" title="Chỉnh sửa">&nbsp</i>
+                            <span class="tooltiptext">Cập nhật</span>
+                        </a>
+                        <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
+                            <i class="icon-delete active DeleteAction" aria-hidden="true"></i>
+                            <i class="icon-delete-hover DeleteHover" title="Xóa">&nbsp</i>
+                            <span class="tooltiptext">Xóa</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %} 
+        </ul>
+        <div class="bottoom_table">
+            <p class="left">Tổng trạng thái: <span>06/40</span></p>
+            <div class="page">
+                <div class="wrap">
+                    <div class="left">
+                        <i class="fa fa-angle-double-left">&nbsp</i>
+                        <div> <p>Trước</p></div>
+                    </div>
+                    <p class="display">Trang 1/4</p>
+                    <div class="right">
+                        <div><p>Sau</p></div>
+                        <i class="fa fa-angle-double-right">&nbsp</i>
+                    </div>
+                </div>
+                
+                <div class="per_page">
+                    <select class="form-control">
+                        <option>10 dòng/ Trang</option>
+                        <option>20 dòng/ Trang</option>
+                        <option>30 dòng/ Trang</option>
+                        <option>40 dòng/ Trang</option>
+                    </select>
+                    <i class="fa fa-angle-down">&nbsp</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

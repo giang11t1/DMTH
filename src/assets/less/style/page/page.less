@@ -827,19 +827,19 @@
 			}
 		}
 	}
-	.table-display {
-		.header_table .no-padding {
-		    padding: 0px;
-		}
-		.content {
-			overflow: hidden;
-		    display: -webkit-box;
-		    -webkit-line-clamp: 1;
-		    -webkit-box-orient: vertical;
-		    text-overflow: ellipsis;
-		    max-height: 2.125em;
-		    word-wrap: break-word;
-		}
+}
+.table-display {
+	.header_table .no-padding {
+	    padding: 0px;
+	}
+	.content {
+		overflow: hidden;
+	    display: -webkit-box;
+	    -webkit-line-clamp: 1;
+	    -webkit-box-orient: vertical;
+	    text-overflow: ellipsis;
+	    max-height: 2.125em;
+	    word-wrap: break-word;
 	}
 }
 .section-career {
@@ -1087,3 +1087,21 @@
 		}
 	}
 	}
+
+.section-promotion {
+	.banner-promotion {
+		.table-display {
+			margin-top: 15px;
+		}
+	}
+	.banner-update .col-md-3, .update-banner .col-md-3, .banner-add .col-md-3 {
+		padding-right: 15px;
+	}
+	.table-display ul li {
+	    line-height: 40px;
+	    input[type=checkbox] {
+    	    position: relative;
+    		top: 2px;
+	    }
+	}
+}
