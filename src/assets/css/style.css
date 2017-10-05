@@ -3745,6 +3745,7 @@ div.tab a {
   border: 1px solid #e1e1e1;
   border-radius: 3px;
   position: relative;
+  margin-left: 8%;
 }
 .display-banner img {
   position: absolute;
@@ -13537,4 +13538,12 @@ section.table_supply .wrap-table.filter_child {
 .section-promotion .table-display ul li input[type=checkbox] {
   position: relative;
   top: 2px;
+}
+.section-promotion .table-display ul li .wrapper {
+  top: 5px;
+}
+.section-promotion .img-promotion .display-banner {
+  width: 250px;
+  height: 250px;
+  margin-left: 15%;
 }

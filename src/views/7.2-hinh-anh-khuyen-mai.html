@@ -1,0 +1,34 @@
+{% set current_page = 'image-promotion' %}
+{% extends "layout/_layout.html" %}
+{% block page-content %}
+<div class="col-md-">
+    <section class="section section-promotion">
+        <h3 class="title-section">Hình ảnh</h3>        
+        <div class="panel box-panel">
+            <div class="top">
+                <h3 class="title TitleCreate">Thêm mới Hình ảnh</h3>
+                <h3 class="title TitleUpdate" style="display: none;">Cập nhật Hình ảnh</h3>
+                <h3 class="title TitleDisplay" style="display: none;">Danh sách Hình ảnh</h3>                
+            </div>            
+            <div class="promotion" >                
+                <div class="tab">
+                  <a type="button" class="tablinks active" onclick="openCity(event, 'home')">Về Thiên Hòa</a>
+                  <a href="#" class="pull-right link AddAction" style="display: none;"><i class="fa fa-plus-circle" aria-hidden="true"></i> Thêm mới</a>
+                </div>
+                <div id="home" class="tabcontent active" style="display: block;">
+                    <div class="no-banner NoDataPromotion">
+                        <p>Chưa có thông tin, bạn vui lòng thêm mới!</p>
+                        <button class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm mới</button>
+                    </div>    
+                    {% include "block/_block-create-img-promotion.html" %} 
+                    {% include "block/_block-update-img-promotion.html" %} 
+                    {% include "block/_block-display-img-promotion.html" %}                  
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% include "block/_modal-success.html" %}
+{% include "block/_modal-add-success.html" %}
+{% include "block/_modal-delete.html" %}
+{% endblock %}

@@ -1,33 +1,15 @@
-<div class="banner-add UpatePromotion">
-    <form class="form-create">
+<div class="banner-add CreatePromotion">
+    <form class="form-create img-promotion">
         <div class="col-md-7">
             <div class="form-group">
                 <div class="col-md-3 text-right">
-                    <label>Tên banner <span>*</span></label>
+                    <label>Tên hình ảnh <span>*</span></label>
                 </div>
                 <div class="col-md-9">
-                    <input type="text" class="form-control" placeholder="Nhập tên banner mới cần tạo">
-                    <label class="error">Nhập tên banner</label>
+                    <input type="text" class="form-control" placeholder="Nhập tên hình ảnh mới cần tạo">
+                    <label class="error">Nhập tên hình ảnh</label>
                 </div>
             </div>            
-            <div class="form-group">
-                <div class="col-md-3 text-right">
-                    <label>Vị trí <span>*</span></label>
-                </div>
-                <div class="col-md-9">
-                    <div class="wrap_select">
-                        <select class="form-control">
-                            <option>Main A</option>
-                            <option>Main B</option>
-                            <option>Main C</option>
-                            <option>Main D</option>
-                            <option>Main E</option>
-                        </select>
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </div>
-                    <label class="error">Chọn vị trí hiển thị</label>
-                </div>
-            </div>
             <div class="form-group">
                 <div class="col-md-3 text-right">
                     <label>Thứ tự hiển thị <span>*</span></label>
@@ -51,8 +33,8 @@
                     <label>Link <span>*</span></label>
                 </div>
                 <div class="col-md-9">
-                    <input type="text" class="form-control" placeholder="Nhập link banner cần tạo">
-                    <label class="error">Nhập link banner</label>
+                    <input type="text" class="form-control" placeholder="Nhập link hình ảnh cần tạo">
+                    <label class="error">Nhập link hình ảnh</label>
                 </div>
             </div>
             <div class="form-group">
@@ -61,8 +43,8 @@
                 </div>
                 <div class="col-md-9">
                     <div class="wrapper">
-                      <input type="checkbox" id="checkbox2" class="slider-toggle" checked />
-                        <label class="slider-viewport" for="checkbox2">
+                      <input type="checkbox" id="checkbox1" class="slider-toggle" checked />
+                        <label class="slider-viewport" for="checkbox1">
                         <div class="slider">
                             <div class="slider-button">&nbsp;</div>
                             <div class="slider-content left"><span>On</span></div>
@@ -78,31 +60,31 @@
                     <span class="cancel Cancel">Hủy bỏ</span>
                 </div>
                 <div class="col-md-9">
-                    <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".SuccessModal">Lưu</button>
-                    <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".SuccessModal">Lưu & Cập nhật banner</button>
+                    <button type="button" value="" class="btn btn_primary BtnUpdate" data-toggle="modal" data-target=".AddSuccessModal">Lưu</button>
+                    <button type="button" value="" class="btn btn_primary BtnUpdate"  data-toggle="modal" data-target=".AddSuccessModal">Lưu & Thêm hình ảnh mới</button>
                 </div>
             </div>
         </div>
         <div class="col-md-5">
             <div class="choose-banner">
-                <label>Hình banner <span>*</span></label>
+                <label>Hình ảnh <span>*</span></label>
                 <div class="wrap-choose">
                     <ul class="wrap_btn">
                         <li>
                             <a href="#" class="btn-loadfile">
                                 <i class="icon-browser">&nbsp;</i>
                                 <span>Browse ...</span>
-                                <input type="file" name="newfile" onchange="readURL5(this);">
+                                <input type="file" name="newfile" onchange="readURL4(this);">
                             </a>
                         </li>
                     </ul>
-                    <span class="size-note">Kích thước: <b>470 x 570 px</b></span>
+                    <span class="size-note">Kích thước: <b>250 x 250 px</b></span>
                     <span class="size-note">Dung lượng: <b>500kb</b></span>
                     <span class="size-note">Định dạng: <b>jpg, png</b></span>
                 </div>                
             </div>           
             <div class="display-banner">
-                <img id="blah1" src="assets/images/banner-promotion.png" alt="thien hoa promotion" />
+                <img id="blah" src="assets/images/img-thien-hoa.jpg" alt="thien hoa img" />
             </div>
         </div>
     </form>

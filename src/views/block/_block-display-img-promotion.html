@@ -1,0 +1,152 @@
+<div class="banner-promotion DisplayPromotion" style="display: none;">
+    <div class="table-display">
+        <div class="header_table">
+            <div class="col-md-7">
+                <div class="col-md-1">
+                    <input type="checkbox" data-toggle="checkall" data-target="input[name=choose]" class="checkbox_check">
+                </div>
+                <div class="col-md-4 no-padding">
+                    <span>Tên hình ảnh</span>
+                </div>
+                <div class="col-md-4">
+                    <span>Hình ảnh</span>
+                </div>
+                <div class="col-md-3 text-center">
+                    <span>Thứ tự hiển thị</span>
+                </div>
+            </div>
+            <div class="col-md-5 no-padding ">
+                <div class="col-md-6 text-left">
+                    <span>Link</span>
+                </div>
+                <div class="col-md-3 no-padding">
+                    <span>Trạng thái</span>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+        </div>
+        <ul class="category_product">
+            <li class="row">
+                <div class="col-md-7">
+                    <div class="col-md-1">
+                        <input type="checkbox" name="choose"  class="checkbox_check">
+                    </div>
+                    <div class="col-md-4 no-padding content">
+                        <span>Thiên Hòa Quận 12</span>
+                    </div>
+                    <div class="col-md-4 wrap-banner">
+                        <img src="assets/images/img-th1.png" alt="thien hoa img">
+                    </div>
+                    <div class="col-md-3 content text-center">
+                        <span>01</span>
+                    </div>
+                </div>
+                <div class="col-md-5 no-padding">
+                    <div class="col-md-6 content no-padding">
+                        <span>www.thien-hoa-quan-12</span>
+                    </div>   
+                    <div class="col-md-3">
+                        <div class="wrapper tooltip">
+                          <input type="checkbox" id="checkbox" class="slider-toggle" onclick="return false;" onkeydown="return false;"/>
+                            <label class="slider-viewport" for="checkbox">
+                                <div class="slider">
+                                    <div class="slider-button">&nbsp;</div>
+                                    <div class="slider-content left"><span>On</span></div>
+                                    <div class="slider-content right"><span>Off</span></div>
+                                </div>
+                            </label>
+                            <span class="tooltiptext">Chưa kích hoạt</span>
+                        </div>
+                    </div>                            
+                    <div class="col-md-3">
+                        <a class="tooltip">
+                            <i class="icon-edit-pen active UpdateAction" aria-hidden="true"></i>
+                            <i class="icon-edit-pen-hover UpdateHover" title="Chỉnh sửa">&nbsp</i>
+                            <span class="tooltiptext">Cập nhật</span>
+                        </a>
+                        <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
+                            <i class="icon-delete active DeleteAction" aria-hidden="true"></i>
+                            <i class="icon-delete-hover DeleteHover" title="Xóa">&nbsp</i>
+                            <span class="tooltiptext">Xóa</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {% for x in [1,2,3,4,5] %}
+            <li class="row">
+                <div class="col-md-7">
+                    <div class="col-md-1">
+                        <input type="checkbox" name="choose"  class="checkbox_check">
+                    </div>
+                    <div class="col-md-4 no-padding content">
+                        <span>Đội ngũ nhân viên</span>
+                    </div>
+                    <div class="col-md-4 wrap-banner">
+                        <img src="assets/images/img-th2.png" alt="thien hoa img">
+                    </div>
+                    <div class="col-md-3 content text-center">
+                        <span>01</span>
+                    </div>
+                </div>
+                <div class="col-md-5 no-padding">
+                    <div class="col-md-6 content no-padding">
+                        <span>www.doi-ngu-nhan-vien</span>
+                    </div>   
+                    <div class="col-md-3">
+                        <div class="wrapper tooltip">
+                          <input type="checkbox" id="checkbox" class="slider-toggle" checked onclick="return false;" onkeydown="return false;"/>
+                            <label class="slider-viewport" for="checkbox">
+                                <div class="slider">
+                                    <div class="slider-button">&nbsp;</div>
+                                    <div class="slider-content left"><span>On</span></div>
+                                    <div class="slider-content right"><span>Off</span></div>
+                                </div>
+                            </label>
+                            <span class="tooltiptext">Kích hoạt</span>
+                        </div>
+                    </div>                            
+                    <div class="col-md-3">
+                        <a class="tooltip">
+                            <i class="icon-edit-pen active UpdateAction" aria-hidden="true"></i>
+                            <i class="icon-edit-pen-hover UpdateHover" title="Chỉnh sửa">&nbsp</i>
+                            <span class="tooltiptext">Cập nhật</span>
+                        </a>
+                        <a class="tooltip" data-toggle="modal" data-target=".DeleteModal">
+                            <i class="icon-delete active DeleteAction" aria-hidden="true"></i>
+                            <i class="icon-delete-hover DeleteHover" title="Xóa">&nbsp</i>
+                            <span class="tooltiptext">Xóa</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %} 
+        </ul>
+        <div class="bottoom_table">
+            <p class="left">Tổng trạng thái: <span>06/40</span></p>
+            <div class="page">
+                <div class="wrap">
+                    <div class="left">
+                        <i class="fa fa-angle-double-left">&nbsp</i>
+                        <div> <p>Trước</p></div>
+                    </div>
+                    <p class="display">Trang 1/4</p>
+                    <div class="right">
+                        <div><p>Sau</p></div>
+                        <i class="fa fa-angle-double-right">&nbsp</i>
+                    </div>
+                </div>
+                
+                <div class="per_page">
+                    <select class="form-control">
+                        <option>10 dòng/ Trang</option>
+                        <option>20 dòng/ Trang</option>
+                        <option>30 dòng/ Trang</option>
+                        <option>40 dòng/ Trang</option>
+                    </select>
+                    <i class="fa fa-angle-down">&nbsp</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
