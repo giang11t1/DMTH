@@ -108,14 +108,14 @@
 				    		</ul>
 				      </div>
 				    </li>
-				    <li class="item-menu panel {% if current_page == 'banner-sale' or current_page == 'image-promotion'%}active{% endif %}">
+				    <li class="item-menu panel {% if current_page == 'banner-sale' or current_page == 'image-promotion' or current_page == 'promotion-gift'%}active{% endif %}">
 			          	<a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
 				          	<i class="icon icon-ad">&nbsp</i>
 				    		<span>Khuyến mãi</span>
 				    		<i class="fa fa-angle-right" aria-hidden="true"></i>
 				    		<i class="fa fa-angle-down" aria-hidden="true"></i>
 			    		</a>
-				      	<div id="collapse8" class="panel-collapse collapse {% if current_page == 'banner-sale' or current_page == 'image-promotion'%}in{% endif %}">
+				      	<div id="collapse8" class="panel-collapse collapse {% if current_page == 'banner-sale' or current_page == 'image-promotion' or current_page == 'promotion-gift'%}in{% endif %}">
 					        <ul class="sub-menu" >
 				    			<li class="item-sub {% if current_page == 'banner-sale'%}active{% endif %}">
 				    				<a href="7.1-banner-khuyen-mai.html">
@@ -127,9 +127,9 @@
 				    					<p>Hình ảnh</p>
 				    				</a>
 				    			</li>
-				    			<li class="item-sub">
-				    				<a href="#">
-				    					<p>Khuyến mãi qùa tặng</p>
+				    			<li class="item-sub {% if current_page == 'promotion-gift'%}active{% endif %}">
+				    				<a href="7.3-qua-tang-khuyen-mai.html">
+				    					<p>Khuyến mãi quà tặng</p>
 				    				</a>
 				    			</li>
 				    			<li class="item-sub">
