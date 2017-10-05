@@ -2309,6 +2309,13 @@ label .since {
 .no-padding {
   padding: 0 !important;
 }
+.panel-group .panel {
+  border-radius: 0;
+}
+.collapse.in {
+  display: inline-block;
+  width: 100%;
+}
 .img {
   position: absolute;
   left: -100%;
@@ -2330,6 +2337,9 @@ label .since {
 /*.btn {
     margin-right: 10px;
 }*/
+.btn:focus {
+  outline: none;
+}
 .btn-primary {
   background-color: #00adef;
   border-radius: 4px;
@@ -2463,6 +2473,25 @@ label .since {
 .btn-upload:focus,
 .btn-upload:active {
   background: #d4111a;
+}
+.btn-stop {
+  font-size: 14px;
+  color: #ed1b24;
+  border: 1px solid #ed1b24;
+  border-radius: 15px;
+  padding: 2px 16px;
+  background: #fff;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.btn-stop:hover,
+.btn-stop:focus,
+.btn-stop:active {
+  color: #fff;
+  background: #ed1b24;
+  outline: none;
 }
 /*
  * Component: Form
@@ -3666,6 +3695,43 @@ footer .container {
 .table-display .bottoom_table .left span {
   text-decoration: underline;
 }
+.table-display .promotion-gift li {
+  display: block;
+  border: none;
+}
+.table-display .promotion-gift li .date-time {
+  line-height: 25px;
+}
+.table-display .promotion-gift .collapse.in {
+  margin-top: 10px;
+  margin-bottom: -8px;
+}
+.table-display .promotion-gift .wrap-view {
+  background: #f8f8f8;
+  padding: 20px;
+}
+.table-display .promotion-gift .wrap-view .view-list {
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+}
+.table-display .promotion-gift .wrap-view .view-list li {
+  background: #fff;
+  line-height: 25px;
+}
+.table-display .promotion-gift .wrap-view .view-list li b {
+  float: left;
+  margin-right: 5px;
+}
+.table-display .promotion-gift .wrap-view .view-list li span {
+  color: #818181;
+}
+.table-display .promotion-gift .wrap-view .view-list li span.color {
+  color: #00adef;
+}
+.table-display .promotion-gift .wrap-view .view-list li:last-child b {
+  margin-right: 30px;
+}
 /* Style the tab */
 div.tab {
   /*overflow: hidden;*/
@@ -3717,7 +3783,7 @@ div.tab a {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
+  padding: 6px 20px;
   border: 1px solid #e1e1e1;
   border-top: none;
 }

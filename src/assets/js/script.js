@@ -1281,38 +1281,3 @@ $(document).ready(function() {
     }
 });
 
-// choose img // load multiple images===================
-function handleFileSelect(evt) {
-    var files = evt.target.files;
-
-    for (var i = 0, f; f = files[i]; i++) {
-
-        if (!f.type.match('image.*')) {
-            continue;
-        }
-
-        var reader = new FileReader();
-
-        reader.onload = (function(theFile) {
-            return function(e) {
-                var span = document.createElement('span');
-                span.innerHTML = [
-                    '<img src="',
-                    e.target.result,
-                    '" title="', escape(theFile.name),
-                    '"/>'
-                ].join('');
-
-                span.addEventListener('click', function(e) {
-                    if (e.offsetX > span.offsetWidth - 15) {
-                        $(this).hide();
-                    }
-                });
-                document.getElementById('list').insertBefore(span, null);
-            };
-
-        })(f);
-        reader.readAsDataURL(f);
-    }
-}
-// document.getElementById('files').addEventListener('change', handleFileSelect, false);

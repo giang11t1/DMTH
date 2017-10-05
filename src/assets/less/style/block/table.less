@@ -53,4 +53,45 @@
 			}
 		}
 	}
+	.promotion-gift {
+		li {
+			display: block;
+			border: none;
+			.date-time {
+				line-height: 25px;
+			}
+		}
+		.collapse.in {
+			margin-top: 10px;
+			margin-bottom: -8px;
+		}
+		.wrap-view {
+			background: @bg-color2;
+			padding: 20px;
+			.view-list {
+				background: #fff;
+				border: @border;
+				padding: 20px;
+				li {
+					background: #fff;
+					line-height: 25px;
+					b {
+						float: left;
+						margin-right: 5px;						
+					}
+					span {
+						color: @text-color-3;
+					}
+					span.color {
+						color: @primary-color;
+					}
+					&:last-child {
+						b {
+							margin-right: 30px;
+						}
+					}
+				}
+			}			
+		}
+	}
 }
