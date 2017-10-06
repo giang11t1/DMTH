@@ -3718,6 +3718,8 @@ footer .container {
 .table-display .promotion-gift .wrap-view .view-list li {
   background: #fff;
   line-height: 25px;
+  display: inline-block;
+  width: 100%;
 }
 .table-display .promotion-gift .wrap-view .view-list li b {
   float: left;
@@ -3728,6 +3730,9 @@ footer .container {
 }
 .table-display .promotion-gift .wrap-view .view-list li span.color {
   color: #00adef;
+}
+.table-display .promotion-gift .wrap-view .view-list li:last-child {
+  padding-bottom: 0;
 }
 .table-display .promotion-gift .wrap-view .view-list li:last-child b {
   margin-right: 30px;
